@@ -1,0 +1,126 @@
+:root {
+    --color-font-white: #ffffff;
+    --color-font-blue: #00417A;
+    --color-lighter-blue: #a3d9ff;
+    --color-dark-blue: #003665;
+    --color-blue: #00417A;
+    --color-bg-lightgrey: #F2F6FA;
+    /*Desktop Font size*/
+    --copy-text-small: 16px;
+    --copy-text-big: 18px;
+    --button-text: 18px;
+    --headline-xs: 24px;
+    --headline-s: 32px;
+    --headline-m: 36px;
+    --headline-l: 48px;
+    --headline-xl: 56px;
+}
+
+html {
+    font-family: 'Manrope', 'Arial';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.outer-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* grid-template-columns: minmax(200px,1440px); */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    grid-area: main;
+}
+
+a {
+    text-decoration: none;
+}
+
+.color-font-blue {
+    color: var(--color-blue);
+}
+
+.color-font-lighterblue {
+    color: var(--color-lighter-blue);
+}
+
+.color-font-darkblue {
+    color: var(--color-dark-blue);
+}
+
+.color-font-white {
+    color: var(--color-font-white);
+}
+
+.headline {
+    font-family: 'Exo 2';
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -2%;
+}
+
+.headline-xl {
+    font-size: 56px;
+}
+
+.headline-l {
+    font-size: 48px;
+}
+
+.headline-m {
+    font-size: 36px;
+}
+
+.headline-s {
+    font-size: 32px;
+}
+
+.headline-xs {
+    font-size: 24px;
+}
+
+.button-text {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0%;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0%;
+}
+
+.copy-text-big {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0%;
+}
+
+.copy-text-small {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+}

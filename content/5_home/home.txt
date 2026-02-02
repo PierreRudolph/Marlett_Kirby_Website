@@ -1,0 +1,57 @@
+Title: Home
+
+----
+
+Subheadline-first-half: Außenreinigung mit System –
+
+----
+
+Subheadline-second-half: in Stuttgart und Umgebung
+
+----
+
+Headline-first-half: Professionelle Reinigung
+
+----
+
+Headline-second-half: für deine Außenbereiche
+
+----
+
+Text: Reinigungs und Sanierungstechnik für Terrassen, Einfahrten, Wege,  und Dächer – materialgerecht im Hoch- und Niederdruckverfahren. Optional mit thermischer Unkrautbehandlung, Systemfuge und Oberflächenschutz.
+
+----
+
+Button-contact-text: Reinigung anfragen
+
+----
+
+Button-phone-text: Telefonische Beratung
+
+----
+
+Button-phone-link: 015170552698
+
+----
+
+Video: - file://7fksamwrtstck5d6
+
+----
+
+Subheadline: Außenreinigung mit System – in Stuttgart und Umgebung
+
+----
+
+Headline: Professionelle Reinigung für deine Außenbereiche
+
+----
+
+Uuid: 9ffjllpedz9zqdip
+
+----
+
+Button-contact-link: 
+
+----
+
+Poster: - file://7fksamwrtstck5d6

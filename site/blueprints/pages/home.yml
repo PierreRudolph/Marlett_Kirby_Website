@@ -1,0 +1,41 @@
+title: Home
+
+options: changeStatus:false;
+
+sections:
+  content:
+    type: fields
+    fields:
+      subheadline_first_half:
+        type: text
+        width: 1/2
+      subheadline_second_half:
+        type: text
+        width: 1/2
+      gap:
+        width: 1/2
+      headline_first_half:
+        label: Headline erste hälfte      
+        type: text
+        width: 1/2
+      headline_second_half:
+        label: Headline zweite hälfte
+        type: text
+        width: 1/2
+      text:
+        type: textarea
+        size: small
+      button_contact_text:
+        label: Kontakt-Button-Text
+        type: text
+      button_phone_text:
+        label: Telefon-Button-Text
+        type: text
+        width: 1/2
+      button_phone_link:
+        label: Telefon-Button-Nummer
+        type: tel
+        width: 1/2
+      video:
+        label: Video
+        type: files
