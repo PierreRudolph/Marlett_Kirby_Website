@@ -30,7 +30,7 @@ Button-phone-text: Telefonische Beratung
 
 ----
 
-Button-phone-link: 015170552698
+Button-phone-link: +497032203752009
 
 ----
 

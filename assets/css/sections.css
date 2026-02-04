@@ -4,7 +4,7 @@
     max-height: 736px;
     position: relative;
     background: linear-gradient(180deg, #2163A0 0%, #00417A 100%);
-    padding: 120px 40px;
+    padding: var(--section-padding-top) var(--main-padding-right) var(--section-padding-bottom) var(--main-padding-left);
 }
 
 .brick-layer-left {
@@ -28,6 +28,9 @@
 }
 
 .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     z-index: 1;
     grid-column: span 6;
 }
@@ -62,10 +65,5 @@
     align-items: center;
     gap: 24px;
     white-space: nowrap;
-}
-
-@media(max-width:1300px) {
-    .section-wrapper {
-        padding: 80px 60px;
-    }
+    margin: 10px 0;
 }

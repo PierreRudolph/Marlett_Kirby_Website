@@ -6,9 +6,9 @@
     color: var(--color-font-blue);
     background: none;
     border: 0;
-    font: inherit;
     font-weight: 600;
     cursor: pointer;
+    padding: 28px 0px;
 }
 
 .arrow {
@@ -19,30 +19,30 @@
 
 .dropdown {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 52px;
     background-color: var(--color-bg-lightgrey);
-    padding: 16px 0 16px 24px;
+    padding: 16px 24px 16px 24px;
     list-style: none;
     min-width: 260px;
     display: none;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 0;
+    gap: 12px;
+    margin: 0;
+    z-index: 2;
 }
 
 .main-nav__item:hover .dropdown {
     display: flex;
-
 }
 
 .dropdown:hover {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
 .main-nav__item:hover .arrow {
     transform: rotate(180deg);
+}
 
+li{
+    
 }

@@ -32,7 +32,7 @@ sections:
         label: Telefon-Button-Text
         type: text
         width: 1/2
-      button_phone_link:
+      button_phone_number:
         label: Telefon-Button-Nummer
         type: tel
         width: 1/2

@@ -41,7 +41,7 @@
 
                     <?php endif ?>
                 <?php endforeach ?>
-                <a class="contact_btn" href="<?= url('contact') ?>">Kontakt</a>
+                <a class="btn-pos btn-text" href="<?= url('contact') ?>">Kontakt</a>
             </nav>
         </header>
         <main>

@@ -13,7 +13,7 @@ $items = $services->children()->listed();
   <ul class="dropdown">
     <?php foreach ($items as $item): ?>
       <li>
-        <a href="<?= $item->url() ?>">
+        <a class="copy-text-small" href="<?= $item->url() ?>">
           <?= $item->title() ?>
         </a>
       </li>
