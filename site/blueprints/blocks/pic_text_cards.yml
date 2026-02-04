@@ -1,0 +1,67 @@
+title: Bild Text Karten
+name: pic_text_cards
+icon: grid
+preview: false
+
+fields:
+
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Sektion
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+
+
+  # -------------------------------------------------
+  # CARDS (LOOPBAR)
+  # -------------------------------------------------
+  cards:
+    label: Karten
+    type: structure
+    max: 4
+    columns:
+      headline: Headline
+      text: Text
+    fields:
+      headline:
+        label: Headline
+        type: text
+
+      text:
+        label: Text
+        type: textarea
+        size: small
+
+      link:
+        label: Link
+        type: link
+
+      img:
+        label: Bild
+        type: files
+        multiple: false
+
+
+  # -------------------------------------------------
+  # BUTTON
+  # -------------------------------------------------
+  button:
+    label: Button
+    type: headline
+
+  button_contact_text:
+    label: Button-Text
+    type: text

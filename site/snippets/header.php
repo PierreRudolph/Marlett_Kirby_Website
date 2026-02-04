@@ -14,7 +14,7 @@
         'assets/css/snippets/footer.css',
         'assets/css/snippets/nav_menu.css',
         'assets/css/sections.css',
-
+        'assets/css/snippets/blocks/pic_text_cards.css',
     ]) ?>
 
     <?= js(['assets/script/snippets/nav_menu.js']) ?>

@@ -81,6 +81,7 @@ body {
 }
 
 main {
+    overflow-y: auto;
     width: 100%;
     grid-area: main;
 }
@@ -254,10 +255,29 @@ p {
     gap: 15px;
 }
 
+.flex-row-gap20 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .flex-column-gap5 {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.flex-middle {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-full {
+    grid-column: span 12;
+}
+
+.grid-middle {
+    grid-column: span 6;
 }
 
 .label-underline {

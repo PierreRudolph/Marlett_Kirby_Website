@@ -1,0 +1,11 @@
+.services-headline {
+    min-width: 770px;
+    grid-column: span 7;
+}
+
+@media(max-width:800px) {
+    .services-headline {
+        min-width: unset;
+        grid-column: span 12;
+    }
+}

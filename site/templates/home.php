@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<div class="section-wrapper">
+<div class="section-wrapper above-fold-wrapper">
     <img src="<?= url("assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left">
     <section class="above-fold">
         <div class="section-content">
@@ -20,8 +20,8 @@
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 
-                <a href="tel:<?= $page->button_phone_number()->toHtml() ?>" 
-                class="btn-neg-outlined btn-text btn-with-icon">
+                <a href="tel:<?= $page->button_phone_number()->toHtml() ?>"
+                    class="btn-neg-outlined btn-text btn-with-icon">
                     <img src="<?= url('assets/icons/phone.svg') ?>">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
@@ -51,7 +51,4 @@
     <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">
 
 </div>
-
-
-<!-- <?php dump(page('services')->children()->listed()) ?> -->
-<?php snippet('footer') ?>
+<?= $page->blocks()->toBlocks() ?>

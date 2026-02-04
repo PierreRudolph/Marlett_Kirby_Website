@@ -3,8 +3,12 @@
     justify-content: center;
     max-height: 736px;
     position: relative;
-    background: linear-gradient(180deg, #2163A0 0%, #00417A 100%);
     padding: var(--section-padding-top) var(--main-padding-right) var(--section-padding-bottom) var(--main-padding-left);
+    background: white;
+}
+
+.above-fold-wrapper {
+    background: linear-gradient(180deg, #2163A0 0%, #00417A 100%);
 }
 
 .brick-layer-left {
@@ -25,6 +29,15 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 40px;
+}
+
+.section-gap48 {
+    overflow: hidden;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 48px;
+
 }
 
 .section-content {

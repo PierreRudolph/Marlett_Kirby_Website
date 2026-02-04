@@ -30,7 +30,7 @@ Button-phone-text: Telefonische Beratung
 
 ----
 
-Button-phone-link: +497032203752009
+Button-phone-number: 
 
 ----
 
@@ -38,20 +38,16 @@ Video: - file://7fksamwrtstck5d6
 
 ----
 
-Subheadline: Außenreinigung mit System – in Stuttgart und Umgebung
+Meta-title: 
 
 ----
 
-Headline: Professionelle Reinigung für deine Außenbereiche
+Meta-description: 
 
 ----
 
-Uuid: 9ffjllpedz9zqdip
+Blocks: [{"content":{"headline_first_half":"Leistungen für saubere Flächen -","headline_second_half":"vom Boden bis zum Dach","section_id":"","cards":[{"headline":"Steinreinigung","text":"Materialgerechte Hoch- und Heißwasserreinigung – entfernt Algen, Moos, Flechten und Grünbelag von Steinflächen.","link":"page://twdhsmab5ebzesmn","img":["file://7e9awhvbelkepxtk"]},{"headline":"Dachreinigung","text":"Schonende Dachreinigung – beseitigt Moos, Algen und Ablagerungen ohne Beschädigung der Dachfläche.","link":"page://hszq0jbds0pwyq9x","img":["file://jjmdlq80pj9jnxzx"]},{"headline":"Fugensanierung","text":"Dauerhafte Fugensanierung – unkrauthemmend, wasserdurchlässig und hoch belastbar für Pflasterflächen.","link":"page://jc7qacvkqnupjkfc","img":["file://pmzlrmqbrp7criqc"]},{"headline":"Tartanbahnen \u2028Reinigung","text":"Spezialreinigung für Tartanbahnen – entfernt Schmutz und Ablagerungen, erhält Elastizität und Rutschfestigkeit.","link":"page://rjracnkg4r5xq52j","img":["file://ftmvyrcxhtfevwt2"]}],"button_contact_text":"Reinigung Anfragen","card1_headline":"Steinreinigung","card1_text":"Materialgerechte Hoch- und Heißwasserreinigung – entfernt Algen, Moos, Flechten und Grünbelag von Steinflächen.","card1_link":"page://twdhsmab5ebzesmn","card1_img":["file://7e9awhvbelkepxtk"],"card2_headline":"Dachreinigung","card2_text":"Schonende Dachreinigung – beseitigt Moos, Algen und Ablagerungen ohne Beschädigung der Dachfläche.","card2_link":"page://hszq0jbds0pwyq9x","card2_img":["file://jjmdlq80pj9jnxzx"],"card3_headline":"Fugensanierung","card3_text":"Dauerhafte Fugensanierung – unkrauthemmend, wasserdurchlässig und hoch belastbar für Pflasterflächen.","card3_link":"page://jc7qacvkqnupjkfc","card3_img":["file://pmzlrmqbrp7criqc"],"card4_headline":"Tartanbahnen \u2028Reinigung","card4_text":"Spezialreinigung für Tartanbahnen – entfernt Schmutz und Ablagerungen, erhält Elastizität und Rutschfestigkeit.","card4_link":"page://rjracnkg4r5xq52j","card4_img":["file://ftmvyrcxhtfevwt2"]},"id":"e21b621c-841f-45dd-a5df-3b47625661b0","isHidden":false,"type":"pic_text_cards"}]
 
 ----
 
-Button-contact-link: 
-
-----
-
-Poster: - file://7fksamwrtstck5d6
+Uuid: ae3jj85luqpukc3g

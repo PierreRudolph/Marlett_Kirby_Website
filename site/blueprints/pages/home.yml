@@ -15,7 +15,7 @@ sections:
       gap:
         width: 1/2
       headline_first_half:
-        label: Headline erste hälfte      
+        label: Headline erste hälfte
         type: text
         width: 1/2
       headline_second_half:
@@ -39,3 +39,15 @@ sections:
       video:
         label: Video
         type: files
+      meta_title:
+        label: Meta Titel
+        type: text
+      meta_description:
+        label: Meta Beschreibung
+        type: textarea
+        spellcheck: true
+      blocks:
+        type: blocks
+        label: Blocks
+        fieldsets:
+          - pic_text_cards
