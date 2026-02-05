@@ -5,9 +5,10 @@
     position: relative;
     padding: var(--section-padding-top) var(--main-padding-right) var(--section-padding-bottom) var(--main-padding-left);
     background: white;
+    z-index: -2;
 }
 
-.above-fold-wrapper {
+.blue-radient-bg {
     background: linear-gradient(180deg, #2163A0 0%, #00417A 100%);
 }
 
@@ -15,12 +16,14 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 .brick-layer-right {
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: -1;
 }
 
 .above-fold {
@@ -37,7 +40,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 48px;
-
 }
 
 .section-content {
@@ -79,4 +81,13 @@
     gap: 24px;
     white-space: nowrap;
     margin: 10px 0;
+}
+
+/*----ICON TEXT CARDS*/
+.icon-text-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    background-color: var(--color-font-white);
 }

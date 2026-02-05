@@ -1,6 +1,7 @@
 <?php snippet('header') ?>
-<div class="section-wrapper above-fold-wrapper">
-    <img src="<?= url("assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left">
+
+<div class="section-wrapper blue-radient-bg">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left">
     <section class="above-fold">
         <div class="section-content">
             <p class="subheadline"><?= $page->subheadline_first_half()->toHtml() ?><span
@@ -51,4 +52,7 @@
     <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">
 
 </div>
+
 <?= $page->blocks()->toBlocks() ?>
+
+<?php snippet('footer') ?>

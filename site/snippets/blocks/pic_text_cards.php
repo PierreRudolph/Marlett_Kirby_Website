@@ -1,4 +1,5 @@
 <div class="section-wrapper" id="<?= $block->section_id()->toHtml() ?>">
+
     <section class="section-gap48">
 
         <h2 class="headline headline-l color-font-blue services-headline">
@@ -7,6 +8,7 @@
                 <?= $block->headline_second_half()->toHtml() ?>
             </span>
         </h2>
+
         <div class="flex-row-gap20 grid-full flex-wrap">
             <?php foreach ($block->cards()->toStructure() as $card): ?>
                 <div class="flex-column">
@@ -22,19 +24,19 @@
                             <h3 class="headline headline-s color-font-blue"><?= $card->headline()->toHtml() ?></h3>
                             <p class="copy-text-smaller color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                         </div>
-                        <a href="<?= $card->link()->toUrl() ?>" class="link-text">Mehr erfahren <img
+                        <a href="<?= $card->link()->toUrl() ?>" class="link-text color-font-skyblue">Mehr erfahren <img
                                 src="<?= url('assets/icons/arrow_forward.svg') ?>"></a>
                     </div>
 
                 </div>
             <?php endforeach ?>
         </div>
+
         <div class="grid-full flex-middle">
             <a style="margin-bottom: 6px;" class="btn-pos btn-text" href="<?= url('contact') ?>">
                 <?= $block->button_contact_text()->toHtml() ?>
             </a>
         </div>
 
-</div>
-</section>
+    </section>
 </div>

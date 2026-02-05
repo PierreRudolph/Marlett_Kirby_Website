@@ -117,6 +117,10 @@ p {
     color: var(--color-font-white);
 }
 
+.color-font-skyblue {
+    color: var(--color-font-skyblue);
+}
+
 .headline {
     font-family: 'Exo 2';
     font-weight: 700;
@@ -180,7 +184,6 @@ p {
 }
 
 .link-text {
-    color: var(--color-font-skyblue);
     font-weight: 800;
     font-size: 18px;
     line-height: 28px;
@@ -288,10 +291,22 @@ p {
     gap: 20px;
 }
 
+.flex-row-gap24 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
 .flex-column-gap5 {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.flex-column-gap24 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .flex-middle {

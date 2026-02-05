@@ -51,3 +51,4 @@ sections:
         label: Blocks
         fieldsets:
           - pic_text_cards
+          - icon_text_cards
