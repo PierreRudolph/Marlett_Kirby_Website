@@ -1,7 +1,7 @@
 .section-wrapper {
     display: flex;
     justify-content: center;
-    max-height: 736px;
+    /* max-height: 736px; */
     position: relative;
     padding: var(--section-padding-top) var(--main-padding-right) var(--section-padding-bottom) var(--main-padding-left);
     background: white;

@@ -5,6 +5,7 @@
     --color-dark-blue: #003665;
     --color-blue: #00417A;
     --color-bg-lightgrey: #F2F6FA;
+    --color-font-skyblue: #4CA6E4;
     /*Desktop Font size*/
     --copy-text-small: 16px;
     --copy-text-big: 18px;
@@ -90,7 +91,9 @@ a {
     text-decoration: none;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     margin: 0;
 }
 
@@ -167,6 +170,24 @@ p {
     font-size: 16px;
     line-height: 31%;
     letter-spacing: 0%;
+}
+
+.copy-text-smaller {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.link-text {
+    color: var(--color-font-skyblue);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /*-----Buttons-----*/
@@ -255,6 +276,12 @@ p {
     gap: 15px;
 }
 
+.flex-column-gap17 {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
 .flex-row-gap20 {
     display: flex;
     align-items: center;
@@ -270,6 +297,15 @@ p {
 .flex-middle {
     display: flex;
     justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .grid-full {

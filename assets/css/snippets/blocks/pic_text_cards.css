@@ -3,6 +3,37 @@
     grid-column: span 7;
 }
 
+.pic-text-card-img {
+    width: 345px;
+    min-width: 345px;
+    height: 235px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-text-card-img img {
+    object-fit: contain;
+    position: relative;
+
+}
+
+.pic-text-card-img img:first-child {
+    transform: scale(0.7);
+}
+
+.pic-text-card-body {
+    background-color: var(--color-bg-lightgrey);
+    padding: 24px 32px 40px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 345px;
+    height: 275px;
+    box-sizing: border-box;
+}
+
 @media(max-width:800px) {
     .services-headline {
         min-width: unset;
