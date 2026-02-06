@@ -1,0 +1,60 @@
+title: Vergleichs Bilder
+name: pic_slider
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Headline
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+
+  # -------------------------------------------------
+  # LINK
+  # -------------------------------------------------
+  link_section:
+    label: Link
+    type: headline
+
+  link_about_us_text:
+    label: Link Text
+    type: text
+  link_about_us_url:
+    label: Link Url
+    type: link
+
+  # -------------------------------------------------
+  # COMPARSION PICS
+  # -------------------------------------------------
+
+  comparison_pics_text:
+    label: Vergleichs Bilder label
+    type: headline
+  comparison_pics_label_headline:
+    width: 1/2
+    label: label headline
+    type: text
+  comparison_pics_label_text:
+    width: 1/2
+    label: label text
+    type: text
+
+  blocks:
+    type: blocks
+    label: Galerie erstellen
+    fieldsets:
+      - comparison_img

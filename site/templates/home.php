@@ -49,7 +49,7 @@
             <?php endforeach ?>
         </div>
     </section>
-    <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">
 
 </div>
 

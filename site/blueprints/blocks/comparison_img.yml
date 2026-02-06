@@ -1,0 +1,36 @@
+name: Zwei Bilder
+icon: images
+preview: false
+
+fields:
+  images:
+    label: Bilder
+    type: files
+    query: model.images
+    multiple: true
+    max: 2
+    layout: cards
+    uploads:
+      template: blocks/image
+
+  comp_pic_one:
+    label: Alt Text Bild 1
+    type: text
+
+  alt2:
+    label: Alt Text Bild 2
+    type: text
+
+  ratio:
+    label: Seitenverhältnis
+    type: select
+    placeholder: Auto
+    options:
+      auto: Auto
+      1/1: "1:1"
+      16/9: "16:9"
+      4/3: "4:3"
+
+  crop:
+    label: Zuschneiden
+    type: toggle

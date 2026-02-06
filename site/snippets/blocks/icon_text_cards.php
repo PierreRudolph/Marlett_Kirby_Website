@@ -11,12 +11,10 @@
                 </span>
             </h2>
 
-            <div>
-                <a class="link-text color-font-skyblue" href="<?= $block->link_about_us_url()->toUrl() ?>">
-                    <?= $block->link_about_us_text()->toHtml() ?>
-                </a>
+            <a class="link-text flex-row-gap5 color-font-white" href="<?= $block->link_about_us_url()->toUrl() ?>">
+                <?= $block->link_about_us_text()->toHtml() ?>
                 <img src="<?= url('assets/icons/arrow_forward.svg') ?>">
-            </div>
+            </a>
         </div>
 
 
@@ -25,12 +23,14 @@
                 <div class="icon-text-card">
 
                     <?php if ($image = $card->img()->toFile()): ?>
-                        <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                        <div class="icon-text-card-img">
+                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                        </div>
                     <?php endif ?>
 
-                    <div class="icon-text-card-body">
-                        <h4 class="headline headline-s color-font-blue"><?= $card->headline()->toHtml() ?></h4>
-                        <p class="copy-text-smaller color-font-darkblue"><?= $card->text()->toHtml() ?></p>
+                    <div class="overflow-hidden">
+                        <h4 class="text-headline color-font-darkblue"><?= $card->headline()->toHtml() ?></h4>
+                        <p class="text-regular color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                     </div>
 
                 </div>

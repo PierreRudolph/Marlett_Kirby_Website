@@ -1,7 +1,6 @@
 <div class="section-wrapper" id="<?= $block->section_id()->toHtml() ?>">
 
     <section class="section-gap48">
-
         <h2 class="headline headline-l color-font-blue services-headline">
             <?= $block->headline_first_half()->toHtml() ?><span style="margin-left: 18px;"
                 class="headline headline-l color-font-lighterblue">
@@ -9,9 +8,10 @@
             </span>
         </h2>
 
+
         <div class="flex-row-gap20 grid-full flex-wrap">
             <?php foreach ($block->cards()->toStructure() as $card): ?>
-                <div class="flex-column">
+                <div class="pic-text-card flex-column">
 
                     <?php if ($image = $card->img()->toFile()): ?>
                         <div class="pic-text-card-img">
@@ -24,8 +24,11 @@
                             <h3 class="headline headline-s color-font-blue"><?= $card->headline()->toHtml() ?></h3>
                             <p class="copy-text-smaller color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                         </div>
-                        <a href="<?= $card->link()->toUrl() ?>" class="link-text color-font-skyblue">Mehr erfahren <img
-                                src="<?= url('assets/icons/arrow_forward.svg') ?>"></a>
+                        <a href="<?= $card->link()->toUrl() ?>" class="flex-row-gap5 link-text color-font-skyblue">Mehr
+                            erfahren <img src="<?= url('assets/icons/arrow_forward.svg') ?>">
+                        </a>
+                        <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>"
+                            class="brick-layer-right card-brick-layer">
                     </div>
 
                 </div>
