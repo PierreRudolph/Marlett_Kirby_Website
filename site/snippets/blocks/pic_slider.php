@@ -1,44 +1,56 @@
 <div class="section-wrapper" id="<?= $block->section_id()->toHtml() ?>">
 
-    <section class="section-gap48">
+    <section class="section-gap48 overflow-visible">
 
-        <div class="flex-column-gap24">
-            <h2 class="headline headline-l color-font-white reasons-headline">
-                <?= $block->headline_first_half()->toHtml() ?><span style="margin-left: 18px;"
-                    class="headline headline-l color-font-lighterblue">
+        <div class="flex-column-gap24 grid-middle">
+            <h2 class="headline headline-l color-font-darkblue-alt reasons-headline">
+                <?= $block->headline_first_half()->toHtml() ?><br>
+                <span class="headline headline-l color-font-lighterblue">
                     <?= $block->headline_second_half()->toHtml() ?>
                 </span>
             </h2>
 
-            <a class="link-text flex-row-gap5 color-font-white" href="<?= $block->link_about_us_url()->toUrl() ?>">
+            <a class="link-text flex-row-gap5 color-font-blue" href="<?= $block->link_about_us_url()->toUrl() ?>">
                 <?= $block->link_about_us_text()->toHtml() ?>
                 <img src="<?= url('assets/icons/arrow_forward.svg') ?>">
             </a>
         </div>
 
+        <div class="grid-full">
+            <div style="transform: translateX(0);" id="comp-pic-wrapper"
+                class="comparison-pics-wrapper flex-row-gap20 ">
+                <?= $block->blocks()->toBlocks() ?>
+            </div>
+            <div>
+                <div class="flex-row-between">
+                    <div class="flex-row-gap10">
+                        <span id="blue-dot-1" class="blue-dot-inactive blue-dot-active"></span>
+                        <span id="blue-dot-2" class="blue-dot-inactive"></span>
+                        <span id="blue-dot-3" class="blue-dot-inactive"></span>
+                        <span id="blue-dot-4" class="blue-dot-inactive"></span>
+                        <span id="blue-dot-5" class="blue-dot-inactive"></span>
+                        <span id="blue-dot-6" class="blue-dot-inactive"></span>
+                        <span id="blue-dot-7" class="blue-dot-inactive"></span>
+                    </div>
 
-        <div class="flex-row-gap20 grid-full">
-            <?php foreach ($block->comparison_pics()->toStructure() as $comparisonPic): ?>
-                <div class="comparison-pic">
 
-                    <?php if ($image = $comparisonPic->comparison_pic_first->img()->toFile()): ?>
-                        <div class="comparison-pic-one">
-                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
-                        </div>
-                    <?php endif ?>
-
-                    <?php if ($image = $comparisonPic->comparison_pic_second->img()->toFile()): ?>
-                        <div class="comparison-pic-two">
-                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
-                        </div>
-                    <?php endif ?>
-
-
+                    <div class="flex-row-gap20">
+                        <button onclick="slidePicsBackward()"><img
+                                src="<?= url('assets/icons/arrow_left.svg') ?>"></button>
+                        <button onclick="slidePicsForward()"><img
+                                src="<?= url('assets/icons/arrow_right.svg') ?>"></button>
+                    </div>
                 </div>
-            <?php endforeach ?>
+            </div>
         </div>
-        <?= $block->blocks()->toBlocks() ?>
 
+
+        <div class="flex-column grid-full">
+            <h4 class="label-alt-headline color-font-darkblue-alt2">
+                <?= $block->comparison_pics_label_headline()->toHtml() ?>
+            </h4>
+            <p class="label-alt-text color-font-darkblue-alt2"><?= $block->comparison_pics_label_text()->toHtml() ?></p>
+        </div>
     </section>
 
 </div>

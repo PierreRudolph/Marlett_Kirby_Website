@@ -1,35 +1,26 @@
 <?php
-
-/** @var \Kirby\Cms\Block $block */
-$alt = $block->alt();
-$caption = $block->caption();
-$crop = $block->crop()->isTrue();
-$link = $block->link();
+$images = $block->images()->toFiles();
 $ratio = $block->ratio()->or('auto');
-$src = null;
-
-if ($block->location() == 'web') {
-    $src = $block->src()->esc();
-} elseif ($image = $block->image()->toFile()) {
-    $alt = $alt->or($image->alt());
-    $src = $image->url();
-}
-
+$crop = $block->crop()->isTrue();
 ?>
-<?php if ($src): ?>
-    <figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?>>
-        <?php if ($link->isNotEmpty()): ?>
-            <a href="<?= Str::esc($link->toUrl()) ?>">
-                <img src="<?= $src ?>" alt="<?= $alt->esc() ?>">
-            </a>
-        <?php else: ?>
-            <img src="<?= $src ?>" alt="<?= $alt->esc() ?>">
-        <?php endif ?>
 
-        <?php if ($caption->isNotEmpty()): ?>
-            <figcaption>
-                <?= $caption ?>
-            </figcaption>
-        <?php endif ?>
-        </figure>
-    <?php endif ?>
+
+<?php if ($images->count()): ?>
+    <figure class="comparison-pics" data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
+
+        <?php foreach ($images as $index => $image): ?>
+
+            <div class="comparison-pic-<?= (int) $index + 1 ?>">
+                <?php
+
+
+                $thumb = $image->crop(172, 440);
+
+                ?>
+                <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+
+            </div>
+        <?php endforeach ?>
+
+    </figure>
+<?php endif ?>

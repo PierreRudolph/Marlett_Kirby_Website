@@ -4,6 +4,8 @@
     --color-lighter-blue: #a3d9ff;
     --color-dark-blue: #003665;
     --color-blue: #00417A;
+    --color-font-darkblue-alt: #084A82;
+    --color-font-darkblue-alt2: #003665;
     --color-bg-lightgrey: #F2F6FA;
     --color-font-skyblue: #4CA6E4;
     /*Desktop Font size*/
@@ -56,6 +58,7 @@ html {
     font-family: 'Manrope', 'Arial';
     font-size: 14px;
     font-weight: 500;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -102,6 +105,10 @@ p {
     margin: 0;
 }
 
+figure {
+    margin: 0;
+}
+
 .color-font-blue {
     color: var(--color-blue);
 }
@@ -112,6 +119,14 @@ p {
 
 .color-font-darkblue {
     color: var(--color-dark-blue);
+}
+
+.color-font-darkblue-alt {
+    color: var(--color-font-darkblue-alt);
+}
+
+.color-font-darkblue-alt2 {
+    color: var(--color-font-darkblue-alt2);
 }
 
 .color-font-white {
@@ -161,6 +176,20 @@ p {
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0%;
+}
+
+.label-alt-headline {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.25px;
+}
+
+.label-alt-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.25px;
 }
 
 .text-regular {
@@ -293,10 +322,20 @@ p {
     overflow: hidden;
 }
 
+.overflow-visible {
+    overflow: visible !important;
+}
+
 .flex-row-gap5 {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.flex-row-gap10 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .flex-row-gap15 {
@@ -333,6 +372,11 @@ p {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.flex-row-between {
+    display: flex;
+    justify-content: space-between;
 }
 
 .flex-middle {

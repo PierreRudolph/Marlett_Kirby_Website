@@ -1,6 +1,6 @@
-name: Zwei Bilder
+name: comparison_img
 icon: images
-preview: false
+preview: fields
 
 fields:
   images:
@@ -12,14 +12,6 @@ fields:
     layout: cards
     uploads:
       template: blocks/image
-
-  comp_pic_one:
-    label: Alt Text Bild 1
-    type: text
-
-  alt2:
-    label: Alt Text Bild 2
-    type: text
 
   ratio:
     label: Seitenverhältnis

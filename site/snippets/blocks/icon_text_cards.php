@@ -5,8 +5,9 @@
 
         <div class="flex-column-gap24">
             <h2 class="headline headline-l color-font-white reasons-headline">
-                <?= $block->headline_first_half()->toHtml() ?><span style="margin-left: 18px;"
-                    class="headline headline-l color-font-lighterblue">
+                <?= $block->headline_first_half()->toHtml() ?>
+                <br>
+                <span class="headline headline-l color-font-lighterblue">
                     <?= $block->headline_second_half()->toHtml() ?>
                 </span>
             </h2>

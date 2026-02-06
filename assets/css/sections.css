@@ -185,20 +185,40 @@ section {
 /*-----PIC TEXT CARDS END----*/
 
 /*---PIC SLIDER---*/
-.comparison-pic {
+.comparison-pics-wrapper {
+    /* transition: transform 225ms ease-in-out; */
+      transition: transform 400ms cubic-bezier(0.65, 0, 0.35, 1);
+    /* overflow-x: auto;
+    scroll-snap-type: x mandatory; */
+}
+
+.comparison-pics {
+    scroll-snap-align: left;
     display: flex;
     align-items: center;
     gap: 2px;
 }
 
-.comparison-pic-one {
-    height: 173px;
-    width: 440px;
+.comparison-pic-1 {
+    width: 173px;
+    height: 440px;
 }
 
-.comparison-pic-two {
-    height: 173px;
-    width: 440px;
+.comparison-pic-2 {
+    width: 173px;
+    height: 440px;
+}
+
+.blue-dot-inactive {
+    display: flex;
+    height: 10px;
+    width: 10px;
+    background-color: var(--color-lighter-blue);
+    border-radius: 30px;
+}
+
+.blue-dot-active {
+    background-color: var(--color-blue);
 }
 
 /*---PIC SLIDER END---*/
