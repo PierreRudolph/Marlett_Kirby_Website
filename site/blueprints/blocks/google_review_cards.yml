@@ -1,0 +1,47 @@
+title: Google Review Karten
+name: google_review_cards
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Headline
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+
+  cards_section:
+    label: Review Karten
+    type: headline
+  cards:
+    label: Google-Reivew-karten erstellen
+    type: structure
+    max: 7
+    columns:
+      headline: Google Review Karte
+      text: Text
+    fields:
+      text:
+        label: Text
+        type: textarea
+        size: small
+      username:
+        label: Nutzername
+        type: text

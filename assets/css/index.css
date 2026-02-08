@@ -109,6 +109,14 @@ figure {
     margin: 0;
 }
 
+button {
+    border: none;
+}
+
+button:hover {
+    border: none;
+}
+
 .color-font-blue {
     color: var(--color-blue);
 }
@@ -203,6 +211,13 @@ figure {
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
+    letter-spacing: 0%;
+}
+
+.label-big {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: 0%;
 }
 
@@ -362,16 +377,34 @@ figure {
     gap: 17px;
 }
 
+.flex-row-start-gap20 {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 .flex-column-gap5 {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
+.flex-column-gap20 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .flex-column-gap24 {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.flex-column-gap32 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .flex-row-between {
