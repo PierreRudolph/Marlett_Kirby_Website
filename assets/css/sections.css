@@ -43,6 +43,14 @@
     gap: 48px;
 }
 
+.section-gap80 {
+    overflow: hidden;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 80px;
+}
+
 section {
     z-index: 1;
 }
@@ -51,6 +59,13 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    grid-column: span 6;
+}
+
+.section-content-gap56 {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
     grid-column: span 6;
 }
 
@@ -254,6 +269,19 @@ section {
 }
 
 /* GOOGLE REVIEW CARD END */
+
+@media(max-width:1200px) {
+    .above-fold {}
+
+    .section-content,
+    .section-content-gap56 {
+        grid-column: span 12;
+    }
+
+    .mobile-grid-reverse {
+        order: 1;
+    }
+}
 
 @media(max-width:800px) {
     .services-headline {

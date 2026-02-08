@@ -1,5 +1,5 @@
 :root {
-    --color-bg-white:#ffffff;
+    --color-bg-white: #ffffff;
     --color-font-white: #ffffff;
     --color-font-blue: #00417A;
     --color-lighter-blue: #a3d9ff;
@@ -372,6 +372,12 @@ button:hover {
     gap: 24px;
 }
 
+.flex-row-gap106 {
+    display: flex;
+    align-items: center;
+    gap: 106px;
+}
+
 .flex-column-gap17 {
     display: flex;
     flex-direction: column;
@@ -406,6 +412,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.flex-column-gap40 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .flex-row-between {

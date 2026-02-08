@@ -1,0 +1,52 @@
+title: Zertifizierter Fachbetrieb
+name: certified
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Sektion
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+  text:
+    label: Text
+    type: textarea
+    size: small
+  img:
+    label: Bild
+    type: files
+    mulitple: false
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+  images:
+    label: Icons
+    type: structure
+    max: 3
+    preview: true
+    columns:
+      headline: Headline
+      text: Text
+    fields:
+      img:
+        label: Icon
+        type: files
+        mulitple: false
+      link:
+        label: Link
+        type: link
