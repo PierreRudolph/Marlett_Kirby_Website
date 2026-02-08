@@ -1,43 +1,80 @@
-let scrollPosition = 0;
-let dotPos = 1;
+let scrollPositionPics = 0;
+let scrollPositionReviews = 0;
+let dotPosPics = 1;
+let dotPosReviews = 1;
+
 
 function slidePicsForward() {
     let picDiv = document.getElementById('comp-pic-wrapper');
-    if (scrollPosition <= -2208)
+    if (scrollPositionPics <= -2208)
         return;
-
-    deactivateLastDot();
-    dotPos++;
-    scrollPosition = scrollPosition - 368;
-    picDiv.style = `transform: translateX(${scrollPosition}px);`;
-    deactivateLastDot(dotPos - 1);
-    activateNewDot();
-
-
-    console.log(scrollPosition);
+    deactivateLastDot('pic');
+    dotPosPics++;
+    scrollPositionPics = scrollPositionPics - 368;
+    picDiv.style = `transform: translateX(${scrollPositionPics}px);`;
+    activateNewDot('pic');
 }
+
+
+function slideReviewsForward() {
+    let reviewDiv = document.getElementById('gog-rev-wrapper');
+    if (scrollPositionReviews <= -3498)
+        return;
+    deactivateLastDot('rev');
+    dotPosReviews++;
+    scrollPositionReviews = scrollPositionReviews - 583;
+    reviewDiv.style = `transform: translateX(${scrollPositionReviews}px);`;
+    activateNewDot('rev');
+}
+
+
+function slideReviewsBackward() {
+    let reviewDiv = document.getElementById('gog-rev-wrapper');
+    if (scrollPositionReviews >= 0)
+        return;
+    deactivateLastDot('rev');
+    dotPosReviews--;
+    scrollPositionReviews = scrollPositionReviews + 583;
+    reviewDiv.style = `transform: translateX(${scrollPositionReviews}px);`;
+    activateNewDot('rev');
+}
+
 
 function slidePicsBackward() {
     let picDiv = document.getElementById('comp-pic-wrapper');
-    if (scrollPosition >= 0)
+    if (scrollPositionPics >= 0)
         return;
-
-    deactivateLastDot();
-    dotPos--;
-    scrollPosition = scrollPosition + 368;
-    picDiv.style = `transform: translateX(${scrollPosition}px);`;
-    activateNewDot();
-
-    console.log(scrollPosition);
-
+    deactivateLastDot('pic');
+    dotPosPics--;
+    scrollPositionPics = scrollPositionPics + 368;
+    picDiv.style = `transform: translateX(${scrollPositionPics}px);`;
+    activateNewDot('pic');
 }
 
-function activateNewDot() {
-    let dot = document.getElementById(`blue-dot-${dotPos}`);
-    dot.classList.add('blue-dot-active');
+
+function activateNewDot(gogOrRev) {
+    if (gogOrRev == 'pic') {
+        let dot = document.getElementById(`blue-dot-${dotPosPics}`);
+        dot.classList.add('blue-dot-active');
+        return;
+    }
+
+    if (gogOrRev == 'rev') {
+        let dot = document.getElementById(`blue-dot-rev-${dotPosReviews}`);
+        dot.classList.add('blue-dot-active');
+    }
 }
 
-function deactivateLastDot() {
-    let dot = document.getElementById(`blue-dot-${dotPos}`);
-    dot.classList.remove('blue-dot-active');
+
+function deactivateLastDot(gogOrRev) {
+    if (gogOrRev == 'pic') {
+        let dot = document.getElementById(`blue-dot-${dotPosPics}`);
+        dot.classList.remove('blue-dot-active');
+        return;
+    }
+
+    if (gogOrRev == 'rev') {
+        let dot = document.getElementById(`blue-dot-rev-${dotPosReviews}`);
+        dot.classList.remove('blue-dot-active');
+    }
 }

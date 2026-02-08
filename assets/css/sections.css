@@ -11,6 +11,10 @@
     background: linear-gradient(180deg, #2163A0 0%, #00417A 100%);
 }
 
+.lightgrey-bg {
+    background-color: var(--color-bg-lightgrey);
+}
+
 .brick-layer-left {
     position: absolute;
     top: 0;
@@ -208,6 +212,7 @@ section {
 }
 
 .blue-dot-inactive {
+    z-index: 1;
     display: flex;
     height: 10px;
     width: 10px;
@@ -220,6 +225,7 @@ section {
 }
 
 .btn-slide {
+    z-index: 1;
     display: flex;
     cursor: pointer;
     padding: 16px;
@@ -231,11 +237,20 @@ section {
 
 /* GOOGLE REVIEW CARD */
 .google-review-card {
-    width: 536px;
-    max-height: 381px;
-    min-width: 536px;
+    z-index: 1;
+    background-color: var(--color-bg-white);
+    box-sizing: border-box;
+    width: 563px;
+    /* max-height: 381px; */
+    min-width: 563px;
     padding: 40px;
     box-shadow: 0px 4px 14px 0px #1F588A29;
+}
+
+.brick-layer-right-reviews {
+    position: absolute;
+    bottom: 58px;
+    right: 0;
 }
 
 /* GOOGLE REVIEW CARD END */
