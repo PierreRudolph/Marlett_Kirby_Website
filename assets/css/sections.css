@@ -12,7 +12,7 @@
 }
 
 .lightgrey-bg {
-    background-color: var(--color-bg-lightgrey);
+    background-color: var(--color-bg-lightgrey) !important;
 }
 
 .brick-layer-left {

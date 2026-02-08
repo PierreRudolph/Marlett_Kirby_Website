@@ -1,0 +1,65 @@
+title: Vorteile
+name: advantages
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Headline
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+
+  cards_section:
+    label: Karten
+    type: headline
+  cards:
+    label: Icon-karten erstellen
+    type: structure
+    max: 4
+    columns:
+      headline: Headline
+      text: Text
+    fields:
+      img:
+        label: Icon
+        type: files
+        mulitple: false
+      headline:
+        label: Headline Karte
+        type: text
+      text:
+        label: Text
+        type: textarea
+        size: small
+
+  # -------------------------------------------------
+  # BUTTON
+  # -------------------------------------------------
+  button:
+    label: Button
+    type: headline
+
+  button_contact_text:
+    label: Button-Text
+    type: text
+  button_contact_link:
+    label: Button-Link
+    type: link
