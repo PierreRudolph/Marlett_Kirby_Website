@@ -69,6 +69,13 @@ section {
     grid-column: span 6;
 }
 
+.section-content-gap32 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    grid-column: span 6;
+}
+
 .section-video {
     width: 120%;
 }
@@ -269,6 +276,24 @@ section {
 }
 
 /* GOOGLE REVIEW CARD END */
+
+/* CONTACT SECTION */
+.contact-option {
+    padding: 12px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.icon-blue-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #005096;
+}
+
+/* CONTACT SECTION END*/
 
 @media(max-width:1200px) {
     .above-fold {}

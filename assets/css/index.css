@@ -118,6 +118,11 @@ button:hover {
     border: none;
 }
 
+.honeypot {
+    position: absolute;
+    left: -9999px;
+}
+
 .color-font-blue {
     color: var(--color-blue);
 }
@@ -394,6 +399,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.flex-column-gap12 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .flex-column-gap20 {

@@ -52,7 +52,6 @@
     <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">
 
 </div>
-
 <?= $page->blocks()->toBlocks() ?>
 
-<?php snippet('footer') ?>
+<?php snippet(name: 'footer') ?>

@@ -1,0 +1,78 @@
+title: Kontakt
+name: contact_section
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Sektion
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  form_headline:
+    label: Kontaktform headline
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+
+  text:
+    label: Text
+    type: textarea
+    size: small
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+  contact_options:
+    label: Kontaktmöglichkeiten
+    type: structure
+    max: 6
+    preview: true
+    columns:
+      headline: Headline
+      text: Text
+    fields:
+      img:
+        label: Icon
+        type: files
+        multiple: false
+      category:
+        type: select
+        options:
+          - email
+          - phone
+          - whatsapp
+      mail:
+        label: Email
+        type: email
+        autocomplete: true
+        validate: email
+        when:
+          category: email
+      phone:
+        label: Telefonnummer
+        type: tel
+        when:
+          category: phone
+      whatsapp_tel:
+        label: WhatsApp Tel. (mit Ländervorwahl, ohne +, ohne Leerzeichen)
+        type: tel
+        when:
+          category: whatsapp
+      whatsapp_text:
+        label: Link text
+        type: text
+        when:
+          category: whatsapp
