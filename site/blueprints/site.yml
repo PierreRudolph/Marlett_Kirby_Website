@@ -1,5 +1,43 @@
 title: Site
 
-sections:
+tabs:
   pages:
-    type: pages
+    label: Seiten
+    icon: page
+    sections:
+      pages:
+        type: pages
+
+  settings:
+    label: Einstellungen
+    icon: cog
+    sections:
+      global:
+        type: fields
+        fields:
+          global_mail:
+            label: E-Mail
+            type: email
+            required: true
+            placeholder: info@domain.de
+
+          phone:
+            label: Telefon
+            type: tel
+            placeholder: "+49 123 456789"
+
+          address:
+            label: Adresse
+            type: textarea
+            size: small
+
+          social:
+            label: Social Media
+            type: structure
+            fields:
+              platform:
+                label: Plattform
+                type: text
+              url:
+                label: URL
+                type: url
