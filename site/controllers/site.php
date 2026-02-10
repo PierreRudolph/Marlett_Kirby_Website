@@ -19,7 +19,8 @@ return function ($kirby, $pages, $page, $site) {
             'city' => get('city'),
             'email' => get('email'),
             'phone' => get('phone'),
-            'text' => get('text')
+            'text' => get('text'),
+            'privacy' => get('privacy')
         ];
 
         // Validation rules
@@ -32,6 +33,7 @@ return function ($kirby, $pages, $page, $site) {
             'email' => ['email'], // optional
             'phone' => ['required', 'regex' => '/^\+?[0-9\s\-]+$/'],
             'text' => ['required', 'minLength' => 3, 'maxLength' => 3000],
+            'privacy' => ['required']
         ];
 
         // Validation messages
@@ -41,7 +43,9 @@ return function ($kirby, $pages, $page, $site) {
             'zip-code' => 'Bitte gültige Postleitzahl eingeben',
             'city' => 'Bitte gültigen Ort eingeben',
             'email' => 'Bitte gültige Email-Adresse eingeben',
-            'text' => 'Text muss zwischen 3 und 3000 Zeichen lang sein'
+            'phone' => 'Bitte gültige Telefonnummer eingeben',
+            'text' => 'Text muss zwischen 3 und 3000 Zeichen lang sein',
+            'privacy' => 'Bitte die Datenschutzbestimmungen akzeptieren'
         ];
 
         // some of the data is invalid

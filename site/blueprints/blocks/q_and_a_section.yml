@@ -1,0 +1,64 @@
+title: Q&A Sektion
+name: q_and_a_section
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Sektion
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+  text:
+    label: Text
+    type: textarea
+    size: small
+
+  # -------------------------------------------------
+  # BUTTON
+  # -------------------------------------------------
+  button:
+    label: Button
+    type: headline
+
+  button_contact_text:
+    label: Button-Text
+    type: text
+  button_contact_link:
+    label: Button-Link
+    type: link
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+  q_and_a_collection:
+    label: Fragen und Antworten
+    type: structure
+    max: 6
+    preview: fields
+    columns:
+      headline: Headline
+      text: Text
+    fields:
+      question:
+        label: Frage
+        type: textarea
+        size: small
+        mulitple: false
+      answer:
+        label: Antwort
+        type: textarea
+        size: medium

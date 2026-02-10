@@ -51,6 +51,14 @@
     gap: 80px;
 }
 
+.section-gap100 {
+    overflow: hidden;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 100px;
+}
+
 section {
     z-index: 1;
 }
@@ -73,6 +81,13 @@ section {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    grid-column: span 6;
+}
+
+.section-content-gap20 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     grid-column: span 6;
 }
 
@@ -278,6 +293,10 @@ section {
 /* GOOGLE REVIEW CARD END */
 
 /* CONTACT SECTION */
+.contact-form {
+    padding: 40px;
+}
+
 .contact-option {
     padding: 12px;
     width: 100%;
@@ -293,7 +312,122 @@ section {
     background-color: #005096;
 }
 
+select {
+    appearance: none;
+    /* Für moderne Browser */
+    -webkit-appearance: none;
+    /* Für Chrome/Safari */
+    -moz-appearance: none;
+    /* Für Firefox */
+}
+
+select:open {
+    background-image: url('../icons/arrow_up.svg');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center right 19px;
+    font-size: 18px;
+
+    /* background-color: blue; */
+    appearance: none;
+    /* Für moderne Browser */
+    -webkit-appearance: none;
+    /* Für Chrome/Safari */
+    -moz-appearance: none;
+    /* Für Firefox */
+}
+
+.services-dropdown {
+    background-image: url('../icons/icon_arrow_down.svg');
+    background-repeat: no-repeat;
+    background-position: center right 19px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 19px;
+    background-color: #FFFFFF;
+    border: 1px solid #BAC9D6;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.services-dropdown:after {
+    content: unset;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    margin-top: 2px;
+    color: var(--color-dark-blue);
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 0%;
+}
+
+.field input {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 0%;
+    padding-top: 6px;
+    padding-right: 19px;
+    padding-bottom: 6px;
+    padding-left: 19px;
+    border: 1px solid #BAC9D6;
+    background-color: #FFFFFF;
+    color: var(--color-font-darkblue-alt2);
+}
+
+.field input:focus {
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 0px 3px #4CA6E4;
+}
+
+.field input::placeholder,
+textarea::placeholder {
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #8D95A5;
+}
+
+.field textarea {
+    height: 174px;
+    padding-top: 16px;
+    padding-right: 19px;
+    padding-bottom: 16px;
+    padding-left: 19px;
+    border: 1px solid #BAC9D6;
+    background: #FFFFFF;
+}
+
+.field textarea::placeholder {
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #8D95A5;
+}
+
 /* CONTACT SECTION END*/
+
+/* Q&A SECTION */
+.btn-accordion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background: var(--color-bg-white);
+    box-shadow: 0px 4px 14px 0px #1F588A29;
+}
+
+.btn-text{
+    
+}
+
+/* Q&A SECTION END */
 
 @media(max-width:1200px) {
     .above-fold {}

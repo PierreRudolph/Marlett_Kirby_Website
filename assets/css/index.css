@@ -7,6 +7,7 @@
     --color-blue: #00417A;
     --color-font-darkblue-alt: #084A82;
     --color-font-darkblue-alt2: #003665;
+    --color-font-darkblue-alt3: #005096;
     --color-bg-lightgrey: #F2F6FA;
     --color-font-skyblue: #4CA6E4;
     /*Desktop Font size*/
@@ -156,6 +157,10 @@ input[type=number] {
     color: var(--color-font-darkblue-alt2);
 }
 
+.color-font-darkblue-alt3 {
+    color: var(--color-font-darkblue-alt3);
+}
+
 .color-font-white {
     color: var(--color-font-white);
 }
@@ -209,20 +214,25 @@ input[type=number] {
     font-weight: 700;
     font-size: 20px;
     line-height: 130%;
-    letter-spacing: -0.25px;
 }
 
 .label-alt-text {
     font-weight: 400;
     font-size: 20px;
     line-height: 130%;
-    letter-spacing: -0.25px;
 }
 
 .text-regular {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.text-regular500 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
     letter-spacing: 0%;
 }
 
@@ -271,6 +281,8 @@ input[type=number] {
 /*-----Buttons-----*/
 /*Button Positiv*/
 .btn-pos {
+    cursor: pointer;
+    width: fit-content;
     transition: background-color, box-shadow, var(--btn-transition);
     color: var(--btn-pos-text-color);
     padding: 8px 36px;
@@ -289,6 +301,7 @@ input[type=number] {
 
 /*Button Positiv Outlined*/
 .btn-pos-outlined {
+    cursor: pointer;
     transition: background-color, box-shadow, var(--btn-transition);
     color: var(--btn-pos-outlined-text-color);
     border: 1px solid var(--btn-pos-outlined-border-color);
@@ -305,6 +318,7 @@ input[type=number] {
 
 /*Button Negativ*/
 .btn-neg {
+    cursor: pointer;
     transition: background-color, box-shadow, var(--btn-transition);
     color: var(--btn-neg-text-color);
     padding: 8px 36px;
@@ -330,6 +344,7 @@ input[type=number] {
 
 /*Button Negativ Outlined*/
 .btn-neg-outlined {
+    cursor: pointer;
     transition: background-color, box-shadow, var(--btn-transition);
     color: var(--btn-neg-outlined-text-color);
     /* background-color: var(--btn-neg-outlined-bg-color); */
@@ -461,6 +476,16 @@ input[type=number] {
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.grid-column-gap20 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-span1 {
+    grid-column: span 1;
 }
 
 .grid-full {
