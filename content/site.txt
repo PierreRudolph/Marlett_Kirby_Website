@@ -2,11 +2,83 @@ Title: Marlett
 
 ----
 
-Global-mail: mail@marlett.de
+Street: Horberstr.
 
 ----
 
-Phone: 
+House-number: 49
+
+----
+
+Zip: 71083
+
+----
+
+City: Herrenbeg
+
+----
+
+Phone: 0176 411 658 24
+
+----
+
+Whatsapp: 070323752009
+
+----
+
+Email: mail@marlett.de
+
+----
+
+Social-links:
+
+- 
+  icon:
+    - file://spcvs70pjplikkeb
+  text: Instagram
+  link: ""
+- 
+  icon:
+    - file://nvrbfkrepml92ejp
+  text: Facebook
+  link: ""
+- 
+  icon:
+    - file://5pfctethtzflhilo
+  text: Tiktok
+  link: ""
+
+----
+
+Show-service-areas: true
+
+----
+
+Service-areas: Herrenberg, Horgau, Augsburg, Stuttgart, Landshut
+
+----
+
+Instagram: 
+
+----
+
+Facebook: 
+
+----
+
+Tiktok: 
+
+----
+
+State: 
+
+----
+
+Country: 
+
+----
+
+Global-mail: mail@marlett.de
 
 ----
 

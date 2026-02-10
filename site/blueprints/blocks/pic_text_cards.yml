@@ -66,4 +66,4 @@ fields:
     type: text
   button_contact_link:
     label: Button-Link
-    type: text
+    type: link

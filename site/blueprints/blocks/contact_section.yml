@@ -41,8 +41,12 @@ fields:
     max: 6
     preview: true
     columns:
-      headline: Headline
-      text: Text
+      img:
+        label: Icon
+        width: 1/2
+      category:
+        label: Kategorie
+        width: 1/2
     fields:
       img:
         label: Icon

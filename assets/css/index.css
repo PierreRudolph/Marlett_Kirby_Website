@@ -3,6 +3,7 @@
     --color-font-white: #ffffff;
     --color-font-blue: #00417A;
     --color-lighter-blue: #a3d9ff;
+    --color-font-lightblue-alt: #A3D9FF;
     --color-dark-blue: #003665;
     --color-blue: #00417A;
     --color-font-darkblue-alt: #084A82;
@@ -99,12 +100,15 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     margin: 0;
 }
 
 p {
+    min-height: 20px;
     margin: 0;
+    line-height: 22px !important;
 }
 
 figure {
@@ -143,6 +147,10 @@ input[type=number] {
 
 .color-font-lighterblue {
     color: var(--color-lighter-blue);
+}
+
+.color-font-lightblue-alt {
+    color: var(--color-font-lightblue-alt);
 }
 
 .color-font-darkblue {
@@ -258,9 +266,9 @@ input[type=number] {
 }
 
 .copy-text-small {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
-    line-height: 31%;
+    line-height: 80%;
     letter-spacing: 0%;
 }
 
@@ -375,6 +383,18 @@ input[type=number] {
     overflow: visible !important;
 }
 
+.flex-row-start-gap12 {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.flex-row-start-gap20 {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 .flex-row-gap5 {
     display: flex;
     align-items: center;
@@ -385,6 +405,12 @@ input[type=number] {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.flex-row-gap12 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .flex-row-gap15 {
@@ -415,12 +441,6 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     gap: 17px;
-}
-
-.flex-row-start-gap20 {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
 }
 
 .flex-column-gap5 {
@@ -484,8 +504,18 @@ input[type=number] {
     gap: 20px;
 }
 
+.grid-column-gap40 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+}
+
 .grid-span1 {
     grid-column: span 1;
+}
+
+.grid-span2 {
+    grid-column: span 2;
 }
 
 .grid-full {

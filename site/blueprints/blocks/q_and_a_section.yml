@@ -45,13 +45,17 @@ fields:
   # CARDS
   # -------------------------------------------------
   q_and_a_collection:
-    label: Fragen und Antworten
+    label: Fragen und Antworten (max 6)
     type: structure
     max: 6
     preview: fields
     columns:
-      headline: Headline
-      text: Text
+      question:
+        label: Frage
+        width: 1/2
+      answer:
+        label: Antwort
+        width: 1/2
     fields:
       question:
         label: Frage

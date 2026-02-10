@@ -31,7 +31,7 @@ fields:
     label: Review Karten
     type: headline
   cards:
-    label: Google-Reivew-karten erstellen
+    label: Google-Reivew-karten erstellen (max 7)
     type: structure
     max: 7
     columns:

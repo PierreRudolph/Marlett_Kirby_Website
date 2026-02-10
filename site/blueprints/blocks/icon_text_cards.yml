@@ -45,7 +45,7 @@ fields:
     label: Karten
     type: headline
   cards:
-    label: Icon-karten erstellen
+    label: Icon-karten erstellen (max 4)
     type: structure
     max: 4
     columns:

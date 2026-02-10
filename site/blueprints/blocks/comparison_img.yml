@@ -4,7 +4,7 @@ preview: fields
 
 fields:
   images:
-    label: Bilder
+    label: Bilder (max 2)
     type: files
     query: model.images
     multiple: true

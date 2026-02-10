@@ -35,13 +35,13 @@ fields:
   # CARDS
   # -------------------------------------------------
   images:
-    label: Icons
+    label: Icons (max 3)
     type: structure
     max: 3
     preview: true
     columns:
-      headline: Headline
-      text: Text
+      img:
+        label: Icon
     fields:
       img:
         label: Icon
