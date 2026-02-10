@@ -414,23 +414,70 @@ textarea::placeholder {
 /* CONTACT SECTION END*/
 
 /* Q&A SECTION */
-.btn-accordion {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.q-and-a-accordion-wrapper {
+    box-sizing: border-box;
+    padding: 8px;
+    max-height: 584px;
+}
+
+.accordion {
+    transition: all 225ms ease-in-out;
+    cursor: pointer;
     padding: 24px;
     background: var(--color-bg-white);
     box-shadow: 0px 4px 14px 0px #1F588A29;
 }
 
-.btn-text{
-    
+.btn-accordion {
+    pointer-events: none;
+    min-width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.open {
+    background: var(--color-bg-white);
+    box-shadow: 0px 4px 14px 0px #1F588A29;
+}
+
+.accordion:not(.open):hover {
+    background: #F2F6FA;
+    box-shadow: 8px 8px 0px 0px var(--color-blue);
+}
+
+.accordion:focus {
+    background: var(--color-bg-white);
+    box-shadow: 0px 0px 0px 3px #4CA6E4;
+}
+
+.accordion.open>.text-accordion {
+    pointer-events: all;
+    height: 116px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.accordion.open>button>img {
+    transform: rotate(180deg);
+}
+
+.accordion>button>img {
+    transition: transform 225ms ease-in-out;
+}
+
+.text-accordion {
+    transition: all 225ms ease-in-out;
+    pointer-events: none;
+    height: 0;
+    opacity: 0;
+    margin-top: 0px;
 }
 
 /* Q&A SECTION END */
 
 @media(max-width:1200px) {
-    .above-fold {}
 
     .section-content,
     .section-content-gap56 {

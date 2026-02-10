@@ -17,7 +17,10 @@
         'assets/css/snippets/blocks/pic_text_cards.css',
     ]) ?>
 
-    <?= js(['assets/script/snippets/nav_menu.js', 'assets/script/snippets/pic_slider.js']) ?>
+    <?= js([
+        'assets/script/snippets/accordion.js',
+        'assets/script/snippets/pic_slider.js'
+    ]) ?>
 
 </head>
 
