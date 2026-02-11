@@ -1,60 +1,112 @@
 title: Home
 
-options: changeStatus:false;
+options:
+  changeStatus: false
 
-sections:
+
+tabs:
+
   content:
-    type: fields
-    fields:
-      subheadline_first_half:
-        type: text
-        width: 1/2
-      subheadline_second_half:
-        type: text
-        width: 1/2
-      gap:
-        width: 1/2
-      headline_first_half:
-        label: Headline erste hälfte
-        type: text
-        width: 1/2
-      headline_second_half:
-        label: Headline zweite hälfte
-        type: text
-        width: 1/2
-      text:
-        type: textarea
-        size: small
-      button_contact_text:
-        label: Kontakt-Button-Text
-        type: text
-      button_phone_text:
-        label: Telefon-Button-Text
-        type: text
-        width: 1/2
-      button_phone_number:
-        label: Telefon-Button-Nummer
-        type: tel
-        width: 1/2
-      video:
-        label: Video
-        type: files
-      meta_title:
-        label: Meta Titel
-        type: text
-      meta_description:
-        label: Meta Beschreibung
-        type: textarea
-        spellcheck: true
-      blocks:
-        type: blocks
-        label: Blocks
-        fieldsets:
-          - pic_text_cards
-          - icon_text_cards
-          - pic_slider
-          - google_review_cards
-          - advantages
-          - certified
-          - contact_section
-          - q_and_a_section
+    label: Inhalt
+    sections:
+
+      hero:
+        type: fields
+        fields:
+
+          hero_headline:
+            type: headline
+            label: Hero Bereich
+
+          subheadline_first_half:
+            label: Subheadline (erste Hälfte)
+            type: text
+            width: 1/2
+          subheadline_second_half:
+            label: Subheadline (zweite Hälfte)
+            type: text
+            width: 1/2
+
+          headline_first_half:
+            label: Headline (erste Hälfte)
+            type: text
+            width: 1/2
+          headline_second_half:
+            label: Headline (zweite Hälfte)
+            type: text
+            width: 1/2
+
+          text:
+            label: Beschreibung
+            type: textarea
+            size: small
+            width: 2/3
+
+          video:
+            label: Video
+            query: site.files
+            preload: true
+            type: files
+            max: 1
+            width: 1/3
+
+          buttons_headline:
+            type: headline
+            label: Buttons
+
+          button_contact_text:
+            label: Kontakt-Button Text
+            type: text
+            width: 1/3
+
+          button_phone_text:
+            label: Telefon-Button Text
+            type: text
+            width: 1/3
+
+          button_phone_number:
+            label: Telefonnummer
+            type: tel
+            width: 1/3
+
+
+      builder:
+        type: fields
+        fields:
+
+          blocks:
+            label: Seiten-Inhalte
+            type: blocks
+            pretty: true
+            fieldsets:
+              - pic_text_cards
+              - icon_text_cards
+              - pic_slider
+              - google_review_cards
+              - advantages
+              - certified
+              - contact_section
+              - q_and_a_section
+
+
+
+  seo:
+    label: SEO
+    sections:
+
+      meta:
+        type: fields
+        fields:
+
+          meta_title:
+            label: Meta Titel
+            type: text
+            width: 1/2
+
+          meta_description:
+            label: Meta Beschreibung
+            type: textarea
+            spellcheck: true
+            buttons: false
+            size: small
+            width: 1/2

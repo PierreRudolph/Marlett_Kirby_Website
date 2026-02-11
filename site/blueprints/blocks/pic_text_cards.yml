@@ -48,9 +48,10 @@ fields:
       link:
         label: Link
         type: link
-
+        
       img:
         label: Bild
+        query: site.files
         type: files
         mulitple: false
 

@@ -1,13 +1,18 @@
 header {
     width: 100%;
-    max-width: calc(1440px + var(--main-padding-right) + var(--main-padding-left));
+    /* max-width: calc(1440px + var(--main-padding-right) + var(--main-padding-left)); */
     grid-area: header;
+    padding: 15px var(--main-padding-right) 15px var(--main-padding-right);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 14px 0px #1F588A29;
+    z-index: 1;
+}
+
+.header-content {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px var(--main-padding-right) 15px var(--main-padding-right);
-    margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .logo img {

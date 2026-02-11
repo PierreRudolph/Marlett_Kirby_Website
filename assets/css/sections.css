@@ -14,6 +14,14 @@
     background-color: var(--color-bg-lightgrey) !important;
 }
 
+.white-bg {
+    background-color: var(--color-bg-white);
+}
+
+.max-width1440 {
+    max-width: 1440px;
+}
+
 .brick-layer-left {
     position: absolute;
     top: 0;
@@ -40,6 +48,14 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 48px;
+}
+
+.section-gap64 {
+    overflow: hidden;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 64px;
 }
 
 .section-gap80 {
@@ -96,6 +112,14 @@ section {
 
 .subheadline {
     color: var(--color-font-white);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.subheadline-neg {
+    color: var(--color-font-blue);
     font-weight: 800;
     font-size: 16px;
     line-height: 28px;
@@ -526,6 +550,58 @@ textarea::placeholder {
 }
 
 /*----FOOTER END----*/
+
+/*------- STONE_CEANING ABOVE FOLD -------*/
+.comparison-slider-figure {
+    position: relative;
+    height: 569px;
+    width: 680px;
+}
+
+.comparison-slider-figure>img {
+    position: absolute;
+}
+
+.comparison-slider-before {
+    overflow: hidden;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.spacer-line {
+    background-color: white;
+    width: 4px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+}
+
+.draggable-button {
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 35px;
+    padding: 25px 14px;
+    background-color: var(--color-bg-white);
+}
+
+/*------- STONE_CEANING ABOVE FOLD END-------*/
+
+/*---------WHY STONE CLEANING----------*/
+.icon-text-card-transparent{
+    
+}
+
+/*---------WHY STONE CLEANING END----------*/
+
 
 @media(max-width:1200px) {
 

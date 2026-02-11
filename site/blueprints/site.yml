@@ -101,3 +101,11 @@ tabs:
             help: Mehrere Orte möglich
             when:
               show_service_areas: true
+
+  assets:
+    label: Assets
+    icon: image
+    sections:
+      files:
+        type: files
+        show: true

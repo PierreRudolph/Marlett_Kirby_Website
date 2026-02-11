@@ -42,11 +42,11 @@
 
         <div class="section-content">
 
-            <?php foreach ($page->videos() as $video): ?>
+            <?php if ($video = $page->video()->toFile()): ?>
                 <video controls poster="<?= url('assets/layout/img/video_poster.png') ?>" class="section-video">
                     <source src="<?= $video->url() ?>" type="<?= $video->mime() ?>">
                 </video>
-            <?php endforeach ?>
+            <?php endif ?>
         </div>
     </section>
     <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">

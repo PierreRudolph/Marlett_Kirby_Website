@@ -50,6 +50,7 @@ fields:
     fields:
       img:
         label: Icon
+        query: site.files
         type: files
         multiple: false
       category:

@@ -116,6 +116,28 @@
 </footer>
 </main>
 </div>
+<!-- <script>
+    const box = document.getElementById("img-compare");
+    const front = document.getElementById("img-front-wrapper");
+    const slider = document.getElementById("slider");
+
+    let dragging = false;
+
+    slider.onmousedown = () => dragging = true;
+    window.onmouseup = () => dragging = false;
+
+    window.onmousemove = e => {
+        if (!dragging) return;
+
+        const rect = box.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+
+        x = Math.max(0, Math.min(x, rect.width)); // Begrenzen
+
+        front.style.width = x + "px";
+        slider.style.left = x + "px";
+    };
+    </script> -->
 </body>
 
 </html>

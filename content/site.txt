@@ -58,6 +58,18 @@ Service-areas: Herrenberg, Horgau, Augsburg, Stuttgart, Landshut
 
 ----
 
+Posttype: Video
+
+----
+
+Video: 
+
+----
+
+Tags: 
+
+----
+
 Instagram: 
 
 ----

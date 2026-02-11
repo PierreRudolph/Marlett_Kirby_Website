@@ -40,6 +40,7 @@ fields:
     fields:
       img:
         label: Icon
+        query: site.files
         type: files
         mulitple: false
       headline:

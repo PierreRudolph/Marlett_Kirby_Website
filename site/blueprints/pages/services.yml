@@ -1,93 +1,79 @@
-title: Leistung Overview
-icon: grid
+title: services
 
-columns:
-  left:
-    width: 2/3
-    sections:
-      published:
-        label: Veröffentlicht
-        type: pages
-        status: listed
-        templates: 
-          - leistung_single 
-          - coaching_overview 
-        image:
-          back: "#011B28"  
-          cover: true
-          ratio: 1/1
-        layout: cards
+options:
+  changeStatus: false
 
-      drafts:
-        label: Entwürfe
-        type: pages
-        status: draft
-        templates: 
-          - leistung_single 
-          - coaching_overview  
-        image:
-          back: "#011B28"  
-          cover: true
-          ratio: 1/1
-        layout: cards
+sections:
+  hero:
+    type: fields
+    fields:
+      hero_headline:
+        type: headline
+        label: Hero Bereich
 
-        left_content:
-        type: fields
-        fields:
-          leistungen:
-            label: Leistungen
-            type: headline
-          section_headline:
-            label: Sektions-Überschrift
-            type: text   
-          headline:
-            label: Überschrift
-            type: text 
-          coaching:
-            label: Coaching
-            type: headline
-          coaching_section_headline:
-            label: Coaching Sektions-Überschrift
-            type: text   
-          coaching_headline:
-            label: Coaching Überschrift
-            type: text 
-          coaching_text:
-            label: Coaching Text
-            type: textarea   
-          btn_text:
-            label: Button-Text
-            type: text   
-          btn_link:
-            label: Button-Link
-            type: link     
-          img:
-            label: Bild
-            type: files   
-          blocks:
-              type: blocks
-              label: Blöcke
-              fieldsets:
-                - headline-text
-                - text-bild
-                - case-section
-                - call-to-action
-    
+      headline_first_half:
+        label: Headline (erste Hälfte)
+        type: text
+        width: 1/2
+      headline_second_half:
+        label: Headline (zweite Hälfte)
+        type: text
+        width: 1/2
 
+      text:
+        label: Beschreibung
+        type: textarea
+        size: small
+        width: 2/3
 
-  right:
-    width: 1/3
-    sections:
-      right_content:
-        type: fields
-        fields:
-          meta_title:
-            label: Meta Titel
-            type: text
-          meta_description:
-            label: Meta Beschreibung
-            type: textarea
-            spellcheck: true
-
-      media:
+      img:
+        label: Bild
+        query: site.files
         type: files
+        multiple: false
+        width: 1/3
+      buttons_headline:
+        type: headline
+        label: Buttons
+
+      button_contact_text:
+        label: Kontakt-Button Text
+        type: text
+        width: 1/3
+
+      button_phone_text:
+        label: Telefon-Button Text
+        type: text
+        width: 1/3
+
+      button_phone_number:
+        label: Telefonnummer
+        type: tel
+        width: 1/3
+
+  services_subpages:
+    type: pages
+    label: Unterseiten Services bearbeiten
+    fields:
+      subpage_blocks:
+        label: Inhalte der Unterseiten
+        type: pages
+        query: site.find('services').children
+        pretty: true
+
+  builder:
+    type: fields
+    fields:
+      blocks:
+        label: Seiten-Inhalte
+        type: blocks
+        pretty: true
+        fieldsets:
+          - pic_text_cards
+          - icon_text_cards
+          - pic_slider
+          - google_review_cards
+          - advantages
+          - certified
+          - contact_section
+          - q_and_a_section

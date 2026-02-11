@@ -6,7 +6,7 @@ fields:
   images:
     label: Bilder (max 2)
     type: files
-    query: model.images
+    query: site.files
     multiple: true
     max: 2
     layout: cards

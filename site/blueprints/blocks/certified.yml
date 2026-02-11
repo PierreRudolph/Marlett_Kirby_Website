@@ -28,6 +28,7 @@ fields:
     size: small
   img:
     label: Bild
+    query: site.files
     type: files
     mulitple: false
 
@@ -45,6 +46,7 @@ fields:
     fields:
       img:
         label: Icon
+        query: site.files
         type: files
         mulitple: false
       link:
