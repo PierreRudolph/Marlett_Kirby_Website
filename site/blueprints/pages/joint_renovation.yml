@@ -1,0 +1,109 @@
+title: joint_renovation
+
+options:
+  changeStatus: true
+
+sections:
+  hero:
+    type: fields
+    fields:
+      hero_headline:
+        type: headline
+        label: Hero Bereich
+
+      subheadline_first_half:
+        label: Subheadline (erste Hälfte)
+        type: text
+        width: 1/2
+      subheadline_second_half:
+        label: Subheadline (zweite Hälfte)
+        type: text
+        width: 1/2
+
+      headline_first_half:
+        label: Headline (erste Hälfte)
+        type: text
+        width: 1/2
+      headline_second_half:
+        label: Headline (zweite Hälfte)
+        type: text
+        width: 1/2
+
+      text_top:
+        label: Beschreibung obere hälfte
+        type: textarea
+        size: small
+        width: 2/3
+
+      text_bottom:
+        label: Beschreibung untere hälfte
+        type: textarea
+        size: small
+        width: 2/3
+
+      buttons_headline:
+        type: headline
+        label: Buttons
+
+      button_contact_text:
+        label: Kontakt-Button Text
+        type: text
+        width: 1/3
+
+      button_phone_text:
+        label: Telefon-Button Text
+        type: text
+        width: 1/3
+
+      button_phone_number:
+        label: Telefonnummer
+        type: tel
+        width: 1/3
+      imageBefore:
+        label: Bilder vor der Reinigung
+        type: files
+        query: site.files
+        multiple: false
+        layout: cards
+        uploads:
+          template: blocks/image
+      imageAfter:
+        label: Bilder nach der Reinigung
+        type: files
+        query: site.files
+        multiple: false
+        layout: cards
+        uploads:
+          template: blocks/image
+      ratio:
+        label: Seitenverhältnis
+        type: select
+        placeholder: Auto
+        options:
+          auto: Auto
+          1/1: "1:1"
+          16/9: "16:9"
+          4/3: "4:3"
+
+      crop:
+        label: Zuschneiden
+        type: toggle
+  builder:
+    type: fields
+    fields:
+      blocks:
+        label: Seiten-Inhalte
+        type: blocks
+        pretty: true
+        fieldsets:
+          - pic_text_cards
+          - icon_text_cards
+          - pic_slider
+          - google_review_cards
+          - advantages
+          - certified
+          - contact_section
+          - q_and_a_section
+          - why_cleaning
+          - our_services
+          - the_procedure
