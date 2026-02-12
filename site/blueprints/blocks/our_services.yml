@@ -36,7 +36,8 @@ fields:
     label: Mit Text unter der Liste? (verändert auch die Darstellung)
   services_text:
     label: Text unterer Teil
-    type: text
+    type: textarea
+    size: medium
     # -------------------------------------------------
   # CARDS
   # -------------------------------------------------
