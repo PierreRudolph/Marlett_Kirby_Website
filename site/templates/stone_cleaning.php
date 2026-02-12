@@ -25,7 +25,7 @@
 
                 <a href="tel:<?= $page->button_phone_number()->toHtml() ?>"
                     class="btn-pos-outlined btn-text btn-with-icon">
-                    <img src="<?= url('assets/icons/phone.svg') ?>">
+                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
 

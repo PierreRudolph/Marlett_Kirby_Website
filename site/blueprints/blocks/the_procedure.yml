@@ -1,0 +1,119 @@
+title: Ablauf einer Reinigung
+name: the_procedure
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Sektion
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+  cards:
+    label: Karten
+    type: structure
+    max: 4
+    columns:
+      headline: Headline
+      text: Text
+    fields:
+      img:
+        label: Icon
+        query: site.files
+        type: files
+        multiple: false
+      category:
+        type: select
+        options:
+          - onlyText
+          - textWithList
+      text_headline:
+        label: Text headline
+        type: text
+      text:
+        label: Text
+        type: text
+        size: medium
+        when:
+          category: onlyText
+
+      text_top:
+        label: Text oberer teil
+        type: text
+        when:
+          category: textWithList
+      text_list:
+        label: Was entfernt wird (max 6)
+        type: structure
+        when:
+          category: textWithList
+        max: 6
+        columns:
+          headline: Headline
+          text: Text
+        fields:
+          text:
+            label: Text
+            type: text
+            size: small
+      text_bottom:
+        label: Text unterer Teil
+        type: text
+        when:
+          category: textWithList
+  show_extended_bottom:
+    label: Sektion erweiterung anzeigen
+    type: toggle
+  extended_bottom:
+    type: structure
+    label: Sektion erweiterung
+    max: 1
+    columns:
+      headline: Headline
+      text: Text
+    fields:
+      image:
+        label: Bild
+        type: files
+        query: site.files
+        multiple: false
+      subheadline_first_half:
+        label: subheadline erste hälfte
+        type: text
+      subheadline_second_half:
+        label: subheadline erste hälfte
+        type: text
+      text:
+        label: Text
+        type: textarea
+        size: medium
+      text_second_half:
+        label: Text zweite hälfte
+        type: textarea
+        size: medium
+      button:
+        label: Button
+        type: headline
+      button_text:
+        label: Button-Text
+        type: text
+      button_link:
+        label: Button-Link
+        type: link

@@ -238,6 +238,13 @@ input[type=number] {
     letter-spacing: 0%;
 }
 
+.text-headline-manrope {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
 .label-alt-headline {
     font-weight: 700;
     font-size: 20px;
@@ -288,7 +295,7 @@ input[type=number] {
 .copy-text-small {
     font-weight: 600;
     font-size: 16px;
-    line-height: 80%;
+    /* line-height: 80%; */
     letter-spacing: 0%;
 }
 
@@ -330,10 +337,12 @@ input[type=number] {
 /*Button Positiv Outlined*/
 .btn-pos-outlined {
     cursor: pointer;
+    width: fit-content;
     transition: background-color, box-shadow, var(--btn-transition);
     color: var(--btn-pos-outlined-text-color);
     border: 1px solid var(--btn-pos-outlined-border-color);
     background-color: var(--btn-pos-outlined-bg-color);
+    padding: 7px 17px;
 }
 
 .btn-pos-outlined:hover {
@@ -347,6 +356,7 @@ input[type=number] {
 /*Button Negativ*/
 .btn-neg {
     cursor: pointer;
+    width: fit-content;
     transition: background-color, box-shadow, var(--btn-transition);
     color: var(--btn-neg-text-color);
     padding: 8px 36px;
@@ -373,6 +383,7 @@ input[type=number] {
 /*Button Negativ Outlined*/
 .btn-neg-outlined {
     cursor: pointer;
+    width: fit-content;
     transition: background-color, box-shadow, var(--btn-transition);
     color: var(--btn-neg-outlined-text-color);
     /* background-color: var(--btn-neg-outlined-bg-color); */
