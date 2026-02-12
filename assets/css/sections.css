@@ -43,6 +43,14 @@
     gap: 40px;
 }
 
+.above-fold-gap120 {
+    overflow: hidden;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 120px;
+}
+
 .section-gap20 {
     overflow: hidden;
     max-width: 1440px;
@@ -131,6 +139,13 @@ section {
     flex-direction: column;
     gap: 20px;
     grid-column: span 6;
+}
+
+.section-content-row-gap24 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    grid-column: span 12;
 }
 
 .section-video {
@@ -640,6 +655,17 @@ textarea::placeholder {
 .extended-section {
     background-color: var(--color-bg-white);
     padding: 40px;
+}
+
+.big-number-card {
+    padding: 40px;
+}
+
+.certificate-card {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 48px 24px;
 }
 
 @media(max-width:1200px) {

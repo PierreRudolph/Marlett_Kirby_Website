@@ -207,6 +207,10 @@ input[type=number] {
     letter-spacing: -2%;
 }
 
+.headline-xxl {
+    font-size: 64px;
+}
+
 .headline-xl {
     font-size: 56px;
 }
@@ -560,7 +564,7 @@ input[type=number] {
 }
 
 .grid-full {
-    grid-column: span 12;
+    grid-column: span 12 !important;
 }
 
 .grid-middle {

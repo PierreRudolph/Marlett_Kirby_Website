@@ -1,0 +1,98 @@
+title: about_us
+
+options:
+  changeStatus: false
+
+sections:
+  hero:
+    type: fields
+    fields:
+      hero_headline:
+        type: headline
+        label: Hero Bereich
+
+      headline_first_half:
+        label: Headline (erste Hälfte)
+        type: text
+        width: 1/2
+      headline_second_half:
+        label: Headline (zweite Hälfte)
+        type: text
+        width: 1/2
+
+      text_top:
+        label: Beschreibung obere Hälfte
+        type: textarea
+        size: small
+        width: 2/3
+
+      text_bottom:
+        label: Beschreibung untere Hälfte
+        type: textarea
+        size: small
+        width: 2/3
+
+      img:
+        label: Bild
+        query: site.files
+        type: files
+        multiple: false
+        width: 1/3
+      ratio:
+        label: Seitenverhältnis
+        type: select
+        placeholder: Auto
+        options:
+          auto: Auto
+          1/1: "1:1"
+          16/9: "16:9"
+          4/3: "4:3"
+
+      crop:
+        label: Zuschneiden
+        type: toggle
+      buttons_headline:
+        type: headline
+        label: Buttons
+      button_contact_text:
+        label: Kontakt-Button Text
+        type: text
+        width: 1/3
+        
+      big_numbers:
+        label: Big Numbers Liste erstellen (max 3)
+        type: structure
+        max: 3
+        columns:
+          headline: Headline
+          text: Text
+        fields:
+          number:
+            label: Zahl
+            type: text
+            size: small
+          text:
+            label: Text
+            type: text
+            size: small
+  
+
+  builder:
+    type: fields
+    fields:
+      blocks:
+        label: Seiten-Inhalte
+        type: blocks
+        pretty: true
+        fieldsets:
+          - pic_text_cards
+          - icon_text_cards
+          - pic_slider
+          - google_review_cards
+          - advantages
+          - certified
+          - contact_section
+          - q_and_a_section
+          - certified_detail
+
+  

@@ -1,0 +1,66 @@
+title: Zertifizierter Fachbetrieb Detail
+name: certified_detail
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Sektion
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+
+  text:
+    label: Text
+    type: textarea
+    size: small
+
+  buttons_headline:
+    type: headline
+    label: Buttons
+
+  button_contact_text:
+    label: Kontakt-Button Text
+    type: text
+    width: 1/3
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+  certificates:
+    label: Zertifikate (max 6)
+    type: structure
+    max: 6
+    preview: true
+    columns:
+      headline:
+        label: Karte
+    fields:
+      img:
+        label: Bild
+        type: files
+        query: site.files
+      text_healine:
+        label: Text headline
+        type: text
+      text:
+        label: Text
+        type: textarea
+        size: medium
+      text_bottom:
+        label: Text untere hälfte (optional)
+        type: textarea
+        size: medium
