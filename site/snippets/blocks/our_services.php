@@ -10,22 +10,29 @@
                     <?= $block->headline_second_half()->toHtml() ?>
                 </span>
             </h2>
-
-
-
-
         </div>
 
         <div class="section-content-gap24 color-font-darkblue">
             <h3 class="headline headline-xs"><?= $block->services_headline()->toHtml() ?></h3>
-            <ul>
-                <?php foreach ($block->services_list()->toStructure() as $service): ?>
-                    <li class="label-alt-headline"><?= $service->text()->toHtml() ?></li>
-                <?php endforeach ?>
-            </ul>
-            <p class="text-regular500"><?= $block->services_text()->toHtml() ?></p>
-        </div>
 
+            <?php if ($block->with_bottom_text()->isTrue()): ?>
+                <ul>
+                    <?php foreach ($block->services_list()->toStructure() as $service): ?>
+                        <li class="label-alt-headline"><?= $service->text()->toHtml() ?></li>
+                    <?php endforeach ?>
+                </ul>
+                <p class="text-regular500"><?= $block->services_text()->toHtml() ?></p>
+            <?php else: ?>
+
+                <ul>
+                    <?php foreach ($block->services_list()->toStructure() as $service): ?>
+                        <li class="label-alt-text"><?= $service->text()->toHtml() ?></li>
+                    <?php endforeach ?>
+                </ul>
+
+            <?php endif ?>
+
+        </div>
 
     </section>
 

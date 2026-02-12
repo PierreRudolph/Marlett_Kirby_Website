@@ -54,7 +54,7 @@ Show-service-areas: true
 
 ----
 
-Service-areas: Herrenberg, Horgau, Augsburg, Stuttgart, Landshut
+Service-areas: Herrenberg, Augsburg, Stuttgart, Landshut
 
 ----
 

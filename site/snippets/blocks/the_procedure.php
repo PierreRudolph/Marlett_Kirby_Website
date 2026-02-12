@@ -68,22 +68,47 @@
                         <img width="648px" height="410px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
                     <?php endif ?>
                 </div>
-                <div class="section-content-gap32">
-                    <h2 class="headline headline-l color-font-blue">
-                        <?= $section_item->subheadline_first_half()->toHtml() ?>
-                        <br>
-                        <span class="headline headline-l color-font-skyblue">
-                            <?= $section_item->subheadline_second_half()->toHtml() ?>
-                        </span>
-                    </h2>
 
-                    <p class="copy-text-big color-font-darkblue"><?= $section_item->text()->toHtml() ?></p>
-                    <p class="copy-text-big color-font-darkblue">
-                        <?= $section_item->text_second_half()->toHtml() ?>
-                    </p>
-                    <a href="<?= $section_item->button_link()->toUrl() ?>" class="btn-pos-outlined btn-text">
-                        <?= $section_item->button_text()->toHtml() ?>
-                    </a>
+                <div class="section-content-gap32">
+    
+                    <?php if ($section_item->extended_bottom_list()->toStructure()->count() > 0): ?>
+                        <h2 class="headline headline-l color-font-blue">
+                            <?= $section_item->subheadline_first_half()->toHtml() ?>
+                            <br>
+                            <span class="headline headline-l color-font-skyblue">
+                                <?= $section_item->subheadline_second_half()->toHtml() ?>
+                            </span>
+                        </h2>
+                        <ul>
+                            <?php foreach ($section_item->extended_bottom_list()->toStructure() as $listItem): ?>
+
+                                <li class="text-headline-manrope color-font-darkblue">
+                                    <?= $listItem->text_first_half()->toHtml() ?>
+                                    <span class="copy-text-big"><?= $listItem->text_second_half()->toHtml() ?></span>
+                                </li>
+
+                            <?php endforeach ?>
+                        </ul>
+                        <a href="<?= $section_item->button_link()->toUrl() ?>" class="btn-pos btn-text">
+                            <?= $section_item->button_text()->toHtml() ?>
+                        </a>
+                    <?php else: ?>
+                        <h2 class="headline headline-l color-font-skyblue">
+                            <?= $section_item->subheadline_first_half()->toHtml() ?>
+                            <br>
+                            <span class="headline headline-l color-font-blue">
+                                <?= $section_item->subheadline_second_half()->toHtml() ?>
+                            </span>
+                        </h2>
+                        <p class="copy-text-big color-font-darkblue"><?= $section_item->text()->toHtml() ?></p>
+                        <p class="copy-text-big color-font-darkblue">
+                            <?= $section_item->text_second_half()->toHtml() ?>
+                        </p>
+                        <a href="<?= $section_item->button_link()->toUrl() ?>" class="btn-pos-outlined btn-text">
+                            <?= $section_item->button_text()->toHtml() ?>
+                        </a>
+                    <?php endif ?>
+
                 </div>
 
             </section>

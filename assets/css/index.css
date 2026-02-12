@@ -114,6 +114,10 @@ p {
     line-height: 22px !important;
 }
 
+ul {
+    margin: 0;
+}
+
 figure {
     margin: 0;
 }

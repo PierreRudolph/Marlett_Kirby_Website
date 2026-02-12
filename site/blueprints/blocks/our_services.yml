@@ -31,9 +31,15 @@ fields:
     label: Leistungen Headline
     type: text
 
+  with_bottom_text:
+    type: toggle
+    label: Mit Text unter der Liste? (verändert auch die Darstellung)
   services_text:
-    label: Leistungen Text
+    label: Text unterer Teil
     type: text
+    # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
 
   cards_section:
     label: Karten

@@ -78,6 +78,7 @@ fields:
         type: text
         when:
           category: textWithList
+
   show_extended_bottom:
     label: Sektion erweiterung anzeigen
     type: toggle
@@ -100,14 +101,42 @@ fields:
       subheadline_second_half:
         label: subheadline erste hälfte
         type: text
+      category:
+        type: select
+        options:
+          - list
+          - blocks
+      extended_bottom_list:
+        type: structure
+        label: Service Liste (max 5)
+        max: 5
+        when:
+          category: list
+        columns:
+          headline: Headline
+          text: Text
+        fields:
+          text_first_half:
+            label: Service erste hälfte
+            type: text
+          text_second_half:
+            label: Service zweite hälfte
+            type: text
+
       text:
         label: Text
         type: textarea
-        size: medium
+        size: small
+        width: 1/2
+        when:
+          category: blocks
       text_second_half:
         label: Text zweite hälfte
         type: textarea
-        size: medium
+        width: 1/2
+        size: small
+        when:
+          category: blocks
       button:
         label: Button
         type: headline
