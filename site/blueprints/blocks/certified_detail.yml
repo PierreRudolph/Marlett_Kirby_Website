@@ -53,7 +53,7 @@ fields:
         label: Bild
         type: files
         query: site.files
-      text_healine:
+      text_headline:
         label: Text headline
         type: text
       text:

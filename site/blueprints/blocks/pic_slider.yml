@@ -53,8 +53,13 @@ fields:
     label: label text
     type: text
 
+  comparison_pics_as_slider:
+    type: toggle
+    label: Vergleichsbilder als slider Anzeigen?
+
   blocks:
     type: blocks
     label: Galerie erstellen
+    max: 7
     fieldsets:
       - comparison_img

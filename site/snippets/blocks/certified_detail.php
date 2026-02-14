@@ -26,8 +26,7 @@
 
 
                     <div class="flex-column-gap20">
-                        <h4 class="headline headline-s color-font-darkblue"><?= $certificate->text_headline()->toHtml() ?>
-                        </h4>
+                        <h4 class="headline headline-s color-font-darkblue"><?= $certificate->text_headline()->toHtml() ?></h4>
                         <p class="text-regular color-font-darkblue"><?= $certificate->text()->toHtml() ?></p>
                         <?php if ($bottomText = $certificate->bottomText()->toHtml() != ""): ?>
                             <p class="text-regular color-font-darkblue"><?= $certificate->text_bottom()->toHtml() ?></p>

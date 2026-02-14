@@ -94,5 +94,7 @@ sections:
           - contact_section
           - q_and_a_section
           - certified_detail
+          - video_section
+          - our_team
 
   

@@ -10,13 +10,8 @@ $crop = $block->crop()->isTrue();
 
         <?php foreach ($images as $index => $image): ?>
 
-            <div class="comparison-pic-<?= (int) $index + 1 ?>">
-                <?php
-
-
-                $thumb = $image->crop(172, 440);
-
-                ?>
+            <div class="comparison-pic-<?= $images->indexOf($image) + 1 ?>">
+                <?php $thumb = $image->crop(170, 439); ?>
                 <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
 
             </div>

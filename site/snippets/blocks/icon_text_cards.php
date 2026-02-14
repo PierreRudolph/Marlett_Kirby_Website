@@ -3,7 +3,7 @@
 
     <section class="section-gap48">
 
-        <div class="flex-column-gap24">
+        <div class="flex-column-gap24 grid-middle">
             <h2 class="headline headline-l color-font-white reasons-headline">
                 <?= $block->headline_first_half()->toHtml() ?>
                 <br>
@@ -11,11 +11,13 @@
                     <?= $block->headline_second_half()->toHtml() ?>
                 </span>
             </h2>
+            <?php if ($block->link_about_us_url()->toUrl() != null): ?>
+                <a class="link-text flex-row-gap5 color-font-white" href="<?= $block->link_about_us_url()->toUrl() ?>">
+                    <?= $block->link_about_us_text()->toHtml() ?>
+                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>">
+                </a>
+            <?php endif ?>
 
-            <a class="link-text flex-row-gap5 color-font-white" href="<?= $block->link_about_us_url()->toUrl() ?>">
-                <?= $block->link_about_us_text()->toHtml() ?>
-                <img src="<?= url('assets/icons/arrow_forward.svg') ?>">
-            </a>
         </div>
 
 

@@ -148,6 +148,13 @@ section {
     grid-column: span 12;
 }
 
+.section-content-row-gap20 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    grid-column: span 12;
+}
+
 .section-video {
     width: 120%;
 }
@@ -304,13 +311,13 @@ section {
 }
 
 .comparison-pic-1 {
-    width: 173px;
-    height: 440px;
+    width: 170px;
+    height: 439px;
 }
 
 .comparison-pic-2 {
-    width: 173px;
-    height: 440px;
+    width: 170px;
+    height: 439px;
 }
 
 .blue-dot-inactive {
@@ -658,6 +665,7 @@ textarea::placeholder {
 }
 
 .big-number-card {
+    flex: 1;
     padding: 40px;
 }
 
@@ -666,6 +674,56 @@ textarea::placeholder {
     align-items: center;
     gap: 80px;
     padding: 48px 24px;
+}
+
+.video-thumbnail-layer {
+    transition: all 225ms ease-in-out;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 65, 122, 0.67), rgba(0, 65, 122, 0.67));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+.video-wrapper:hover .video-with-thumbnail {
+    opacity: 1;
+}
+
+.video-wrapper:hover .video-thumbnail-layer {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.video-with-thumbnail {
+    transition: all 225ms ease-in-out;
+    width: 100%;
+    opacity: 0;
+}
+
+.video-poster-layer {
+    transition: all 225ms ease-in-out;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.show-video {
+    opacity: 1;
+}
+
+.hide-layer {
+    pointer-events: none;
+    opacity: 0;
 }
 
 @media(max-width:1200px) {

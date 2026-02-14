@@ -1,0 +1,88 @@
+title: references
+
+options:
+  changeStatus: true
+
+sections:
+  hero:
+    type: fields
+    fields:
+      hero_headline:
+        type: headline
+        label: Hero Bereich
+
+      headline_first_half:
+        label: Headline (erste Hälfte)
+        type: text
+        width: 1/2
+      headline_second_half:
+        label: Headline (zweite Hälfte)
+        type: text
+        width: 1/2
+
+      text_top:
+        label: Beschreibung
+        type: textarea
+        size: small
+        width: 2/3
+      comparison_pics_label_headline:
+        label: label headline
+        type: text
+      comparison_pics_label_text:
+        label: label text
+        type: textarea
+        size: small
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+      galleryOwn:
+        label: Karten
+        type: structure
+        max: 8
+        columns:
+          headline: Headline
+          text: Text
+        fields:
+          img_one:
+            label: Bild davor
+            query: site.files
+            type: files
+            mulitple: false
+          img_two:
+            label: Bild danach
+            query: site.files
+            type: files
+            mulitple: false
+      ratio:
+        label: Seitenverhältnis
+        type: select
+        placeholder: Auto
+        options:
+          auto: Auto
+          1/1: "1:1"
+          16/9: "16:9"
+          4/3: "4:3"
+
+      crop:
+        label: Zuschneiden
+        type: toggle
+  builder:
+    type: fields
+    fields:
+      blocks:
+        label: Seiten-Inhalte
+        type: blocks
+        pretty: true
+        fieldsets:
+          - pic_text_cards
+          - icon_text_cards
+          - pic_slider
+          - google_review_cards
+          - advantages
+          - certified
+          - contact_section
+          - q_and_a_section
+          - why_cleaning
+          - our_services
+          - the_procedure

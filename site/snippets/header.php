@@ -18,9 +18,7 @@
     ]) ?>
 
     <?= js([
-        'assets/script/snippets/accordion.js',
-        'assets/script/snippets/pic_slider.js',
-        // 'assets/script/snippets/pic_comparison_slider.js'
+        'assets/script/script.js',
     ]) ?>
 
 </head>

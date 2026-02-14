@@ -25,6 +25,7 @@
                             <h3 class="headline headline-s color-font-blue"><?= $card->headline()->toHtml() ?></h3>
                             <p class="copy-text-smaller color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                         </div>
+                      
                         <a href="<?= $card->link()->toUrl() ?>" class="flex-row-gap5 link-text color-font-skyblue">Mehr
                             erfahren <img src="<?= url('assets/icons/arrow_forward.svg') ?>">
                         </a>
