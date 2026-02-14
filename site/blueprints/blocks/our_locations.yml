@@ -1,0 +1,52 @@
+title: Unsere Standorte
+name: our_locations
+icon: grid
+preview: false
+
+fields:
+  # -------------------------------------------------
+  # SECTION
+  # -------------------------------------------------
+  section:
+    label: Headline
+    type: headline
+
+  headline_first_half:
+    label: Headline – erste Hälfte
+    type: text
+
+  headline_second_half:
+    label: Headline – zweite Hälfte
+    type: text
+
+  section_id:
+    label: Section ID
+    type: text
+
+  # -------------------------------------------------
+  # CARDS
+  # -------------------------------------------------
+
+  cards_section:
+    label: Karten
+    type: headline
+  cards:
+    label: Icon-karten erstellen (max 4)
+    type: structure
+    max: 4
+    columns:
+      headline: Headline
+      text: Text
+    fields:
+      city:
+        label: Stadt
+        type: text
+      street_and_number:
+        label: Straße und Hausnummer
+        type: text
+      zip:
+        label: Postleitzahl
+        type: text
+      phone:
+        label: Telefonnummer
+        type: tel

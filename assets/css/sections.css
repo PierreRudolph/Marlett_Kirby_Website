@@ -726,6 +726,11 @@ textarea::placeholder {
     opacity: 0;
 }
 
+.location-card {
+    width: 708px;
+    padding: 24px
+}
+
 @media(max-width:1200px) {
 
     .section-content,
