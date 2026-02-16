@@ -22,8 +22,8 @@
     --headline-xl: 56px;
 
     /*Site Padding*/
-    --main-padding-left: 40px;
-    --main-padding-right: 40px;
+    --main-padding-left: 80px;
+    --main-padding-right: 80px;
     /*Sections Padding (top,bottom)*/
     --section-padding-top: 120px;
     --section-padding-bottom: 120px;
@@ -128,6 +128,11 @@ button {
 
 button:hover {
     border: none;
+}
+
+img {
+    object-fit: contain;
+    /* height: fit-content; */
 }
 
 input::-webkit-outer-spin-button,
@@ -263,6 +268,7 @@ input[type=number] {
     font-weight: 400;
     font-size: 20px;
     line-height: 130%;
+    margin-bottom: 5px;
 }
 
 .text-regular {
@@ -440,6 +446,12 @@ input[type=number] {
     gap: 20px;
 }
 
+.flex-row-gap4 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 .flex-row-gap5 {
     display: flex;
     align-items: center;
@@ -476,10 +488,10 @@ input[type=number] {
     gap: 24px;
 }
 
-.flex-row-gap106 {
-    display: flex;
-    align-items: center;
-    gap: 106px;
+.flex-column-gap16{
+      display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .flex-column-gap17 {
@@ -576,17 +588,6 @@ input[type=number] {
     offset: 14%;
     text-decoration-thickness: 9%;
     text-decoration-skip-ink: all;
-}
-
-@media(max-width:1300px) {
-    :root {
-        /*Site Padding*/
-        --main-padding-left: 40px;
-        --main-padding-right: 40px;
-        /*Sections Padding (top,bottom)*/
-        --section-padding-top: 80px;
-        --section-padding-bottom: 80px;
-    }
 }
 
 .spacer-line {

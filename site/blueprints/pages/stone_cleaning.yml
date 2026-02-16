@@ -56,7 +56,7 @@ sections:
       imageBefore:
         label: Bilder vor der Reinigung
         type: files
-        query: site.find('services').children.files
+        query: site.files
         multiple: false
         layout: cards
         uploads:
@@ -64,7 +64,7 @@ sections:
       imageAfter:
         label: Bilder nach der Reinigung
         type: files
-        query: site.find('services').children.files
+        query: site.files
         multiple: false
         layout: cards
         uploads:

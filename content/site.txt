@@ -37,16 +37,22 @@ Social-links:
     - file://spcvs70pjplikkeb
   text: Instagram
   link: ""
+  icon_mobile:
+    - file://bn4gulgfgumum0nm
 - 
   icon:
     - file://nvrbfkrepml92ejp
   text: Facebook
   link: ""
+  icon_mobile:
+    - file://8pl3sxhgypzih10j
 - 
   icon:
     - file://5pfctethtzflhilo
   text: Tiktok
   link: ""
+  icon_mobile:
+    - file://ep2cmfynmlefpstr
 
 ----
 

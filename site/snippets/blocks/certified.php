@@ -12,12 +12,12 @@
                 </h2>
                 <p class="text-regular color-font-darkblue"><?= $block->text()->toHtml() ?></p>
             </div>
-            <div class="flex-row-gap106">
+            <div class="flex-row-between">
                 <?php foreach ($block->images()->toStructure() as $image): ?>
 
                     <?php if ($imageFile = $image->img()->toFile()): ?>
 
-                        <img src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>">
+                        <img style="width: 156px;" src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>">
 
                     <?php endif ?>
 
@@ -27,9 +27,12 @@
 
         <div class="section-content">
             <?php if ($solsos = $block->img()->toFile()): ?>
-                <div>
-                    <img src="<?= $solsos->url() ?>" alt="<?= $solsos->alt() ?>">
-                </div>
+                <figure data-crop="true">
+
+                    <?php $thumb = $solsos->crop(680, 424); ?>
+                    <img style="width: 100%;" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+
+                </figure>
             <?php endif ?>
         </div>
 

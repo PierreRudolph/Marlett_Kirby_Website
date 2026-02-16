@@ -31,7 +31,7 @@ return function ($kirby, $pages, $page, $site) {
             'zip-code' => ['required', 'minLength' => 4],
             'city' => ['required', 'minLength' => 2],
             'email' => ['email'], // optional
-            'phone' => ['required', 'regex' => '/^\+?[0-9\s\-]+$/'],
+            'phone' => ['required', 'minLength' => 8 ],
             'text' => ['required', 'minLength' => 3, 'maxLength' => 3000],
             'privacy' => ['required']
         ];
@@ -59,12 +59,11 @@ return function ($kirby, $pages, $page, $site) {
                 $service = ('Gewünschte Leistung: ' . $data['service']) ?: 'Keine Angabe';
                 $text = $data['text'] . "\n\n" . $service;
                 $kirby->email([
-                    'template' => 'email',
-                    'from' => $site->global_mail()->value(),
+                    'from' => 'mail@pierre-lettner.de',
                     'replyTo' => $data['email'] ?: $site->global_mail()->value(),
-                    'to' => $site->global_mail()->value(),
+                    'to' => 'plettner@hotmail.de',
                     'subject' => esc($name) . ' hat dir über das Kontaktformular geschrieben',
-                    'data' => [
+                    'body' => [
                         'name' => esc($name),
                         'zip' => esc($data['zip-code']),
                         'city' => esc($data['city']),

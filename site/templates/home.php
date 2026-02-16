@@ -44,7 +44,7 @@
 
             <?php if ($video = $page->video()->toFile()): ?>
                 <video controls poster="<?= url('assets/layout/img/video_poster.png') ?>" class="section-video">
-                    <source src="<?= $video->url() ?>" type="<?= $video->mime() ?>">
+                    <source src="<?= $video->url() ?>" type="<?= $video->mime() ?>" loading="lazy">
                 </video>
             <?php endif ?>
         </div>

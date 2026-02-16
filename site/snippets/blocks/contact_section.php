@@ -21,7 +21,7 @@
                         <div class="contact-option lightgrey-bg flex-row-gap24">
 
                             <?php if ($image = $contact_option->img()->toFile()): ?>
-                                <div class="icon-blue-bg flex-middle">
+                                <div class="icon-blue-bg">
                                     <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
                                 </div>
                             <?php endif ?>

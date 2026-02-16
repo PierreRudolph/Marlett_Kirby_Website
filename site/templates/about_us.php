@@ -5,7 +5,7 @@
     <section class="above-fold-gap120">
 
         <div class="section-gap64 grid-full" style="align-items: center;">
-            <div class="section-content mobile-grid-reverse">
+            <div class="section-content">
 
                 <h1 class="headline headline-xl color-font-skyblue"><?= $page->headline_first_half()->toHtml() ?>
                     <br>

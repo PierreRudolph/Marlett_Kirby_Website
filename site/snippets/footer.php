@@ -2,11 +2,11 @@
     <div>
         <div class="grid-column-gap40" style="width:100%">
 
-            <div class="flex-column-gap40 grid-span2">
+            <div class="flex-column-gap40 grid-span2 mobile-flex-row">
                 <a class="logo" href="<?= $site->url() ?>">
                     <img src="<?= url('assets/icons/marlett_logo.svg') ?>">
                 </a>
-                <div class="flex-row-start-gap12">
+                <div class="flex-row-start-gap12 mobile-margin-auto">
                     <img src="<?= url('assets/icons/icon_map_pin.svg') ?>">
                     <div class="flex-column color-font-white">
                         <p class="label-big">Standort <?= $site->city()->toHtml() ?></p>
@@ -116,28 +116,6 @@
 </footer>
 </main>
 </div>
-<!-- <script>
-    const box = document.getElementById("img-compare");
-    const front = document.getElementById("img-front-wrapper");
-    const slider = document.getElementById("slider");
-
-    let dragging = false;
-
-    slider.onmousedown = () => dragging = true;
-    window.onmouseup = () => dragging = false;
-
-    window.onmousemove = e => {
-        if (!dragging) return;
-
-        const rect = box.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-
-        x = Math.max(0, Math.min(x, rect.width)); // Begrenzen
-
-        front.style.width = x + "px";
-        slider.style.left = x + "px";
-    };
-    </script> -->
 </body>
 
 </html>

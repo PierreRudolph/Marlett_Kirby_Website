@@ -10,7 +10,8 @@
 }
 
 .arrow {
-    width: 16px;
+    cursor: pointer;
+    width: 24px;
     margin-left: 0.3rem;
     transition: transform 225ms ease-in-out;
 }
@@ -52,4 +53,17 @@
 
 .main-nav__item:hover .arrow {
     transform: rotate(180deg);
+}
+
+/* .main-nav__item:checked .dropdown {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 2;
+} */
+
+.services-dropdown-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
 }

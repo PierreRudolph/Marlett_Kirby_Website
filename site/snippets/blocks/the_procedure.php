@@ -1,6 +1,6 @@
 <div class="section-wrapper gap120 lightgrey-bg" id="<?= $block->section_id()->toHtml() ?>">
 
-    <section class="section-gap20">
+    <section class="section-gap48">
         <div class="section-content">
             <h2 class="headline headline-l color-font-blue">
                 <?= $block->headline_first_half()->toHtml() ?>

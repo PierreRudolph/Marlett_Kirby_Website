@@ -78,6 +78,10 @@ tabs:
               link:
                 label: URL
                 type: url
+              icon_mobile:
+                label: Icon Mobile (Header)
+                type: files
+                placeholder: z.B. instagram, facebook, tiktok
 
   areas:
     label: Einzugsgebiete

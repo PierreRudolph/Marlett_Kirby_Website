@@ -3,7 +3,7 @@
 <div class="section-wrapper white-bg">
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left">
     <section class="above-fold">
-        <div class="section-content mobile-grid-reverse">
+        <div class="section-content">
             <p class="subheadline-neg">
                 <?= $page->subheadline_first_half()->toHtml() ?><span style="margin-left: 4px;font-weight:500;">
                     <?= $page->subheadline_second_half()->toHtml() ?>

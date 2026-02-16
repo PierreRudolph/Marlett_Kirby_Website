@@ -2,7 +2,7 @@
 
     <section class="section-gap48">
         <div class="section-content">
-            <div class="flex-column-gap24 grid-middle">
+            <div class="flex-column-gap24">
                 <h2 class="headline headline-l color-font-blue reasons-headline">
                     <?= $block->headline_first_half()->toHtml() ?>
                     <br>
