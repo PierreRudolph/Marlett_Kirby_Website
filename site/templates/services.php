@@ -3,7 +3,7 @@
 <div class="section-wrapper white-bg">
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left">
     <section class="above-fold">
-        <div class="section-content mobile-grid-reverse">
+        <div class="section-content">
 
             <div>
                 <h1 class="headline headline-xl color-font-blue"><?= $page->headline_first_half()->toHtml() ?><span
@@ -40,9 +40,8 @@
 
         <div class="section-content">
             <?php if ($img = $page->img()->toFile()): ?>
-                <div class="icon-text-card-img">
+                <div class="services-pic">
                     <img src="<?= $img->url() ?>" alt="<?= $img->alt() ?>" loading="lazy">
-
                 </div>
             <?php endif ?>
         </div>

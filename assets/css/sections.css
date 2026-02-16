@@ -730,3 +730,20 @@ textarea::placeholder {
     width: 708px;
     padding: 24px
 }
+
+.certified-icons-wrapper img {
+    width: 156px;
+}
+
+.services-pic {
+    width: 100%;
+}
+
+.services-pic img {
+    width: 120%;
+}
+
+.extended-section-img-wrapper img {
+    width: 100%;
+    height: 100%;
+}

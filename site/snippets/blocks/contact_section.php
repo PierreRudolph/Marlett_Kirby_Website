@@ -4,15 +4,17 @@
 
 
         <div class="section-content-gap32">
+            <div class="flex-column-gap24">
+                <h2 class="headline headline-l color-font-darkblue-alt3 services-headline">
+                    <?= $block->headline_first_half()->toHtml() ?>
+                    <br>
+                    <span class="headline headline-l color-font-skyblue">
+                        <?= $block->headline_second_half()->toHtml() ?>
+                    </span>
+                </h2>
+                <p class="text-regular color-font-darkblue-alt2"><?= $block->text()->toHtml() ?></p>
+            </div>
 
-            <h2 class="headline headline-l color-font-darkblue-alt3 services-headline">
-                <?= $block->headline_first_half()->toHtml() ?>
-                <br>
-                <span class="headline headline-l color-font-skyblue">
-                    <?= $block->headline_second_half()->toHtml() ?>
-                </span>
-            </h2>
-            <p class="text-regular color-font-darkblue-alt2"><?= $block->text()->toHtml() ?></p>
 
             <div class="flex-column-gap12">
                 <?php foreach ($block->contact_options()->toStructure() as $contact_option): ?>

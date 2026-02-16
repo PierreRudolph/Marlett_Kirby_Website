@@ -97,14 +97,18 @@ function slidePicsBackward() {
     activateNewDot('pic');
 }
 
-
+/////GOOGLE REVIEW SLIDER
 function slideReviewsForward() {
     let reviewDiv = document.getElementById('gog-rev-wrapper');
     if (scrollPositionReviews <= -3498)
         return;
     deactivateLastDot('rev');
     dotPosReviews++;
-    scrollPositionReviews = scrollPositionReviews - 583;
+    if (window.screen.width <= 603) {
+        scrollPositionReviews = scrollPositionReviews - 361;
+    } else {
+        scrollPositionReviews = scrollPositionReviews - 583;
+    }
     reviewDiv.style = `transform: translateX(${scrollPositionReviews}px);`;
     activateNewDot('rev');
 }
@@ -116,7 +120,13 @@ function slideReviewsBackward() {
         return;
     deactivateLastDot('rev');
     dotPosReviews--;
-    scrollPositionReviews = scrollPositionReviews + 583;
+    if (window.screen.width <= 603) {
+        scrollPositionReviews = scrollPositionReviews + 361;
+
+    } else {
+        scrollPositionReviews = scrollPositionReviews + 583;
+
+    }
     reviewDiv.style = `transform: translateX(${scrollPositionReviews}px);`;
     activateNewDot('rev');
 }
@@ -125,12 +135,16 @@ function slideReviewsBackward() {
 function activateNewDot(gogOrRev) {
     if (gogOrRev == 'pic') {
         let dot = document.getElementById(`blue-dot-${dotPosPics}`);
+        if (dot == null)
+            return;
         dot.classList.add('blue-dot-active');
         return;
     }
 
     if (gogOrRev == 'rev') {
         let dot = document.getElementById(`blue-dot-rev-${dotPosReviews}`);
+        if (dot == null)
+            return;
         dot.classList.add('blue-dot-active');
     }
 }
@@ -139,12 +153,16 @@ function activateNewDot(gogOrRev) {
 function deactivateLastDot(gogOrRev) {
     if (gogOrRev == 'pic') {
         let dot = document.getElementById(`blue-dot-${dotPosPics}`);
+        if (dot == null)
+            return;
         dot.classList.remove('blue-dot-active');
         return;
     }
 
     if (gogOrRev == 'rev') {
         let dot = document.getElementById(`blue-dot-rev-${dotPosReviews}`);
+        if (dot == null)
+            return;
         dot.classList.remove('blue-dot-active');
     }
 }

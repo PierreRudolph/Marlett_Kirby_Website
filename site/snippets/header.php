@@ -32,7 +32,7 @@
         <header>
             <div class="header-content max-width1440">
                 <a class="logo" href="<?= $site->url() ?>">
-                    <img src="<?= url('assets/icons/marlett_logo.svg') ?>">
+                    <img src="<?= $site->header_icon()->toFile()->url() ?>">
                 </a>
 
                 <nav>

@@ -110,6 +110,13 @@ tabs:
     label: Assets
     icon: image
     sections:
+      icon:
+        type: fields
+        fields:
+          header_icon:
+            label: Header Icon
+            type: files
+            multiple: false
       files:
         type: files
         show: true

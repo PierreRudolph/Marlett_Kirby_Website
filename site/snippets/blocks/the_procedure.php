@@ -15,7 +15,7 @@
             <?php $collection = $block->cards()->toStructure() ?>
             <?php foreach ($collection as $card): ?>
                 <?php $index = ($collection->indexOf($card) + 1) ?>
-                <div class="flex-row-start-gap20">
+                <div class="flex-row-start-gap20 mobile-flex-wrap">
                     <span class="headline big-number color-font-blue"><?= $index ?></span>
 
 
@@ -41,7 +41,6 @@
 
                         <?php if ($card->text_top()->toString() == ""): ?>
                             <div class="flex-column-gap20">
-                                <h3 class="headline headline-xs color-font-blue"><?= $card->headline()->toHtml() ?></h3>
                                 <p class="copy-text-big color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                             </div>
                         <?php endif ?>
@@ -63,14 +62,14 @@
         <?php foreach ($section_collection as $section_item): ?>
 
             <section class="section-gap64 extended-section">
-                <div class="section-content">
+                <div class="section-content extended-section-img-wrapper">
                     <?php if ($image = $section_item->image()->toFile()): ?>
                         <img width="648px" height="410px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
                     <?php endif ?>
                 </div>
 
                 <div class="section-content-gap32">
-    
+
                     <?php if ($section_item->extended_bottom_list()->toStructure()->count() > 0): ?>
                         <h2 class="headline headline-l color-font-blue">
                             <?= $section_item->subheadline_first_half()->toHtml() ?>
@@ -79,7 +78,7 @@
                                 <?= $section_item->subheadline_second_half()->toHtml() ?>
                             </span>
                         </h2>
-                        <ul>
+                        <ul style="padding-left: 16px;">
                             <?php foreach ($section_item->extended_bottom_list()->toStructure() as $listItem): ?>
 
                                 <li class="text-headline-manrope color-font-darkblue">

@@ -56,12 +56,7 @@
             </div>
         </div>
 
-        <div class="flex-column grid-full">
-            <h4 class="label-alt-headline color-font-darkblue-alt2">
-                <?= $block->comparison_pics_label_headline()->toHtml() ?>
-            </h4>
-            <p class="label-alt-text color-font-darkblue-alt2"><?= $block->comparison_pics_label_text()->toHtml() ?></p>
-        </div>
+
 
     </section>
     <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right-reviews">

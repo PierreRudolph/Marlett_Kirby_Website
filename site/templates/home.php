@@ -8,9 +8,9 @@
                     style="margin-left: 4px;font-weight:500;"><?= $page->subheadline_second_half()->toHtml() ?></span>
             </p>
             <div>
-                <h1 class="headline headline-xl color-font-white"><?= $page->headline_first_half()->toHtml() ?><span
-                        style="margin-left: 18px;"
-                        class="headline headline-xl color-font-lighterblue"><?= $page->headline_second_half()->toHtml() ?></span>
+                <h1 class="headline headline-xl color-font-white"><?= $page->headline_first_half()->toHtml() ?>
+                    <span class="headline headline-xl color-font-lighterblue">
+                        <?= $page->headline_second_half()->toHtml() ?></span>
                 </h1>
             </div>
 

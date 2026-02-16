@@ -64,6 +64,10 @@ Service-areas: Herrenberg, Stuttgart
 
 ----
 
+Header-icon: - file://s9glikxlbsvzb8od
+
+----
+
 Posttype: Video
 
 ----
