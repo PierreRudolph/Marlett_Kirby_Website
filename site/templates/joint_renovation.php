@@ -29,7 +29,7 @@
 
                 <a href="tel:<?= $page->button_phone_number()->toHtml() ?>"
                     class="btn-pos-outlined btn-text btn-with-icon">
-                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>">
+                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
 
@@ -37,8 +37,8 @@
             <div class="flex-column-gap5">
 
                 <div class="flex-row-gap15">
-                    <img src="<?= url('assets/icons/google_icon.svg') ?>">
-                    <img src="<?= url('assets/icons/stars_icon.svg') ?>">
+                    <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Stern Icon" loading="lazy" role="img">
                 </div>
                 <div class="label color-font-blue">5,0 Sterne Bewertung -<span style="margin-left: 4px;"
                         class="label-underline">20+
@@ -63,21 +63,21 @@
                 <?php $thumb = $imageBefore->crop(680, 569); ?>
                 <div id="img-front-wrapper" class="comparison-slider-before" style="width: 50%">
                     <img draggable="false" class="noselect" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>"
-                        loading="lazy">
+                        loading="lazy" role="img">
 
                 </div>
 
                 <span id="slider" class="spacer-line">
                     <div class="draggable-button">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>">
+                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>" alt="Pfeil nach links" loading="lazy" role="img">
+                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>" alt="Pfeil nach rechts" loading="lazy" role="img">
                     </div>
                 </span>
 
                 <?php $thumb = $imageAfter->crop(680, 569); ?>
 
                 <img draggable="false" class="noselect" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>"
-                    loading="lazy">
+                    loading="lazy" role="img">
 
             </figure>
 

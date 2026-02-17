@@ -20,7 +20,7 @@
 
 
                     <?php if ($image = $card->img()->toFile()): ?>
-                        <img width="153px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                        <img width="153px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                     <?php endif ?>
 
                     <div class="flex-column-gap20">
@@ -64,7 +64,7 @@
             <section class="section-gap64 extended-section">
                 <div class="section-content extended-section-img-wrapper">
                     <?php if ($image = $section_item->image()->toFile()): ?>
-                        <img width="648px" height="410px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                        <img width="648px" height="410px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                     <?php endif ?>
                 </div>
 

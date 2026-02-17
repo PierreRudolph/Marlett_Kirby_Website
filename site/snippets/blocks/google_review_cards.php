@@ -19,8 +19,8 @@
                     <div class="google-review-card flex-column-gap32">
 
                         <div class="flex-row-gap15">
-                            <img src="<?= url('assets/icons/google_icon.svg') ?>">
-                            <img src="<?= url('assets/icons/stars_icon.svg') ?>">
+                            <img src="<?= url('assets/icons/google_icon.svg') ?>"alt="Icon von Google" loading="lazy" role="img">
+                            <img src="<?= url('assets/icons/stars_icon.svg') ?>"alt="Stern Icon" loading="lazy" role="img">
                         </div>
 
 
@@ -49,9 +49,9 @@
 
                 <div class="flex-row-gap20">
                     <button class="btn-slide" onclick="slideReviewsBackward()"><img
-                            src="<?= url('assets/icons/arrow_left.svg') ?>"></button>
+                            src="<?= url('assets/icons/arrow_left.svg') ?>"alt="Icon Pfeil nach links" loading="lazy" role="img"></button>
                     <button class="btn-slide" onclick="slideReviewsForward()"><img
-                            src="<?= url('assets/icons/arrow_right.svg') ?>"></button>
+                            src="<?= url('assets/icons/arrow_right.svg') ?>" alt="Icon Pfeil nach rechts" loading="lazy" role="img"></button>
                 </div>
             </div>
         </div>

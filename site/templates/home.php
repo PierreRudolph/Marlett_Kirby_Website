@@ -23,7 +23,7 @@
 
                 <a href="tel:<?= $page->button_phone_number()->toHtml() ?>"
                     class="btn-neg-outlined btn-text btn-with-icon">
-                    <img src="<?= url('assets/icons/phone.svg') ?>">
+                    <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
 
@@ -31,8 +31,8 @@
             <div class="flex-column-gap5">
 
                 <div class="flex-row-gap15">
-                    <img src="<?= url('assets/icons/google_icon.svg') ?>">
-                    <img src="<?= url('assets/icons/stars_icon.svg') ?>">
+                    <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Stern Icon" loading="lazy" role="img">
                 </div>
                 <div class="label color-font-white">5,0 Sterne Bewertung -<span style="margin-left: 4px;"
                         class="label-underline">20+

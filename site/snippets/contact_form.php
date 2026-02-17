@@ -1,6 +1,6 @@
 <?php if ($success): ?>
     <div class="alert success">
-        <p><?= $success ?></p>
+        <p class="headline headline-m color-font-white"><?= $success ?></p>
     </div>
 <?php else: ?>
     <?php if (isset($alert['error'])): ?>
@@ -96,7 +96,7 @@
         <div class="field checkbox">
             <label>
                 <input type="checkbox" name="privacy" value="1" <?= isset($data['privacy']) && $data['privacy'] ? 'checked' : '' ?> required>
-                Ich stimme den <a href="/datenschutz" target="_blank">Datenschutzbestimmungen</a> zu <abbr
+                Ich stimme den <a href="<?= url('datenschutzerklaerung') ?>" target="_blank">Datenschutzbestimmungen</a> zu <abbr
                     title="required">*</abbr>
             </label>
             <?= isset($alert['privacy']) ? '<span class="alert error">' . esc($alert['privacy']) . '</span>' : '' ?>

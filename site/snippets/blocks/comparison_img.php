@@ -11,7 +11,7 @@ $crop = $block->crop()->isTrue();
 
             <div class="comparison-pic-<?= $images->indexOf($image) + 1 ?>">
                 <?php $thumb = $image->crop(170, 439); ?>
-                <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
             </div>
         <?php endforeach ?>
 
@@ -23,7 +23,7 @@ $crop = $block->crop()->isTrue();
 
             <div class="comparison-pic-<?= $images->indexOf($image) + 1 ?>">
                 <?php $thumb = $image->crop(128, 328); ?>
-                <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
             </div>
         <?php endforeach ?>
 

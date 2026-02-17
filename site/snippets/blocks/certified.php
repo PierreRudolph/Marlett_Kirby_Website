@@ -17,7 +17,7 @@
 
                     <?php if ($imageFile = $image->img()->toFile()): ?>
 
-                        <img src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>">
+                        <img src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>" loading="lazy" role="img">
 
                     <?php endif ?>
 
@@ -30,7 +30,7 @@
                 <figure data-crop="true">
 
                     <?php $thumb = $solsos->crop(680, 424); ?>
-                    <img style="width: 100%;" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                    <img style="width: 100%;" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
 
                 </figure>
             <?php endif ?>

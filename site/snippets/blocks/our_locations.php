@@ -17,7 +17,7 @@
                     <div class="location-card flex-column-gap24 lightgrey-bg">
 
                         <div class="icon-text-card-img">
-                            <img src="assets/icons/icon_location_pin.svg" alt="Karten Marker">
+                            <img src="assets/icons/icon_location_pin.svg" alt="Icon Karten Marker" loading="lazy" role="img">
                         </div>
 
                         <div class="overflow-hidden">
@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="flex-row-gap15">
-                            <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon">
+                            <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
                             <p class="text-regular color-font-darkblue">
                                 <?= $card->phone()->toHtml() ?>
                             </p>

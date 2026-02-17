@@ -1,5 +1,5 @@
 <div class="section-wrapper blue-radient-bg" id="<?= $block->section_id()->toHtml() ?>">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left" loading="lazy">
 
     <section class="section-gap48">
 
@@ -14,7 +14,7 @@
             <?php if ($block->link_about_us_url()->toUrl() != null): ?>
                 <a class="link-text flex-row-gap5 color-font-white" href="<?= $block->link_about_us_url()->toUrl() ?>">
                     <?= $block->link_about_us_text()->toHtml() ?>
-                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>">
+                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>" alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
                 </a>
             <?php endif ?>
 
@@ -27,7 +27,7 @@
 
                     <?php if ($image = $card->img()->toFile()): ?>
                         <div class="icon-text-card-img">
-                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                         </div>
                     <?php endif ?>
 
@@ -41,6 +41,6 @@
         </div>
 
     </section>
-    <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">
+    <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" loading="lazy">
 
 </div>

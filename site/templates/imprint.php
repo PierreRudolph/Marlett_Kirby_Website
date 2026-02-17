@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon">
+                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
                         <p class="text-regular color-font-darkblue">
                         <p><strong>Tel:</strong></p>
                         <?= $page->tel_haupt()->toHtml() ?>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon">
+                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
                         <p class="text-regular color-font-darkblue">
                         <p><strong>Tel:</strong></p>
                         <?= $page->tel_zweigstelle()->toHtml() ?>
@@ -64,7 +64,7 @@
 
                     </div>
                     <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon">
+                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
                         <p class="text-regular color-font-darkblue">
                         <p><strong>Mobil:</strong></p>
                         <?= $page->mobil_zweigstelle()->toHtml() ?>

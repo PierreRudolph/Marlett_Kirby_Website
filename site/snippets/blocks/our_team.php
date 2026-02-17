@@ -24,7 +24,7 @@
 
                         <div>
                             <?php if ($thumb = $card->img()->toFile()->crop(464, 442)): ?>
-                                <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                                <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                             <?php endif ?>
                         </div>
 

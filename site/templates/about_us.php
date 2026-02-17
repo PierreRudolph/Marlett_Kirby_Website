@@ -33,7 +33,7 @@
 
                     <figure data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
                         <?php $thumb = $image->crop(680, 567); ?>
-                        <img class="mobile-width" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                        <img class="mobile-width" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                     </figure>
                 <?php endif ?>
 

@@ -23,8 +23,8 @@
             <div class="flex-column-gap5">
 
                 <div class="flex-row-gap15">
-                    <img src="<?= url('assets/icons/google_icon.svg') ?>">
-                    <img src="<?= url('assets/icons/stars_icon.svg') ?>">
+                    <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Icon von Google loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Icon Stern" loading="lazy" role="img">
                 </div>
                 <div class="label color-font-white">5,0 Sterne Bewertung -<span style="margin-left: 4px;"
                         class="label-underline">20+

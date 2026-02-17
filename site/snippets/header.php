@@ -31,7 +31,8 @@
         <header>
             <div class="header-content max-width1440">
                 <a class="logo" href="<?= $site->url() ?>">
-                    <img src="<?= $site->header_icon()->toFile()->url() ?>">
+                    <?php $img= $site->header_icon()->toFile()?>
+                    <img src="<?= $img->url() ?>" alt="<?= $img->alt() ?>"  loading="lazy" role="img">
                 </a>
 
                 <nav>
@@ -102,7 +103,7 @@
                     <div class="contact-option lightgrey-bg flex-row-gap24">
 
                         <div class="icon-blue-bg">
-                            <img src="<?= url('assets/icons/icon_mail.svg') ?>">
+                            <img src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy" role="img">
                         </div>
 
                         <a class="color-font-darkblue-alt2 mobile-subheadline"
@@ -116,7 +117,7 @@
                     <div class="contact-option lightgrey-bg flex-row-gap24">
 
                         <div class="icon-blue-bg">
-                            <img src="<?= url('assets/icons/phone.svg') ?>">
+                            <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
                         </div>
 
                         <a class="color-font-darkblue-alt2 mobile-subheadline" href="tel:<?= $site->phone()->toHtml() ?>">
@@ -129,7 +130,7 @@
                     <div class="contact-option lightgrey-bg flex-row-gap24">
 
                         <div class="icon-blue-bg">
-                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>">
+                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" alt="Icon von WhatsApp" loading="lazy" role="img">
                         </div>
 
                         <a class="color-font-darkblue-alt2 mobile-subheadline"
@@ -145,7 +146,7 @@
 
                     <a href="<?= $social_link->link()->toHtml() ?>">
                         <?php if ($image = $social_link->icon_mobile()->toFile()): ?>
-                            <img src="<?= $image->url() ?>">
+                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                         <?php endif ?>
                     </a>
 

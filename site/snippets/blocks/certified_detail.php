@@ -20,7 +20,7 @@
                 <div class="certificate-card lightgrey-bg">
                     <div class="flex-middle" >
                         <?php if ($imageFile = $certificate->img()->toFile()): ?>
-                            <img width="312px" height="132px" src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>">
+                            <img width="312px" height="132px" src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>" loading="lazy" role="img">
                         <?php endif ?>
                     </div>
 

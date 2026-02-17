@@ -4,10 +4,10 @@
 
             <div class="flex-column-gap40 grid-span2 mobile-flex-row">
                 <a class="logo" href="<?= $site->url() ?>">
-                    <img src="<?= url('assets/icons/marlett_logo.svg') ?>">
+                    <img src="<?= url('assets/icons/marlett_logo.svg') ?>" alt="Marlett Firmenlogo" loading="lazy" role="img">
                 </a>
                 <div class="flex-row-start-gap12 mobile-margin-auto">
-                    <img src="<?= url('assets/icons/icon_map_pin.svg') ?>">
+                    <img src="<?= url('assets/icons/icon_map_pin.svg') ?>" alt="Icon eines Kartenmarkers" loading="lazy" role="img">
                     <div class="flex-column color-font-white">
                         <p class="label-big">Standort <?= $site->city()->toHtml() ?></p>
                         <p class="copy-text-small"><?= $site->street()->toHtml() ?>
@@ -24,18 +24,18 @@
                     <?php if ($site->whatsapp()->toHtml() != ''): ?>
                         <a class="flex-row-gap12 copy-text-small color-font-white"
                             href="tel:<?= $site->whatsapp()->toHtml() ?>">
-                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>">
+                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" alt="Icon von WhatsApp" loading="lazy" role="img">
                             <span><?= $site->whatsapp()->toHtml() ?></span>
                         </a>
                     <?php endif ?>
                     <a class="flex-row-gap12 copy-text-small color-font-white"
                         href="tel:<?= $site->phone()->toHtml() ?>">
-                        <img src="<?= url('assets/icons/phone.svg') ?>">
+                        <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
                         <span><?= $site->phone()->toHtml() ?></span>
                     </a>
                     <a class="flex-row-gap12 copy-text-small color-font-white"
                         href="mailto:<?= $site->email()->toSring() ?>">
-                        <img src="<?= url('assets/icons/icon_mail.svg') ?>">
+                        <img src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy" role="img">
                         <span><?= $site->email()->toHtml() ?></span>
                     </a>
                 </div>
@@ -73,7 +73,7 @@
                             href="<?= $social_link->link()->toHtml() ?>">
                             <?php if ($image = $social_link->icon()->toFile()): ?>
 
-                                <img src="<?= $image->url() ?>">
+                                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                             <?php endif ?>
 
                             <span><?= $social_link->text()->toHtml() ?></span>

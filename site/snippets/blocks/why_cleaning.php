@@ -22,7 +22,7 @@
 
                     <?php if ($image = $card->img()->toFile()): ?>
                         <div class="icon-text-card-img">
-                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                         </div>
                     <?php endif ?>
 

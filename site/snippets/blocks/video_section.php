@@ -24,13 +24,13 @@
                                 <?= $videoStructure->video_thumbnail_text()->toHtml() ?>
                             </h3>
                             <?php if ($iconPath = url('assets/icons/icon_play_btn.svg')): ?>
-                                <img src="<?= $iconPath ?>" alt="Abspiel Knopf">
+                                <img src="<?= $iconPath ?>" alt="Icon Video Starten" loading="lazy" role="img">
                             <?php endif ?>
                         </div>
                     </div>
                     <div onclick="hideVideoLayers(<?= $index ?>)">
                         <?php if ($iconPath = url('assets/icons/icon_play_btn.svg')): ?>
-                            <img id="poster-video-layer-<?= $index ?>" class="video-poster-layer"
+                            <img id="poster-video-layer-<?= $index ?>" class="video-poster-layer" alt="Icon Video Starten" loading="lazy" role="img"
                                 src="<?= $videoStructure->video_thumbnail()->toFile()->url() ?>">
                         <?php endif ?>
                     </div>

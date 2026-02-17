@@ -13,7 +13,7 @@
             <?php if ($show_as_slider): ?>
                 <a class="link-text flex-row-gap5 color-font-blue" href="<?= $block->link_about_us_url()->toUrl() ?>">
                     <?= $block->link_about_us_text()->toHtml() ?>
-                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>">
+                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>" alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
                 </a>
             <?php endif ?>
         </div>
@@ -36,9 +36,9 @@
                     </div>
 
                     <div class="flex-row-gap20">
-                        <button class="btn-slide" onclick="slidePicsBackward()"><img
+                        <button class="btn-slide" onclick="slidePicsBackward()"><img alt="Icon Pfeil nach Links" loading="lazy" role="img"
                                 src="<?= url('assets/icons/arrow_left.svg') ?>"></button>
-                        <button class="btn-slide" onclick="slidePicsForward()"><img
+                        <button class="btn-slide" onclick="slidePicsForward()"><img alt="Icon Pfeil nach Rechts" loading="lazy" role="img"
                                 src="<?= url('assets/icons/arrow_right.svg') ?>"></button>
                     </div>
                 </div>

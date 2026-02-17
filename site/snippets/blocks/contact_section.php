@@ -24,7 +24,7 @@
 
                             <?php if ($image = $contact_option->img()->toFile()): ?>
                                 <div class="icon-blue-bg">
-                                    <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                                    <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                                 </div>
                             <?php endif ?>
 
@@ -40,12 +40,12 @@
 
                             <?php if ($image = $contact_option->img()->toFile()): ?>
                                 <div class="icon-blue-bg">
-                                    <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                                    <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                                 </div>
                             <?php endif ?>
 
                             <a class="color-font-darkblue-alt2 text-headline"
-                                href="https://wa.me/<?= $contact_option->whatsapp_tel()->toHtml() ?>">
+                                href="https://wa.me/<?= $contact_option->whatsapp_tel()->toHtml() ?>" loading="lazy" role="img">
                                 <?= $contact_option->whatsapp_text() ?> </a>
                         </div>
                     <?php endif ?>
@@ -55,7 +55,7 @@
 
                             <?php if ($image = $contact_option->img()->toFile()): ?>
                                 <div class="icon-blue-bg">
-                                    <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                                    <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                                 </div>
                             <?php endif ?>
 

@@ -32,7 +32,7 @@
 
                         <div class="comparison-pic-<?= $images->indexOf($item) + 1 ?>">
                             <?php $thumb = $img1->crop(170, 439); ?>
-                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                         </div>
 
 
@@ -40,7 +40,7 @@
 
                         <div class="comparison-pic-<?= $images->indexOf($item) + 1 ?>">
                             <?php $thumb = $img2->crop(170, 439); ?>
-                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                         </div>
                     </figure>
 
@@ -50,7 +50,7 @@
 
                         <div class="comparison-pic-<?= $images->indexOf($item) + 1 ?>">
                             <?php $thumb = $img1->crop(128, 328); ?>
-                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                         </div>
 
 
@@ -58,7 +58,7 @@
 
                         <div class="comparison-pic-<?= $images->indexOf($item) + 1 ?>">
                             <?php $thumb = $img2->crop(128, 328); ?>
-                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                         </div>
                     </figure>
 

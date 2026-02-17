@@ -32,7 +32,7 @@
                 <div onclick="openCloseAccordion(<?= $index ?>)" class="accordion" id="accordion-<?= $index ?>">
                     <button class=" btn-accordion">
                         <h4 class="color-font-darkblue-alt2 text-headline mobile-font-16p"><?= $q_and_a->question()->toHtml() ?></h4>
-                        <img src="<?= url('assets/icons/icon_arrow_down.svg') ?>">
+                        <img src="<?= url('assets/icons/icon_arrow_down.svg') ?>" alt="Icon Pfeil nach Unten" loading="lazy" role="img">
                     </button>
                     <div id="accordion-text" class="text-accordion">
                         <p class="text-regular500 color-font-darkblue-alt2"><?= $q_and_a->answer()->toHtml() ?></p>

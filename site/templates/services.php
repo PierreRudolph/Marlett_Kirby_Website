@@ -21,7 +21,7 @@
 
                 <a href="tel:<?= $page->button_phone_number()->toHtml() ?>"
                     class="btn-pos-outlined btn-text btn-with-icon">
-                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>">
+                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
 
@@ -29,8 +29,8 @@
             <div class="flex-column-gap5">
 
                 <div class="flex-row-gap15">
-                    <img src="<?= url('assets/icons/google_icon.svg') ?>">
-                    <img src="<?= url('assets/icons/stars_icon.svg') ?>">
+                    <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
                 </div>
                 <div class="label color-font-blue">5,0 Sterne Bewertung -<span style="margin-left: 4px;"
                         class="label-underline">20+
@@ -41,7 +41,7 @@
         <div class="section-content">
             <?php if ($img = $page->img()->toFile()): ?>
                 <div class="services-pic">
-                    <img src="<?= $img->url() ?>" alt="<?= $img->alt() ?>" loading="lazy">
+                    <img src="<?= $img->url() ?>" alt="<?= $img->alt() ?>" loading="lazy" role="img">
                 </div>
             <?php endif ?>
         </div>
