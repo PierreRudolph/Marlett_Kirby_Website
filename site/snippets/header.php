@@ -42,6 +42,9 @@
                         <?php foreach ($site->children()->listed() as $item): ?>
 
                             <?php if (
+                                $item->title()->esc() != 'Datenschutzerklärung' &&
+                                $item->title()->esc() != 'Impressum' &&
+                                $item->title()->esc() != 'agb' &&
                                 $item->title()->esc() != 'Leistungen' &&
                                 $item->title()->esc() != 'Kontakt' &&
                                 $item->title()->esc() != 'Home'
@@ -55,7 +58,7 @@
                         <?php endforeach ?>
                     </div>
 
-                    <a class="btn-pos btn-text" href="<?= url('contact') ?>">Kontakt</a>
+                    <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">Kontakt</a>
 
                     <label class="menu-toggle desktop800-d-none">
 
@@ -78,6 +81,9 @@
                 <?php foreach ($site->children()->listed() as $item): ?>
 
                     <?php if (
+                        $item->title()->esc() != 'Datenschutzerklärung' &&
+                        $item->title()->esc() != 'Impressum' &&
+                        $item->title()->esc() != 'agb' &&
                         $item->title()->esc() != 'Leistungen' &&
                         $item->title()->esc() != 'Home'
                     ): ?>

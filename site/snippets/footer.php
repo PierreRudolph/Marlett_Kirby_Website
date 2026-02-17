@@ -44,11 +44,11 @@
             <div class="flex-column-gap40 grid-span1">
                 <h5 class="headline headline-xs color-font-lightblue-alt">Unternehmen</h5>
                 <div class="flex-column-gap12">
-                    <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= url('about_us') ?>">
-                        <?= page('about_us')->title() ?>
+                    <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= url('ueber-uns') ?>">
+                        <?= page('ueber-uns')->title() ?>
                     </a>
-                    <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= url('references') ?>">
-                        <?= page('references')->title() ?>
+                    <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= url('referenzen') ?>">
+                        <?= page('referenzen')->title() ?>
                     </a>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="flex-column-gap40 grid-span1">
                 <h5 class="headline headline-xs color-font-lightblue-alt">Leistungen</h5>
                 <div class="flex-column-gap12">
-                    <?php foreach (page('services')->children()->listed() as $service): ?>
+                    <?php foreach (page('leistungen')->children()->listed() as $service): ?>
                         <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= $service->url() ?>">
                             <?= $service->title()->toHtml() ?>
                         </a>
@@ -108,9 +108,9 @@
             <p class="copy-text-small color-font-blue">© 2026 Marlett GbR</p>
 
             <div class="flex-row-gap24">
-                <a class="copy-text-small color-font-blue" href="<?= url('imprint') ?>">Impressum</a>
-                <a class="copy-text-small color-font-blue" href="<?= url('privacy') ?>">Datenschutz</a>
-                <a class="copy-text-small color-font-blue" href="<?= url('abg') ?>">AGB</a>
+                <a class="copy-text-small color-font-blue" href="<?= url('impressum') ?>">Impressum</a>
+                <a class="copy-text-small color-font-blue" href="<?= url('datenschutzerklaerung') ?>">Datenschutz</a>
+                <a class="copy-text-small color-font-blue" href="<?= url('agb') ?>">AGB</a>
             </div>
         </div>
     </div>

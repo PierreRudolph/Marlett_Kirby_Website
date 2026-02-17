@@ -1,12 +1,12 @@
 <?php
-$services = page('services');
+$services = page('leistungen');
 $items = $services->children()->listed();
 ?>
 
 
 <div class="main-nav__item">
   <div class="services-dropdown-link">
-    <a href="<?= url('services') ?>" class="main-nav__toggle mobile-headline-xs">
+    <a href="<?= url('leistungen') ?>" class="main-nav__toggle mobile-headline-xs">
       <?= $services->title() ?></a>
 
     <img class="arrow mobile800-d-none" src="<?= url('assets/icons/chevron_down.svg') ?>">

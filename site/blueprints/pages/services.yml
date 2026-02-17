@@ -58,7 +58,7 @@ sections:
       subpage_blocks:
         label: Inhalte der Unterseiten
         type: pages
-        query: site.find('services').children
+        query: site.find('leistungen').children
         pretty: true
 
   builder:

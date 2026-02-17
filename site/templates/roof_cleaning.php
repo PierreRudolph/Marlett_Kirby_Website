@@ -23,7 +23,7 @@
             </p>
 
             <div class="buttons-wrapper">
-                <a class="btn-pos btn-text" href="<?= url('contact') ?>">
+                <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 

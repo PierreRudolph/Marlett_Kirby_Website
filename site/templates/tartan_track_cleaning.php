@@ -19,7 +19,7 @@
             <!-- <h1 class="headline headline-xl color-font-lighterblue"><?= $page->headline_second_half()->toHtml() ?></h1> -->
             <p class="copy-text-big color-font-darkblue "><?= $page->text()->toHtml() ?></p>
             <div class="buttons-wrapper">
-                <a class="btn-pos btn-text" href="<?= url('contact') ?>">
+                <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 

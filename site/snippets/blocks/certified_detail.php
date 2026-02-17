@@ -38,7 +38,7 @@
             <?php endforeach ?>
         </div>
         <div class="flex-middle grid-full">
-            <a class="btn-pos btn-text" href="<?= url('contact') ?>">
+            <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">
                 <?= $page->button_contact_text()->toHtml() ?>
             </a>
         </div>

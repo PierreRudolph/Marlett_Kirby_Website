@@ -2,6 +2,10 @@ Title: Marlett
 
 ----
 
+Company-name: Marlett GbR
+
+----
+
 Street: Horberstr.
 
 ----
@@ -18,6 +22,34 @@ City: Herrenbeg
 
 ----
 
+Street-second-adress: Grottenberg
+
+----
+
+House-number-second-adress: 2
+
+----
+
+Zip-second-adress: 86497
+
+----
+
+City-second-adress: Horgau
+
+----
+
+Tax-id: DE365963347
+
+----
+
+Shareholder-one: Johnny Lettner
+
+----
+
+Shareholder-two: Florian Martan
+
+----
+
 Phone: 0176 411 658 24
 
 ----
@@ -27,6 +59,10 @@ Whatsapp:
 ----
 
 Email: mail@marlett.de
+
+----
+
+Phone-line: 08294/8590450
 
 ----
 

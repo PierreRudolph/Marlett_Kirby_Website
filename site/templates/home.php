@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?php snippet(name: 'header') ?>
 
 <div class="section-wrapper blue-radient-bg">
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left">
@@ -17,7 +17,7 @@
             <!-- <h1 class="headline headline-xl color-font-lighterblue"><?= $page->headline_second_half()->toHtml() ?></h1> -->
             <p class="copy-text-big color-font-white"><?= $page->text()->toHtml() ?></p>
             <div class="buttons-wrapper">
-                <a class="btn-neg btn-text" href="<?= url('contact') ?>">
+                <a class="btn-neg btn-text" href="<?= url('kontakt') ?>">
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 

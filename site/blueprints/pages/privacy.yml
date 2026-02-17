@@ -1,0 +1,14 @@
+title: Datenschutzerklärung
+
+tabs:
+  content:
+    label: Inhalt
+    sections:
+      impressum:
+        type: fields
+        fields:
+
+          all_text:
+            label: Alles
+            type: textarea
+            size: big

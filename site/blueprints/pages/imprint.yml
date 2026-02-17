@@ -1,0 +1,64 @@
+title: Impressum
+
+tabs:
+  content:
+    label: Inhalt
+    sections:
+      impressum:
+        type: fields
+        fields:
+
+          adresse:
+            label: Adresse
+            type: textarea
+            size: medium
+
+          mail_haupt:
+            label: Mail
+            type: email
+
+          tel_haupt:
+            label: Tel
+            type: tel
+
+          ustid:
+            label: Umsatzsteuer ID
+            type: text
+
+          adresse_zweigstelle:
+            label: Adresse Zweigstelle
+            type: textarea
+            size: medium
+
+          mail_zweigstelle:
+            label: Mail Zweigstelle
+            type: email
+
+          tel_zweigstelle:
+            label: Tel Zweigstelle
+            type: tel
+
+          mobil_zweigstelle:
+            label: Mobil Zweigstelle
+            type: tel
+
+          gesellschafter:
+            label: Vertretungsberechtigte Gesellschafter
+            type: structure
+            max: 2
+            fields:
+              name:
+                label: Name
+                type: text
+
+          haftungsausschluss:
+            label: Haftungsausschluss
+            type: structure
+            fields:
+              headline:
+                label: Überschrift
+                type: text
+              text:
+                label: Text
+                type: textarea
+                size: large

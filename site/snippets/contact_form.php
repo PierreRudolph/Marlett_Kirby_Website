@@ -18,7 +18,7 @@
             <div class="field">
                 <label for="service">Für welche Leistung interessieren Sie sich?</label>
                 <select class="services-dropdown color-font-darkblue" name="service" id="service">
-                    <?php foreach (page('services')->children()->listed() as $p): ?>
+                    <?php foreach (page('leistungen')->children()->listed() as $p): ?>
                         <option value="<?= $p->title()->html() ?>">
                             <?= $p->title()->html() ?>
                         </option>
