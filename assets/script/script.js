@@ -19,7 +19,6 @@ document.addEventListener('click', e => {
         return;
     let classList = e.target.classList;
     let includesAccordion;
-    console.log(classList)
     for (let i = 0; i < classList.length; i++) {
         includesAccordion = classList[i].includes('accordion');
         if (includesAccordion)
@@ -76,11 +75,17 @@ let dotPosReviews = 1;
 
 function slidePicsForward() {
     let picDiv = document.getElementById('comp-pic-wrapper');
+    if (isMobile() && scrollPositionPics <= -1632)
+        return;
     if (scrollPositionPics <= -2172)
         return;
     deactivateLastDot('pic');
     dotPosPics++;
-    scrollPositionPics = scrollPositionPics - 362;
+    if (isMobile()) {
+        scrollPositionPics = scrollPositionPics - 272;
+    } else {
+        scrollPositionPics = scrollPositionPics - 362;
+    }
     picDiv.style = `transform: translateX(${scrollPositionPics}px);`;
     activateNewDot('pic');
 }
@@ -92,7 +97,11 @@ function slidePicsBackward() {
         return;
     deactivateLastDot('pic');
     dotPosPics--;
-    scrollPositionPics = scrollPositionPics + 362;
+    if (isMobile()) {
+        scrollPositionPics = scrollPositionPics + 272;
+    } else {
+        scrollPositionPics = scrollPositionPics + 362;
+    }
     picDiv.style = `transform: translateX(${scrollPositionPics}px);`;
     activateNewDot('pic');
 }
@@ -100,12 +109,14 @@ function slidePicsBackward() {
 /////GOOGLE REVIEW SLIDER
 function slideReviewsForward() {
     let reviewDiv = document.getElementById('gog-rev-wrapper');
+    if (isMobile() && scrollPositionPics <= -2130)
+        return;
     if (scrollPositionReviews <= -3498)
         return;
     deactivateLastDot('rev');
     dotPosReviews++;
-    if (window.screen.width <= 603) {
-        scrollPositionReviews = scrollPositionReviews - 361;
+    if (isMobile()) {
+        scrollPositionReviews = scrollPositionReviews - 355;
     } else {
         scrollPositionReviews = scrollPositionReviews - 583;
     }
@@ -120,8 +131,8 @@ function slideReviewsBackward() {
         return;
     deactivateLastDot('rev');
     dotPosReviews--;
-    if (window.screen.width <= 603) {
-        scrollPositionReviews = scrollPositionReviews + 361;
+    if (isMobile()) {
+        scrollPositionReviews = scrollPositionReviews + 355;
 
     } else {
         scrollPositionReviews = scrollPositionReviews + 583;
@@ -165,4 +176,8 @@ function deactivateLastDot(gogOrRev) {
             return;
         dot.classList.remove('blue-dot-active');
     }
+}
+
+function isMobile() {
+    return window.screen.width <= 603;
 }

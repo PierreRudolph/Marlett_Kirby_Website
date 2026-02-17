@@ -21,11 +21,13 @@
             <div class="flex-column-gap40 grid-span1">
                 <h5 class="headline headline-xs color-font-lightblue-alt">Kontakt</h5>
                 <div class="flex-column-gap12">
-                    <a class="flex-row-gap12 copy-text-small color-font-white"
-                        href="tel:<?= $site->whatsapp()->toHtml() ?>">
-                        <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>">
-                        <span><?= $site->whatsapp()->toHtml() ?></span>
-                    </a>
+                    <?php if ($site->whatsapp()->toHtml() != ''): ?>
+                        <a class="flex-row-gap12 copy-text-small color-font-white"
+                            href="tel:<?= $site->whatsapp()->toHtml() ?>">
+                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>">
+                            <span><?= $site->whatsapp()->toHtml() ?></span>
+                        </a>
+                    <?php endif ?>
                     <a class="flex-row-gap12 copy-text-small color-font-white"
                         href="tel:<?= $site->phone()->toHtml() ?>">
                         <img src="<?= url('assets/icons/phone.svg') ?>">

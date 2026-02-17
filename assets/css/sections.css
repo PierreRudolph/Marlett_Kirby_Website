@@ -156,7 +156,7 @@ section {
 }
 
 .section-video {
-    width: 120%;
+    width: 100%;
 }
 
 .subheadline {
@@ -311,13 +311,13 @@ section {
 }
 
 .comparison-pic-1 {
-    width: 170px;
-    height: 439px;
+    /* width: 170px;
+    height: 439px; */
 }
 
 .comparison-pic-2 {
-    width: 170px;
-    height: 439px;
+    /* width: 170px;
+    height: 439px; */
 }
 
 .blue-dot-inactive {
@@ -736,7 +736,8 @@ textarea::placeholder {
 }
 
 .services-pic {
-    width: 100%;
+    width: 680px;
+    height: 500px;
 }
 
 .services-pic img {

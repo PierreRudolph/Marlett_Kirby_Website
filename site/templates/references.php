@@ -26,7 +26,7 @@
                 <?php foreach ($images as $item): ?>
 
 
-                    <figure class="comparison-pics" data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
+                    <figure class="comparison-pics mobile603-d-none" data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
 
                         <?php $img1 = $item->img_one()->toFile() ?>
 
@@ -40,6 +40,24 @@
 
                         <div class="comparison-pic-<?= $images->indexOf($item) + 1 ?>">
                             <?php $thumb = $img2->crop(170, 439); ?>
+                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                        </div>
+                    </figure>
+
+                    <figure class="comparison-pics desktop603-d-none" data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
+
+                        <?php $img1 = $item->img_one()->toFile() ?>
+
+                        <div class="comparison-pic-<?= $images->indexOf($item) + 1 ?>">
+                            <?php $thumb = $img1->crop(128, 328); ?>
+                            <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
+                        </div>
+
+
+                        <?php $img2 = $item->img_two()->toFile() ?>
+
+                        <div class="comparison-pic-<?= $images->indexOf($item) + 1 ?>">
+                            <?php $thumb = $img2->crop(128, 328); ?>
                             <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy">
                         </div>
                     </figure>

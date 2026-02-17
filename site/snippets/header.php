@@ -14,7 +14,6 @@
         'assets/css/fonts.css',
         'assets/css/index.css',
         'assets/css/snippets/header.css',
-        'assets/css/snippets/footer.css',
         'assets/css/snippets/nav_menu.css',
         'assets/css/sections.css',
         'assets/css/snippets/blocks/pic_text_cards.css',

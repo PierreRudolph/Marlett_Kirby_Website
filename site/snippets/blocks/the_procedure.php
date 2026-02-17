@@ -20,7 +20,7 @@
 
 
                     <?php if ($image = $card->img()->toFile()): ?>
-                        <img width="153px" height="140px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                        <img width="153px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
                     <?php endif ?>
 
                     <div class="flex-column-gap20">
