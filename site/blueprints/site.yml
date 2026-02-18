@@ -148,6 +148,29 @@ tabs:
             help: Mehrere Orte möglich
             when:
               show_service_areas: true
+  
+  seo:
+    label: SEO
+    sections:
+      meta:
+        type: fields
+        fields:
+          meta_title:
+            label: Meta Titel
+            type: text
+            width: 1/2
+          meta_description:
+            label: Meta Beschreibung
+            type: textarea
+            spellcheck: true
+            buttons: false
+            size: small
+            width: 1/2
+          meta_img:
+            label: Meta Bild
+            type: files
+            multiple: false
+            width: 1/3
 
   assets:
     label: Assets

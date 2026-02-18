@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /kirby/
+Disallow: /site/
+Disallow: /vendor/
+Disallow: /content/
+Disallow: /accounts/
+Disallow: /panel/
+
+Allow: /media/
+Allow: /assets/
+
+Sitemap: https://marlett-steinsanierungen.de/sitemap.xml
+

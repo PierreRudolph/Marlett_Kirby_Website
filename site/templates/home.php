@@ -1,7 +1,7 @@
 <?php snippet(name: 'header') ?>
 
 <div class="section-wrapper blue-radient-bg">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left" fetchpriority="high">
     <section class="above-fold">
         <div class="section-content mobile-grid-reverse">
             <p class="subheadline"><?= $page->subheadline_first_half()->toHtml() ?><span
@@ -43,13 +43,13 @@
         <div class="section-content">
 
             <?php if ($video = $page->video()->toFile()): ?>
-                <video controls poster="<?= url('assets/layout/img/video_poster.png') ?>" class="section-video">
+                <video controls poster="<?= url('assets/layout/img/video_poster2.webp') ?>" class="section-video">
                     <source src="<?= $video->url() ?>" type="<?= $video->mime() ?>" loading="lazy">
                 </video>
             <?php endif ?>
         </div>
     </section>
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" fetchpriority="high">
 
 </div>
 <?= $page->blocks()->toBlocks() ?>

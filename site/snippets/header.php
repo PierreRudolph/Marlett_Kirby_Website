@@ -6,10 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $site->title()->esc() ?> | <?= $page->title()->esc() ?></title>
     <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= url('assets/favicon/apple-touch-icon.png') ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= url('assets/favicon/favicon-32x32.png') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= url('assets/favicon/favicon-16x16.png') ?>">
+    <link rel="manifest" href="<?= url('assets/favicon/site.webmanifest') ?>">
+    <link rel="canonical" href="<?= $site->url() ?>">
+
+    <!-- ------META----- -->
+    <meta name="description" content="<?= $site->meta_description() ?>">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:url" content="<?= $site->url() ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= $site->meta_title() ?>">
+    <meta property="og:description" content="<?= $site->meta_description() ?>">
+    <meta property="og:image" content="<?= $site->meta_img() ?>">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="<?= $site->url() ?>">
+    <meta property="twitter:url" content="<?= $site->url() ?>">
+    <meta name="twitter:title" content="<?= $site->meta_title() ?>">
+    <meta name="twitter:description" content="<?= $site->meta_description() ?>">
+    <meta name="twitter:image" content="<?= $site->meta_img() ?>">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ------META END----- -->
+
+
     <?= css([
         'assets/css/fonts.css',
         'assets/css/index.css',
@@ -31,8 +56,8 @@
         <header>
             <div class="header-content max-width1440">
                 <a class="logo" href="<?= $site->url() ?>">
-                    <?php $img= $site->header_icon()->toFile()?>
-                    <img src="<?= $img->url() ?>" alt="<?= $img->alt() ?>"  loading="lazy" role="img">
+                    <?php $img = $site->header_icon()->toFile() ?>
+                    <img src="<?= $img->url() ?>" alt="<?= $img->alt() ?>" loading="lazy" role="img">
                 </a>
 
                 <nav>
@@ -130,7 +155,8 @@
                     <div class="contact-option lightgrey-bg flex-row-gap24">
 
                         <div class="icon-blue-bg">
-                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" alt="Icon von WhatsApp" loading="lazy" role="img">
+                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" alt="Icon von WhatsApp" loading="lazy"
+                                role="img">
                         </div>
 
                         <a class="color-font-darkblue-alt2 mobile-subheadline"

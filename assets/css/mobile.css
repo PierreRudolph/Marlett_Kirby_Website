@@ -393,6 +393,10 @@
     .services-pic {
         width: 100%;
     }
+
+    .video-wrapper {
+        width: 100%;
+    }
 }
 
 @media(max-width: 750px) {

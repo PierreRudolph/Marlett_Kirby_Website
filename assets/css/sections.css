@@ -157,6 +157,7 @@ section {
 
 .section-video {
     width: 100%;
+    object-fit: cover;
 }
 
 .subheadline {
@@ -692,6 +693,9 @@ textarea::placeholder {
 
 .video-wrapper {
     position: relative;
+    max-width: 710px;
+    max-height: 400px;
+    width: 710px;
 }
 
 .video-wrapper:hover .video-with-thumbnail {
@@ -749,4 +753,4 @@ textarea::placeholder {
     height: 100%;
 }
 
-.imprint-section{}
+.imprint-section {}

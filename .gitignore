@@ -56,3 +56,5 @@ Icon
 /media/
 /kirby/
 /vendor/
+robot.txt
+.gitignore
