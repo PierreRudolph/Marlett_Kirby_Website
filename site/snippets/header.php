@@ -34,7 +34,49 @@
 
     <!-- ------META END----- -->
 
+    <!-- STRUCTURED DATA -->
 
+    <?php
+    // LocalBusiness JSON-LD aus Site-Feldern generieren
+    
+    $companyName = $site->company_name()->value();
+    $street = $site->street()->value();
+    $houseNumber = $site->house_number()->value();
+    $image = $site->meta_img()->toFile()->url();
+    $zip = $site->zip()->value();
+    $city = $site->city()->value();
+    $url = $site->url(); // Website-URL
+    $telephone = $site->phone_line()->value() ?? ''; // optional, falls du ein Feld für Telefon hast
+    $mobileTelephone = $site->phone()->value();
+
+    $fullStreet = trim($street . ' ' . $houseNumber);
+
+    $localBusiness = [
+        "@context" => "https://schema.org",
+        "@type" => "LocalBusiness",
+        "name" => $companyName,
+        "url" => $url,
+        "telephone" => $telephone,
+        "mobile" => $mobileTelephone,
+        "image" => $image,
+        "address" => [
+            "@type" => "PostalAddress",
+            "streetAddress" => $fullStreet,
+            "addressLocality" => $city,
+            "postalCode" => $zip,
+            "addressCountry" => "DE"
+        ]
+    ];
+    ?>
+
+    <?php if (!empty($companyName)): ?>
+        <script type="application/ld+json">
+        <?= json_encode($localBusiness, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
+        </script>
+    <?php endif ?>
+
+
+    <!-- STRUCTURED DATA END -->
     <?= css([
         'assets/css/fonts.css',
         'assets/css/index.css',
