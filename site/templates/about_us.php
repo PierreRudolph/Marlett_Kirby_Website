@@ -18,7 +18,7 @@
                     <?= $page->text_bottom()->toHtml() ?>
                 </p>
 
-                <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">
+                <a class="btn-pos btn-text m-btn-width" href="<?= url('kontakt') ?>">
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 

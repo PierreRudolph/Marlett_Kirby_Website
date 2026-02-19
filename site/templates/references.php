@@ -7,11 +7,11 @@
         <div class="flex-column-gap24 grid-middle">
             <h2 class="headline headline-l color-font-darkblue-alt reasons-headline">
                 <?= $page->headline_first_half()->toHtml() ?><br>
-                <span class="headline headline-l color-font-lighterblue">
+                <span class="headline headline-l color-font-skyblue">
                     <?= $page->headline_second_half()->toHtml() ?>
                 </span>
             </h2>
-            <p><?= $page->text_top()->toHtml() ?></p>
+            <p class="text-regular500 color-font-darkblue"><?= $page->text_top()->toHtml() ?></p>
         </div>
 
         <div class="grid-full flex-column-gap20">

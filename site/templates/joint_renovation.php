@@ -3,7 +3,7 @@
 <div class="section-wrapper white-bg">
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left">
     <section class="above-fold">
-        <div class="section-content mobile-grid-reverse">
+        <div class="section-content">
             <p class="subheadline-neg">
                 <?= $page->subheadline_first_half()->toHtml() ?><span style="margin-left: 4px;font-weight:500;">
                     <?= $page->subheadline_second_half()->toHtml() ?>
@@ -23,12 +23,12 @@
             </p>
 
             <div class="buttons-wrapper">
-                <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">
+                <a class="btn-pos btn-text m-btn-width" href="<?= url('kontakt') ?>">
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 
-                <a href="tel:<?= $page->button_phone_number()->toHtml() ?>"
-                    class="btn-pos-outlined btn-text btn-with-icon">
+                <a href="tel:<?= $site->phone()->toHtml() ?>"
+                    class="btn-pos-outlined btn-text btn-with-icon m-btn-width">
                     <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>

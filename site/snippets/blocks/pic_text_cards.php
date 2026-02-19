@@ -4,7 +4,7 @@
         <h2 class="headline headline-l color-font-blue services-headline">
             <?= $block->headline_first_half()->toHtml() ?>
             <br>
-            <span class="headline headline-l color-font-lighterblue">
+            <span class="headline headline-l color-font-skyblue">
                 <?= $block->headline_second_half()->toHtml() ?>
             </span>
         </h2>

@@ -25,6 +25,10 @@ tabs:
             label: Umsatzsteuer ID
             type: text
 
+          show_second_adress:
+            label: Adresse zweigstelle anzeigen?
+            type: toggle
+
           adresse_zweigstelle:
             label: Adresse Zweigstelle
             type: textarea

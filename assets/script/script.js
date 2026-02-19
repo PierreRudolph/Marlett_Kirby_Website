@@ -53,7 +53,7 @@ function closeOpenAccordions() {
     let accordion;
     for (let i = 0; i <= 5; i++) {
         accordion = document.getElementById(`accordion-${i}`);
-        if (accordion.classList.contains('open')) {
+        if (accordion != null && accordion.classList.contains('open')) {
             accordion.classList.remove('open');
         }
     }
@@ -180,4 +180,9 @@ function deactivateLastDot(gogOrRev) {
 
 function isMobile() {
     return window.screen.width <= 603;
+}
+
+function pauseVideo(videoId) {
+    let videoElm = document.getElementById(videoId);
+    videoElm.pause();
 }

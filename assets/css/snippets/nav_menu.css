@@ -1,5 +1,6 @@
 .main-nav__toggle {
-    position: relative;
+    position: absolute;
+    left: 0;
     z-index: 1;
     color: var(--color-font-blue);
     background: none;
@@ -19,7 +20,7 @@
 .dropdown {
     transition: opacity 225ms ease-in-out;
     position: absolute;
-    top: 79px;
+    top: 81px;
     background-color: var(--color-bg-lightgrey);
     padding: 16px 24px 16px 24px;
     list-style: none;
@@ -62,8 +63,10 @@
 } */
 
 .services-dropdown-link {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 4px;
+    width: 129px;
 }

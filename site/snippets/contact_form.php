@@ -6,13 +6,14 @@
     <?php if (isset($alert['error'])): ?>
         <div><?= $alert['error'] ?></div>
     <?php endif ?>
-    <form class="contact-form flex-column-gap24 lightgrey-bg" method="post" action="<?= $page->url() ?>">
+    <form id="contact-form" class="contact-form flex-column-gap24 lightgrey-bg" method="post"
+        action="<?= $page->url() . '#contact-form' ?>">
         <div class="honeypot">
             <label for="website">Website <abbr title="required">*</abbr></label>
             <input type="url" id="website" name="website" tabindex="-1">
         </div>
 
-        <h3 class="headline-m color-font-darkblue-alt3">Vereinbare deinen Termin</h3>
+        <h3 class="headline headline-m color-font-darkblue-alt3">Vereinbare deinen Termin</h3>
 
         <div class="flex-column-gap20">
             <div class="field">
@@ -26,7 +27,7 @@
                 </select>
             </div>
             <div class="grid-column-gap20">
-                <div class="field grid-span1">
+                <div class="field">
                     <label for="first-name">
                         Vorname <abbr title="Bitte ausfüllen">*</abbr>
                     </label>
@@ -35,7 +36,7 @@
                     <?= isset($alert['first-name']) ? '<span class="alert error">' . esc($alert['first-name']) . '</span>' : '' ?>
                 </div>
 
-                <div class="field grid-span1">
+                <div class="field">
                     <label for="last-name">
                         Nachname <abbr title="Bitte ausfüllen">*</abbr>
                     </label>
@@ -44,7 +45,7 @@
                     <?= isset($alert['last-name']) ? '<span class="alert error">' . esc($alert['last-name']) . '</span>' : '' ?>
                 </div>
 
-                <div class="field grid-span1">
+                <div class="field">
                     <label for="zip-code">
                         Postleitzahl <abbr title="Bitte ausfüllen">*</abbr>
                     </label>
@@ -53,7 +54,7 @@
                     <?= isset($alert['zip-code']) ? '<span class="alert error">' . esc($alert['zip-code']) . '</span>' : '' ?>
                 </div>
 
-                <div class="field grid-span1">
+                <div class="field">
                     <label for="city">
                         Ort <abbr title="Bitte ausfüllen">*</abbr>
                     </label>
@@ -62,7 +63,7 @@
                     <?= isset($alert['city']) ? '<span class="alert error">' . esc($alert['city']) . '</span>' : '' ?>
                 </div>
 
-                <div class="field grid-span1">
+                <div class="field">
                     <label for="email">
                         Email (optional)
                     </label>
@@ -71,7 +72,7 @@
                     <?= isset($alert['email']) ? '<span class="alert error">' . esc($alert['email']) . '</span>' : '' ?>
                 </div>
 
-                <div class="field grid-span1">
+                <div class="field">
                     <label for="phone">
                         Telefon <abbr title="Bitte ausfüllen">*</abbr>
                     </label>
@@ -87,8 +88,8 @@
                     Nachricht (optional)
                 </label>
                 <textarea placeholder="Deine Nachricht" id="text" name="text" required>
-                                                                                                                                                                                                    <?= esc($data['text'] ?? '') ?>
-                                                                                                                                                                                                </textarea>
+                                                                                                                                                                                                            <?= esc($data['text'] ?? '') ?>
+                                                                                                                                                                                                        </textarea>
                 <?= isset($alert['text']) ? '<span class="alert error">' . esc($alert['text']) . '</span>' : '' ?>
             </div>
         </div>
@@ -96,13 +97,13 @@
         <div class="field checkbox">
             <label>
                 <input type="checkbox" name="privacy" value="1" <?= isset($data['privacy']) && $data['privacy'] ? 'checked' : '' ?> required>
-                Ich stimme den <a href="<?= url('datenschutzerklaerung') ?>" target="_blank">Datenschutzbestimmungen</a> zu <abbr
-                    title="required">*</abbr>
+                Ich stimme den <a href="<?= url('datenschutzerklaerung') ?>" target="_blank">Datenschutzbestimmungen</a> zu
+                <abbr title="required">*</abbr>
             </label>
             <?= isset($alert['privacy']) ? '<span class="alert error">' . esc($alert['privacy']) . '</span>' : '' ?>
         </div>
 
-        <button class="btn-pos btn-text" type="submit" name="submit" value="Senden">Senden</button>
+        <button class="btn-pos btn-text m-btn-width" type="submit" name="submit" value="Senden">Senden</button>
 
 
     </form>

@@ -30,48 +30,65 @@
                         <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
                         <p class="text-regular color-font-darkblue">
                         <p><strong>Tel:</strong></p>
-                        <?= $page->tel_haupt()->toHtml() ?>
+                        <?= $site->phone_line()->toHtml() ?>
                         </p>
 
                     </div>
 
-                </div>
-                <div class="location-card flex-column-gap24 lightgrey-bg">
-
-                    <h4 class="text-headline color-font-darkblue">Adresse Zweigstelle</h4>
-                    <div class="overflow-hidden">
-
-                        <p class="text-regular color-font-darkblue">
-                            <?= $page->adresse_zweigstelle()->toHtml() ?>
-                        </p>
-                        <p class="text-regular color-font-darkblue">
-                            <?php if ($page->mail_zweigstelle()->isNotEmpty()): ?>
-                            <p><strong>Mail:</strong>
-                                <a href="mailto:<?= $page->mail_zweigstelle()->esc() ?>">
-                                    <?= $page->mail_zweigstelle()->html() ?>
-                                </a>
-                            </p>
-                        <?php endif ?>
-                        </p>
-                    </div>
-
-                    <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
-                        <p class="text-regular color-font-darkblue">
-                        <p><strong>Tel:</strong></p>
-                        <?= $page->tel_zweigstelle()->toHtml() ?>
-                        </p>
-
-                    </div>
                     <div class="flex-row-gap15">
                         <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
                         <p class="text-regular color-font-darkblue">
                         <p><strong>Mobil:</strong></p>
-                        <?= $page->mobil_zweigstelle()->toHtml() ?>
+                        <?= $site->phone()->toHtml() ?>
                         </p>
 
                     </div>
+
                 </div>
+
+                <?php
+
+                $show_second_adress = $page->show_second_adress()->isTrue();
+                ?>
+                <?php if ($show_second_adress): ?>
+                    <div class="location-card flex-column-gap24 lightgrey-bg">
+
+                        <h4 class="text-headline color-font-darkblue">Adresse Zweigstelle</h4>
+                        <div class="overflow-hidden">
+
+                            <p class="text-regular color-font-darkblue">
+                                <?= $page->adresse_zweigstelle()->toHtml() ?>
+                            </p>
+                            <p class="text-regular color-font-darkblue">
+                                <?php if ($page->mail_zweigstelle()->isNotEmpty()): ?>
+                                <p><strong>Mail:</strong>
+                                    <a href="mailto:<?= $page->mail_zweigstelle()->esc() ?>">
+                                        <?= $page->mail_zweigstelle()->html() ?>
+                                    </a>
+                                </p>
+                            <?php endif ?>
+                            </p>
+                        </div>
+
+                        <div class="flex-row-gap15">
+                            <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                            <p class="text-regular color-font-darkblue">
+                            <p><strong>Tel:</strong></p>
+                            <?= $page->tel_zweigstelle()->toHtml() ?>
+                            </p>
+
+                        </div>
+                        <div class="flex-row-gap15">
+                            <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                            <p class="text-regular color-font-darkblue">
+                            <p><strong>Mobil:</strong></p>
+                            <?= $page->mobil_zweigstelle()->toHtml() ?>
+                            </p>
+
+                        </div>
+                    </div>
+                <?php endif ?>
+
 
                 <div class="location-card flex-column-gap24 lightgrey-bg">
 

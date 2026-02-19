@@ -15,12 +15,12 @@
             <!-- <h1 class="headline headline-xl color-font-lighterblue"><?= $page->headline_second_half()->toHtml() ?></h1> -->
             <p class="copy-text-big color-font-darkblue "><?= $page->text()->toHtml() ?></p>
             <div class="buttons-wrapper">
-                <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">
+                <a class="btn-pos btn-text m-btn-width" href="<?= url('kontakt') ?>">
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 
-                <a href="tel:<?= $page->button_phone_number()->toHtml() ?>"
-                    class="btn-pos-outlined btn-text btn-with-icon">
+                <a href="tel:<?= $site->phone()->toHtml() ?>"
+                    class="btn-pos-outlined btn-text btn-with-icon m-btn-width">
                     <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>

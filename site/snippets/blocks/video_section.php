@@ -30,17 +30,24 @@
                     </div>
                     <div onclick="hideVideoLayers(<?= $index ?>)">
                         <?php if ($iconPath = url('assets/icons/icon_play_btn.svg')): ?>
-                            <img id="poster-video-layer-<?= $index ?>" class="video-poster-layer" alt="Icon Video Starten" loading="lazy" role="img"
-                                src="<?= $videoStructure->video_thumbnail()->toFile()->url() ?>">
+                            <img id="poster-video-layer-<?= $index ?>" class="video-poster-layer" alt="Icon Video Starten"
+                                loading="lazy" role="img" src="<?= $videoStructure->video_thumbnail()->toFile()->url() ?>">
                         <?php endif ?>
                     </div>
 
 
                     <?php if ($videoFile = $videoStructure->video()->toFile()): ?>
-                        <video class="video-with-thumbnail" id="section-video-<?= $index ?>" controls
-                            poster="<?= $videoStructure->video_thumbnail()->toFile()->url() ?>">
-                            <source src="<?= $videoFile->url() ?>" type="<?= $videoFile->mime() ?>">
-                        </video>
+                        <div class="video-home-wrapper" style="width: 100%;">
+
+                            <video muted class="video-with-thumbnail" id="section-video-<?= $index ?>" controls
+                                poster="<?= $videoStructure->video_thumbnail()->toFile()->url() ?>">
+                                <source src="<?= $videoFile->url() ?>" type="<?= $videoFile->mime() ?>">
+                            </video>
+                            <div onclick="pauseVideo('section-video-<?= $index ?>')" class="video-play-btn"><img
+                                    src="<?= url('assets/icons/pause.svg') ?>" alt="Videoapspiel Button" loading="lazy"
+                                    role="img"></div>
+
+                        </div>
                     <?php endif ?>
                 </div>
 

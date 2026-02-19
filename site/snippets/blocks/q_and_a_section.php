@@ -30,7 +30,7 @@
             <?php foreach ($q_and_a_collection as $q_and_a): ?>
                 <?php $index = $q_and_a_collection->indexOf($q_and_a) ?>
                 <div onclick="openCloseAccordion(<?= $index ?>)" class="accordion" id="accordion-<?= $index ?>">
-                    <button class=" btn-accordion">
+                    <button class="btn-accordion">
                         <h4 id="faq-question" class="color-font-darkblue-alt2 text-headline mobile-font-16p">
                             <?= $q_and_a->question()->toHtml() ?>
                         </h4>

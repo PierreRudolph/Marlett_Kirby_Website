@@ -50,23 +50,36 @@
                         </div>
                     <?php endif ?>
 
-                    <?php if ($contact_option->phone()->value() !== ""): ?>
-                        <div class="contact-option lightgrey-bg flex-row-gap24">
-
-                            <?php if ($image = $contact_option->img()->toFile()): ?>
-                                <div class="icon-blue-bg">
-                                    <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
-                                </div>
-                            <?php endif ?>
-
-                            <a class="color-font-darkblue-alt2 text-headline"
-                                href="tel:<?= $contact_option->phone()->toHtml() ?>">
-                                <?= $contact_option->phone()->toHtml() ?>
-                            </a>
-                        </div>
-                    <?php endif ?>
-
                 <?php endforeach ?>
+                <?php if ($site->phone_line()->value() !== ""): ?>
+                    <div class="contact-option lightgrey-bg flex-row-gap24">
+
+                        <?php if ($image = $contact_option->img()->toFile()): ?>
+                            <div class="icon-blue-bg">
+                                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
+                            </div>
+                        <?php endif ?>
+
+                        <a class="color-font-darkblue-alt2 text-headline" href="tel:<?= $site->phone_line()->toHtml() ?>">
+                            <?= $site->phone_line()->toHtml() ?>
+                        </a>
+                    </div>
+                <?php endif ?>
+
+                <?php if ($site->phone()->value() !== ""): ?>
+                    <div class="contact-option lightgrey-bg flex-row-gap24">
+
+                        <?php if ($image = $contact_option->img()->toFile()): ?>
+                            <div class="icon-blue-bg">
+                                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
+                            </div>
+                        <?php endif ?>
+
+                        <a class="color-font-darkblue-alt2 text-headline" href="tel:<?= $site->phone()->toHtml() ?>">
+                            <?= $site->phone()->toHtml() ?>
+                        </a>
+                    </div>
+                <?php endif ?>
             </div>
 
         </div>

@@ -19,13 +19,13 @@
             <!-- <h1 class="headline headline-xl color-font-lighterblue"><?= $page->headline_second_half()->toHtml() ?></h1> -->
             <p class="copy-text-big color-font-darkblue "><?= $page->text()->toHtml() ?></p>
             <div class="buttons-wrapper">
-                <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">
+                <a class="btn-pos btn-text m-btn-width" href="<?= url('kontakt') ?>">
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 
-                <a href="tel:<?= $page->button_phone_number()->toHtml() ?>"
-                    class="btn-pos-outlined btn-text btn-with-icon">
-                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
+                <a href="tel:<?= $site->phone()->toHtml() ?>" class="btn-pos-outlined btn-text btn-with-icon m-btn-width">
+                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy"
+                        role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
 
@@ -63,10 +63,12 @@
 
                 </div>
 
-                <span id="slider" class="spacer-line">
-                    <div class="draggable-button">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>" alt="Pfeil nach Links" loading="lazy" role="img">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>" alt="Pfeil nach Rechts" loading="lazy" role="img">
+                <span id="slider" class="spacer-line noselect">
+                    <div class="draggable-button noselect">
+                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>"
+                            alt="Pfeil nach Links" loading="lazy" role="img">
+                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>"
+                            alt="Pfeil nach Rechts" loading="lazy" role="img">
                     </div>
                 </span>
 
@@ -84,15 +86,16 @@
                 const slider = document.getElementById("slider");
 
                 slider.addEventListener("pointerdown", e => {
+                    e.preventDefault();                 // wichtig für iOS
                     slider.setPointerCapture(e.pointerId);
                     move(e);
-                });
+                }, { passive: false });
 
                 slider.addEventListener("pointermove", e => {
-                    e.preventDefault();   // <-- verhindert Scrollen auf Touch
                     if (!slider.hasPointerCapture(e.pointerId)) return;
+                    e.preventDefault();                 // verhindert Scroll auf iPhone
                     move(e);
-                });
+                }, { passive: false });
 
                 slider.addEventListener("pointerup", e => {
                     slider.releasePointerCapture(e.pointerId);
@@ -105,12 +108,10 @@
                 function move(e) {
                     const rect = box.getBoundingClientRect();
                     let x = e.clientX - rect.left;
-
                     x = Math.max(0, Math.min(x, rect.width));
-
                     front.style.width = x + "px";
                     slider.style.left = x + "px";
-                };
+                }
             </script>
 
 

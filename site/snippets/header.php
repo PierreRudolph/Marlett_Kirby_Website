@@ -83,7 +83,6 @@
         'assets/css/snippets/header.css',
         'assets/css/snippets/nav_menu.css',
         'assets/css/sections.css',
-        'assets/css/snippets/blocks/pic_text_cards.css',
         'assets/css/mobile.css'
     ]) ?>
 
@@ -140,9 +139,7 @@
                     </label>
                 </nav>
             </div>
-
-        </header>
-        <div class="mobile-nav-menu desktop800-d-none">
+    <div class="mobile-nav-menu desktop800-d-none">
             <div>
                 <?php snippet('nav_menu') ?>
                 <hr>
@@ -224,4 +221,6 @@
             </div>
 
         </div>
+        </header>
+    
         <main>
