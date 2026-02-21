@@ -33,7 +33,7 @@
             <?php endforeach ?>
         </div>
         <div class="grid-full flex-middle">
-            <a style="margin-bottom: 6px;" class="btn-pos btn-text" href="<?= $block->button_contact_link()->toUrl() ?>">
+            <a class="btn-pos btn-text marg-bot6" href="<?= $block->button_contact_link()->toUrl() ?>">
                 <?= $block->button_contact_text()->toHtml() ?>
             </a>
         </div>

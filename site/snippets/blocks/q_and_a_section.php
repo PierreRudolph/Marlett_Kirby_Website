@@ -1,7 +1,7 @@
 <div class="section-wrapper lightgrey-bg" id="<?= $block->section_id()->toHtml() ?>">
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left">
 
-    <section class="section-gap48" style="overflow: visible;">
+    <section class="section-gap48 overflow-visible">
 
         <div class="section-content-gap20">
 
@@ -16,8 +16,7 @@
             <p class="text-regular500 color-font-darkblue-alt2"><?= $block->text()->toHtml() ?></p>
 
             <div class="grid-full flex-middle">
-                <a style="margin-bottom: 6px;" class="btn-pos btn-text"
-                    href="<?= $block->button_contact_link()->toUrl() ?>">
+                <a class="btn-pos btn-text marg-bot6" href="<?= $block->button_contact_link()->toUrl() ?>">
                     <?= $block->button_contact_text()->toHtml() ?>
                 </a>
             </div>
@@ -77,10 +76,10 @@ endif;
 
 <?php if (!empty($faqArray)): ?>
     <script type="application/ld+json">
-    <?= json_encode([
-        "@context" => "https://schema.org",
-        "@type" => "FAQPage",
-        "mainEntity" => $faqArray
-    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
-    </script>
+        <?= json_encode([
+            "@context" => "https://schema.org",
+            "@type" => "FAQPage",
+            "mainEntity" => $faqArray
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
+        </script>
 <?php endif ?>

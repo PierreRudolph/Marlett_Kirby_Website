@@ -38,7 +38,7 @@
         </div>
 
         <div class="grid-full flex-middle">
-            <a style="margin-bottom: 6px;" class="btn-pos btn-text" href="<?= url('kontakt') ?>">
+            <a class="btn-pos btn-text marg-bot6" href="<?= url('kontakt') ?>">
                 <?= $block->button_contact_text()->toHtml() ?>
             </a>
         </div>

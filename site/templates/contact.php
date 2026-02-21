@@ -4,13 +4,12 @@
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left">
     <section class="above-fold">
         <div class="section-content">
-            <p class="subheadline"><?= $page->subheadline_first_half()->toHtml() ?><span
-                    style="margin-left: 4px;font-weight:500;"><?= $page->subheadline_second_half()->toHtml() ?></span>
+            <p class="subheadline"><?= $page->subheadline_first_half()->toHtml() ?>
+            <span class="subheadline-second-half"><?= $page->subheadline_second_half()->toHtml() ?></span>
             </p>
             <div>
                 <h1 class="headline headline-xl color-font-white"><?= $page->headline_first_half()->toHtml() ?><span
-                        style="margin-left: 18px;"
-                        class="headline headline-xl color-font-lighterblue"><?= $page->headline_second_half()->toHtml() ?></span>
+                        class="headline headline-xl color-font-lighterblue marg-left18"><?= $page->headline_second_half()->toHtml() ?></span>
                 </h1>
             </div>
 
@@ -26,8 +25,8 @@
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Icon von Google loading="lazy" role="img">
                     <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Icon Stern" loading="lazy" role="img">
                 </div>
-                <div class="label color-font-white">5,0 Sterne Bewertung -<span style="margin-left: 4px;"
-                        class="label-underline">20+
+                <div class="label color-font-white">5,0 Sterne Bewertung -<span 
+                        class="label-underline marg-left4">20+
                         Bewertungen</span></div>
             </div>
         </div>

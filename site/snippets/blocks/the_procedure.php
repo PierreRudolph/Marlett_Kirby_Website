@@ -64,7 +64,8 @@
             <section class="section-gap64 extended-section">
                 <div class="section-content extended-section-img-wrapper">
                     <?php if ($image = $section_item->image()->toFile()): ?>
-                        <img width="648px" height="410px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
+                        <img width="648px" height="410px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy"
+                            role="img">
                     <?php endif ?>
                 </div>
 
@@ -78,7 +79,7 @@
                                 <?= $section_item->subheadline_second_half()->toHtml() ?>
                             </span>
                         </h2>
-                        <ul style="padding-left: 16px;">
+                        <ul class="pad-left16">
                             <?php foreach ($section_item->extended_bottom_list()->toStructure() as $listItem): ?>
 
                                 <li class="text-headline-manrope color-font-darkblue">

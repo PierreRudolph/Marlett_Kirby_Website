@@ -16,7 +16,7 @@
             <h3 class="headline headline-xs"><?= $block->services_headline()->toHtml() ?></h3>
 
             <?php if ($block->with_bottom_text()->isTrue()): ?>
-                <ul class="flex-column-gap8" style="padding-left: 16px;">
+                <ul class="flex-column-gap8 pad-left16">
                     <?php foreach ($block->services_list()->toStructure() as $service): ?>
                         <li class="label-alt-headline"><?= $service->text()->toHtml() ?></li>
                     <?php endforeach ?>

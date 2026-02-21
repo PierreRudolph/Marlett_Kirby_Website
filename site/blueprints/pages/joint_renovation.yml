@@ -95,16 +95,3 @@ sections:
         label: Seiten-Inhalte
         type: blocks
         pretty: true
-        fieldsets:
-          - pic_text_cards
-          - icon_text_cards
-          - pic_slider
-          - google_review_cards
-          - advantages
-          - certified
-          - contact_section
-          - q_and_a_section
-          - why_cleaning
-          - our_services
-          - the_procedure
-          - newspaper_article

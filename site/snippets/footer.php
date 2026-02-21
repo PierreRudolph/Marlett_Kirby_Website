@@ -1,6 +1,6 @@
 <footer class="footer blue-radient-bg">
     <div>
-        <div class="grid-column-gap40" style="width:100%">
+        <div class="grid-column-gap40 width-full">
 
             <div class="flex-column-gap40 grid-span2 mobile-flex-row">
                 <a class="logo" href="<?= $site->url() ?>">
@@ -101,7 +101,7 @@
 
         <?php if ($site->show_service_areas()->toBool()): ?>
             <hr class="hr-line">
-            <div class="flex-column-gap40" style="width:100%">
+            <div class="flex-column-gap40 width-full" >
                 <h4 class="headline headline-xs color-font-white">Einzugsgebiete</h4>
                 <?php $areas = $site->service_areas()->split(','); ?>
                 <div class="flex-row-gap24">

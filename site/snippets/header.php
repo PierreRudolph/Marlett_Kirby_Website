@@ -77,14 +77,14 @@
 
 
     <!-- STRUCTURED DATA END -->
-    <?= css([
+    <?= css( [
         'assets/css/fonts.css',
         'assets/css/index.css',
         'assets/css/snippets/header.css',
         'assets/css/snippets/nav_menu.css',
         'assets/css/sections.css',
         'assets/css/mobile.css'
-    ]) ?>
+    ],) ?>
 
     <?= js([
         'assets/script/script.js',
@@ -129,7 +129,7 @@
 
                     <label class="menu-toggle desktop800-d-none">
 
-                        <input type="checkbox" style="display:none;">
+                        <input type="checkbox d-none">
                         <div class="hamburger">
                             <span></span>
                             <span></span>

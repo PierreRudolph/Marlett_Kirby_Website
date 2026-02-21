@@ -19,7 +19,7 @@
         </div>
 
         <div class="section-content">
-            <div class="pic-text-card flex-column" style="max-width: 345px;">
+            <div class="pic-text-card flex-column max-width345">
 
                 <?php if ($image = $block->img()->toFile()): ?>
                     <div class="newspaper-img">

@@ -19,7 +19,7 @@
                 <?php $index = $videoCollection->indexOf($videoStructure) ?>
                 <div class="video-wrapper">
                     <div class="video-thumbnail-layer" id="blue-video-layer-<?= $index ?>">
-                        <div class="flex-column-gap12" style="align-items: center;">
+                        <div class="flex-column-gap12 align-center">
                             <h3 class="headline headline-s color-font-white">
                                 <?= $videoStructure->video_thumbnail_text()->toHtml() ?>
                             </h3>
@@ -37,7 +37,7 @@
 
 
                     <?php if ($videoFile = $videoStructure->video()->toFile()): ?>
-                        <div class="video-home-wrapper" style="width: 100%;">
+                        <div class="video-home-wrapper width-full">
 
                             <video muted class="video-with-thumbnail" id="section-video-<?= $index ?>" controls
                                 poster="<?= $videoStructure->video_thumbnail()->toFile()->url() ?>">

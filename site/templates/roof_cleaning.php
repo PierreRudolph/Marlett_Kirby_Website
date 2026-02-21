@@ -5,14 +5,13 @@
     <section class="above-fold">
         <div class="section-content">
             <p class="subheadline-neg">
-                <?= $page->subheadline_first_half()->toHtml() ?><span style="margin-left: 4px;font-weight:500;">
+                <?= $page->subheadline_first_half()->toHtml() ?><span class="subheadline-second-half">
                     <?= $page->subheadline_second_half()->toHtml() ?>
                 </span>
             </p>
             <div>
                 <h1 class="headline headline-xl color-font-blue"><?= $page->headline_first_half()->toHtml() ?><span
-                        style="margin-left: 18px;"
-                        class="headline headline-xl color-font-skyblue"><?= $page->headline_second_half()->toHtml() ?></span>
+                        class="headline headline-xl color-font-skyblue marg-left18"><?= $page->headline_second_half()->toHtml() ?></span>
                 </h1>
             </div>
 
@@ -29,7 +28,8 @@
 
                 <a href="tel:<?= $site->phone()->toHtml() ?>"
                     class="btn-pos-outlined btn-text btn-with-icon m-btn-width">
-                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy"
+                        role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
 
@@ -40,8 +40,7 @@
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
                     <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Stern Icon" loading="lazy" role="img">
                 </div>
-                <div class="label color-font-blue">5,0 Sterne Bewertung -<span style="margin-left: 4px;"
-                        class="label-underline">20+
+                <div class="label color-font-blue">5,0 Sterne Bewertung -<span class="label-underline marg-left4">20+
                         Bewertungen</span></div>
             </div>
         </div>
@@ -61,7 +60,7 @@
                 data-crop="<?= $crop ?>">
 
                 <?php $thumb = $imageBefore->crop(680, 569); ?>
-                <div id="img-front-wrapper" class="comparison-slider-before" style="width: 50%">
+                <div id="img-front-wrapper" class="comparison-slider-before width-half">
                     <img draggable="false" class="noselect" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>"
                         loading="lazy" role="img">
 
@@ -69,8 +68,10 @@
 
                 <span id="slider" class="spacer-line">
                     <div class="draggable-button">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>" alt="Pfeil nach Links" loading="lazy" role="img">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>" alt="Pfeil nach Rechts" loading="lazy" role="img">
+                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>"
+                            alt="Pfeil nach Links" loading="lazy" role="img">
+                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>"
+                            alt="Pfeil nach Rechts" loading="lazy" role="img">
                     </div>
                 </span>
 

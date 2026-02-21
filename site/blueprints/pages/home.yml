@@ -3,17 +3,13 @@ title: Home
 options:
   changeStatus: false
 
-
 tabs:
-
   content:
     label: Inhalt
     sections:
-
       hero:
         type: fields
         fields:
-
           hero_headline:
             type: headline
             label: Hero Bereich
@@ -69,22 +65,11 @@ tabs:
             type: tel
             width: 1/3
 
-
       builder:
         type: fields
         fields:
-
           blocks:
             label: Seiten-Inhalte
             type: blocks
             pretty: true
-            fieldsets:
-              - pic_text_cards
-              - icon_text_cards
-              - pic_slider
-              - google_review_cards
-              - advantages
-              - certified
-              - contact_section
-              - q_and_a_section
-              - newspaper_article
+

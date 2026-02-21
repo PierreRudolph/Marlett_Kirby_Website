@@ -31,7 +31,7 @@
                 <figure data-crop="true">
 
                     <?php $thumb = $solsos->crop(680, 424); ?>
-                    <img style="width: 100%;" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy"
+                    <img class="width-full" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy"
                         role="img">
 
                 </figure>

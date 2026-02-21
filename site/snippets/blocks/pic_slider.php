@@ -19,7 +19,7 @@
         </div>
 
         <div class="grid-full flex-column-gap20">
-            <div style="transform: translateX(0);" id="comp-pic-wrapper"
+            <div id="comp-pic-wrapper"
                 class="comparison-pics-wrapper flex-row-gap20 <?= $show_as_slider ? "" : "flex-wrap" ?>">
                 <?= $block->blocks()->toBlocks() ?>
             </div>

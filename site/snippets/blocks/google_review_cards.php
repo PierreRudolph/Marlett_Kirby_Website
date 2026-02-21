@@ -12,7 +12,7 @@
         </div>
 
         <div class="grid-full flex-column-gap20">
-            <div style="transform: translateX(0);" id="gog-rev-wrapper"
+            <div id="gog-rev-wrapper"
                 class="comparison-pics-wrapper flex-row-start-gap20 ">
 
                 <?php foreach ($block->cards()->toStructure() as $card): ?>

@@ -7,8 +7,7 @@
 
             <div>
                 <h1 class="headline headline-xl color-font-blue"><?= $page->headline_first_half()->toHtml() ?><span
-                        style="margin-left: 18px;"
-                        class="headline headline-xl color-font-skyblue"><?= $page->headline_second_half()->toHtml() ?></span>
+                        class="headline headline-xl color-font-skyblue marg-left18"><?= $page->headline_second_half()->toHtml() ?></span>
                 </h1>
             </div>
 
@@ -32,8 +31,8 @@
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
                     <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
                 </div>
-                <div class="label color-font-blue">5,0 Sterne Bewertung -<span style="margin-left: 4px;"
-                        class="label-underline">20+
+                <div class="label color-font-blue">5,0 Sterne Bewertung -<span
+                        class="label-underline marg-left4">20+
                         Bewertungen</span></div>
             </div>
         </div>

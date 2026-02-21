@@ -4,7 +4,7 @@
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left">
     <section class="above-fold-gap120">
 
-        <div class="section-gap64 grid-full" style="align-items: center;">
+        <div class="section-gap64 grid-full align-center">
             <div class="section-content">
 
                 <h1 class="headline headline-xl color-font-skyblue"><?= $page->headline_first_half()->toHtml() ?>
@@ -33,7 +33,8 @@
 
                     <figure data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
                         <?php $thumb = $image->crop(680, 567); ?>
-                        <img class="mobile-width" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
+                        <img class="mobile-width" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>"
+                            loading="lazy" role="img">
                     </figure>
                 <?php endif ?>
 

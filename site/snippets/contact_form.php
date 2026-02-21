@@ -87,9 +87,8 @@
                 <label for="text">
                     Nachricht (optional)
                 </label>
-                <textarea placeholder="Deine Nachricht" id="text" name="text" required>
-                                                                                                                                                                                                            <?= esc($data['text'] ?? '') ?>
-                                                                                                                                                                                                        </textarea>
+                <textarea placeholder="Deine Nachricht" id="text" name="text"
+                    required><?= esc($data['text'] ?? '') ?></textarea>
                 <?= isset($alert['text']) ? '<span class="alert error">' . esc($alert['text']) . '</span>' : '' ?>
             </div>
         </div>
