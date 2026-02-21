@@ -46,6 +46,13 @@ tabs:
             label: Mobil Zweigstelle
             type: tel
 
+          versicherung_link:
+            label: Versicherung link
+            type: link
+
+          versicherung_link_text:
+            label: Versicherung Link text
+            type: text
           gesellschafter:
             label: Vertretungsberechtigte Gesellschafter
             type: structure

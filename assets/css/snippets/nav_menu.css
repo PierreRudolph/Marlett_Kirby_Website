@@ -7,7 +7,6 @@
     border: 0;
     font-weight: 600;
     cursor: pointer;
-    padding: 28px 0px;
 }
 
 .arrow {
@@ -20,7 +19,7 @@
 .dropdown {
     transition: opacity 225ms ease-in-out;
     position: absolute;
-    top: 81px;
+    top: 40px;
     background-color: var(--color-bg-lightgrey);
     padding: 16px 24px 16px 24px;
     list-style: none;
@@ -32,6 +31,11 @@
     opacity: 0;
     pointer-events: none;
     z-index: 0;
+}
+
+.main-nav__item {
+    position: relative;
+    width: 130px;
 }
 
 .main-nav__item:hover .dropdown {
@@ -63,10 +67,13 @@
 } */
 
 .services-dropdown-link {
-    position: relative;
+    padding: 28px 0px;
+    position: absolute;
+    top: -41px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 4px;
-    width: 129px;
+    height: fit-content;
+    width: 126px;
 }

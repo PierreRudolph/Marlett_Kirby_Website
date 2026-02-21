@@ -18,15 +18,19 @@
         <div class="section-content-gap24 grid-full">
             <?php foreach ($block->certificates()->toStructure() as $certificate): ?>
                 <div class="certificate-card lightgrey-bg">
-                    <div class="flex-middle" >
+                    <div class="flex-middle">
                         <?php if ($imageFile = $certificate->img()->toFile()): ?>
-                            <img width="312px" height="132px" src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>" loading="lazy" role="img">
+                            <a target="blank" href="<?= $certificate->link()->toHtml() ?>">
+                                <img width="312px" height="132px" src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>"
+                                    loading="lazy" role="img">
+                            </a>
                         <?php endif ?>
                     </div>
 
 
                     <div class="flex-column-gap20">
-                        <h4 class="headline headline-s color-font-darkblue"><?= $certificate->text_headline()->toHtml() ?></h4>
+                        <h4 class="headline headline-s color-font-darkblue"><?= $certificate->text_headline()->toHtml() ?>
+                        </h4>
                         <p class="text-regular color-font-darkblue"><?= $certificate->text()->toHtml() ?></p>
                         <?php if ($bottomText = $certificate->bottomText()->toHtml() != ""): ?>
                             <p class="text-regular color-font-darkblue"><?= $certificate->text_bottom()->toHtml() ?></p>

@@ -9,37 +9,39 @@
 
                 <div class="location-card flex-column-gap24 lightgrey-bg">
 
-                    <h4 class="text-headline color-font-darkblue">Adresse</h4>
+                    <h4 class="headline headline-xs color-font-darkblue">Adresse</h4>
+                    <p class="text-regular500 color-font-darkblue">
+                        <?= $page->adresse()->toHtml() ?>
+                    </p>
                     <div class="overflow-hidden">
 
-                        <p class="text-regular color-font-darkblue">
-                            <?= $page->adresse()->toHtml() ?>
-                        </p>
-                        <p class="text-regular color-font-darkblue">
+
+
+                        <p class="text-regular500  color-font-darkblue">
                             <?php if ($page->mail_haupt()->isNotEmpty()): ?>
-                            <p><strong>Mail:</strong>
+                                <strong>Mail:</strong>
                                 <a href="mailto:<?= $page->mail_haupt()->esc() ?>">
                                     <?= $page->mail_haupt()->html() ?>
                                 </a>
-                            </p>
-                        <?php endif ?>
+
+                            <?php endif ?>
                         </p>
                     </div>
 
                     <div class="flex-row-gap15">
                         <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
-                        <p class="text-regular color-font-darkblue">
-                        <p><strong>Tel:</strong></p>
-                        <?= $site->phone_line()->toHtml() ?>
+                        <p class="text-regular500  color-font-darkblue">
+                            <strong>Tel:</strong>
+                            <?= $site->phone_line()->toHtml() ?>
                         </p>
 
                     </div>
 
                     <div class="flex-row-gap15">
                         <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
-                        <p class="text-regular color-font-darkblue">
-                        <p><strong>Mobil:</strong></p>
-                        <?= $site->phone()->toHtml() ?>
+                        <p class="text-regular500  color-font-darkblue">
+                            <strong>Mobil:</strong>
+                            <?= $site->phone()->toHtml() ?>
                         </p>
 
                     </div>
@@ -92,7 +94,7 @@
 
                 <div class="location-card flex-column-gap24 lightgrey-bg">
 
-                    <h4 class="text-headline color-font-darkblue">Vertretungsberechtigte Gesellschafter</h4>
+                    <h4 class="headline headline-xs color-font-darkblue">Vertretungsberechtigte Gesellschafter</h4>
                     <div class="overflow-hidden">
 
                         <?php
@@ -100,7 +102,7 @@
                         $gesellschafter = $page->gesellschafter()->toStructure();
                         if ($gesellschafter->isNotEmpty()): ?>
                             <?php foreach ($gesellschafter as $g): ?>
-                                <p class="text-regular color-font-darkblue">
+                                <p class="text-regular500 color-font-darkblue">
                                     <?= $g->name()->html() ?>
                                 </p>
                             <?php endforeach ?>
@@ -109,12 +111,47 @@
                     </div>
 
                     <div class="flex-row-gap15">
-                        <p class="text-regular color-font-darkblue">
-                        <p><strong>Umsatzsteuer ID:</strong>
+                        <p class="text-regular500  color-font-darkblue">
+                            <strong>Umsatzsteuer ID:</strong>
                             <?= $page->ustid()->html() ?>
+                        </p>
+                    </div>
+
+                    <div class="flex-row-gap15">
+                        <p class="text-regular color-font-darkblue">
+                            <strong>Betriebshaftplicht:</strong><br>
+                            <strong>Versicherung wurde abgeschlossen bei:</strong>
+                            <a target="blank" href="<?= $page->versicherung_link()->toHtml() ?>">
+                                <?= $page->versicherung_link_text()->toHtml() ?>
+                            </a>
+
                         </p>
 
                     </div>
+
+                </div>
+
+                <div class="location-card flex-column-gap24 lightgrey-bg">
+
+                    <h4 class="headline headline-xs color-font-darkblue">Gewerbeaufsicht</h4>
+                    <p class="text-regular500 color-font-darkblue">
+                        <strong>Stadtverwaltung Herrenberg</strong>
+                    </p>
+                    <p class="text-regular500 color-font-darkblue">
+                        Marktplatz 1
+                    </p>
+                    <p class="text-regular500 color-font-darkblue">
+                        71083 Herrenberg
+                    </p>
+                    <div class="flex-row-gap15">
+                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                        <p class="text-regular500  color-font-darkblue">
+                            <strong>Tel:</strong>
+                            +49 7032 924-0
+                        </p>
+
+                    </div>
+
                 </div>
             </div>
 

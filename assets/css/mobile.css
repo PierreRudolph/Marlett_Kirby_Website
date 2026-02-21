@@ -408,6 +408,19 @@
     .video-wrapper {
         width: 100%;
     }
+
+    .main-nav__item {
+        width: unset;
+    }
+
+    .services-dropdown-link {
+        padding: 0;
+        position: unset;
+    }
+
+    .location-card {
+        width: unset;
+    }
 }
 
 @media(max-width: 750px) {
