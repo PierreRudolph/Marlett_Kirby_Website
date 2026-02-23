@@ -9,7 +9,7 @@
     <form id="contact-form" class="contact-form flex-column-gap24 lightgrey-bg" method="post"
         action="<?= $page->url() . '#contact-form' ?>">
         <div class="honeypot">
-            <label for="website">Website <abbr title="required">*</abbr></label>
+            <label for="website">Website <abbr title=Pflichtfeld>*</abbr></label>
             <input type="url" id="website" name="website" tabindex="-1">
         </div>
 
@@ -29,7 +29,7 @@
             <div class="grid-column-gap20">
                 <div class="field">
                     <label for="first-name">
-                        Vorname <abbr title="Bitte ausfüllen">*</abbr>
+                        Vorname <abbr title="Pflichtfeld">*</abbr>
                     </label>
                     <input type="text" id="first-name" name="first-name" placeholder="Vorname"
                         value="<?= esc($data['first-name'] ?? '', 'attr') ?>" required>
@@ -38,7 +38,7 @@
 
                 <div class="field">
                     <label for="last-name">
-                        Nachname <abbr title="Bitte ausfüllen">*</abbr>
+                        Nachname <abbr title="Pflichtfeld">*</abbr>
                     </label>
                     <input type="text" id="last-name" name="last-name" placeholder="Nachname"
                         value="<?= esc($data['last-name'] ?? '', 'attr') ?>" required>
@@ -47,7 +47,7 @@
 
                 <div class="field">
                     <label for="zip-code">
-                        Postleitzahl <abbr title="Bitte ausfüllen">*</abbr>
+                        Postleitzahl <abbr title="Pflichtfeld">*</abbr>
                     </label>
                     <input type="number" id="zip-code" name="zip-code" placeholder="PLZ"
                         value="<?= esc($data['zip-code'] ?? '', 'attr') ?>" required>
@@ -56,7 +56,7 @@
 
                 <div class="field">
                     <label for="city">
-                        Ort <abbr title="Bitte ausfüllen">*</abbr>
+                        Ort <abbr title="Pflichtfeld">*</abbr>
                     </label>
                     <input type="text" id="city" name="city" placeholder="Ort"
                         value="<?= esc($data['city'] ?? '', 'attr') ?>" required>
@@ -74,7 +74,7 @@
 
                 <div class="field">
                     <label for="phone">
-                        Telefon <abbr title="Bitte ausfüllen">*</abbr>
+                        Telefon <abbr title="Pflichtfeld">*</abbr>
                     </label>
                     <input type="tel" id="phone" name="phone" placeholder="Telefonnummer"
                         value="<?= esc($data['phone'] ?? '', 'attr') ?>" required>
@@ -87,7 +87,7 @@
                 <label for="text">
                     Nachricht (optional)
                 </label>
-                <textarea placeholder="Deine Nachricht" id="text" name="text"
+                <textarea  placeholder="Deine Nachricht" id="text" name="text"
                     required><?= esc($data['text'] ?? '') ?></textarea>
                 <?= isset($alert['text']) ? '<span class="alert error">' . esc($alert['text']) . '</span>' : '' ?>
             </div>
@@ -96,8 +96,8 @@
         <div class="field checkbox">
             <label>
                 <input type="checkbox" name="privacy" value="1" <?= isset($data['privacy']) && $data['privacy'] ? 'checked' : '' ?> required>
-                Ich stimme den <a href="<?= url('datenschutzerklaerung') ?>" target="_blank">Datenschutzbestimmungen</a> zu
-                <abbr title="required">*</abbr>
+                Ich stimme den <a href="<?= url('datenschutzerklaerung') ?>" target="_blank" class="label-underline color-font-blue">Datenschutzbestimmungen</a> zu
+                <abbr title="Pflichtfeld">*</abbr>
             </label>
             <?= isset($alert['privacy']) ? '<span class="alert error">' . esc($alert['privacy']) . '</span>' : '' ?>
         </div>

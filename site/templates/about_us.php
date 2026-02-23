@@ -1,10 +1,11 @@
 <?php snippet('header') ?>
 
 <div class="section-wrapper white-bg">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left"
+        aria-label="hidden" aria-label="hidden">
     <section class="above-fold-gap120">
 
-        <div class="section-gap64 grid-full align-center">
+        <div class="section-gap80 grid-full align-center">
             <div class="section-content">
 
                 <h1 class="headline headline-xl color-font-skyblue"><?= $page->headline_first_half()->toHtml() ?>
@@ -13,12 +14,12 @@
                         class="headline headline-xl color-font-blue"><?= $page->headline_second_half()->toHtml() ?></span>
                 </h1>
 
-                <p class="text-regular500 color-font-darkblue "><?= $page->text_top()->toHtml() ?></p>
-                <p class="text-regular500 color-font-darkblue ">
+                <p class="copy-text-big color-font-darkblue "><?= $page->text_top()->toHtml() ?></p>
+                <p class="copy-text-big color-font-darkblue ">
                     <?= $page->text_bottom()->toHtml() ?>
                 </p>
 
-                <a class="btn-pos btn-text m-btn-width" href="<?= url('kontakt') ?>">
+                <a class="btn-pos btn-text m-btn-width marg-top12" href="<?= url('kontakt') ?>">
                     <?= $page->button_contact_text()->toHtml() ?>
                 </a>
 
@@ -33,8 +34,8 @@
 
                     <figure data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
                         <?php $thumb = $image->crop(680, 567); ?>
-                        <img class="mobile-width" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>"
-                            loading="lazy" role="img">
+                        <img aspect-ratio="16/9" class="mobile-width width-full" src="<?= $thumb->url() ?>"
+                            alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                     </figure>
                 <?php endif ?>
 

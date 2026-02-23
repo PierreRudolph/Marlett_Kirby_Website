@@ -87,7 +87,7 @@ Social-links:
   icon:
     - file://5pfctethtzflhilo
   text: Tiktok
-  link: ""
+  link: https://www.tiktok.com/@marlettgbr4
   icon_mobile:
     - file://ep2cmfynmlefpstr
 

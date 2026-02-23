@@ -11,7 +11,7 @@
                     <?= $page->headline_second_half()->toHtml() ?>
                 </span>
             </h2>
-            <p class="text-regular500 color-font-darkblue"><?= $page->text_top()->toHtml() ?></p>
+            <p class="copy-text-big color-font-darkblue"><?= $page->text_top()->toHtml() ?></p>
         </div>
 
         <div class="grid-full flex-column-gap20">

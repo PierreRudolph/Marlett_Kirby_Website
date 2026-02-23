@@ -1,5 +1,5 @@
 <div class="section-wrapper lightgrey-bg" id="<?= $block->section_id()->toHtml() ?>">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left" aria-label="hidden">  
 
     <section class="section-gap48 overflow-visible">
 
@@ -48,7 +48,7 @@
 
     </section>
 
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right" aria-label="hidden" aria-label="hidden">
 </div>
 
 

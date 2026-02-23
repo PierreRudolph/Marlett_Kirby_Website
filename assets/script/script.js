@@ -182,7 +182,51 @@ function isMobile() {
     return window.screen.width <= 603;
 }
 
+function initiateHomeVideo() {
+    setTimeout(() => {
+        let videoElem = document.getElementById('video-home');
+        if (videoElem != null && videoElem.paused)
+            showPlayBtn();
+    }, 200)
+}
+
+function showPlayBtn() {
+    hideVideoBtn('pause');
+    showVideoBtn('play');
+}
+
+function showPauseBtn() {
+    hideVideoBtn('play');
+    showVideoBtn('pause');
+}
+
+
+function hideVideoBtn(btnId) {
+    let btnElem = document.getElementById(`video-${btnId}-btn`);
+    if (btnElem == null)
+        return;
+    btnElem.classList.add('d-none-important');
+}
+
+function showVideoBtn(btnId) {
+    let btnElem = document.getElementById(`video-${btnId}-btn`);
+    if (btnElem == null)
+        return;
+    btnElem.classList.remove('d-none-important');
+}
+
+function playVideo(videoId) {
+    let videoElm = document.getElementById(videoId);
+    if (videoElm == null)
+        return;
+    videoElm.play();
+    showPauseBtn();
+}
+
 function pauseVideo(videoId) {
     let videoElm = document.getElementById(videoId);
+    if (videoElm == null)
+        return;
     videoElm.pause();
+    showPlayBtn();
 }

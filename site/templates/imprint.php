@@ -121,12 +121,25 @@
                         <p class="text-regular color-font-darkblue">
                             <strong>Betriebshaftplicht:</strong><br>
                             <strong>Versicherung wurde abgeschlossen bei:</strong>
-                            <a target="blank" href="<?= $page->versicherung_link()->toHtml() ?>">
-                                <?= $page->versicherung_link_text()->toHtml() ?>
-                            </a>
-
                         </p>
 
+                    </div>
+                    <div class="flex-column-gap5">
+                           <p class="text-regular500 color-font-darkblue">
+                            <strong>Linke & Kalkbrenner GmbH</strong>
+                        </p>
+                        <p class="text-headline color-font-darkblue">
+                            Adresse:
+                        </p>
+                        <p class="text-regular500 color-font-darkblue">
+                            Ulmer Str. 133
+                        </p>
+                        <p class="text-regular500 color-font-darkblue">
+                            86156 Augsburg
+                        </p>
+                        <p class="text-regular500 color-font-darkblue">
+                            <strong>Tel:</strong> +49 821 51007
+                        </p>
                     </div>
 
                 </div>

@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
 <div class="section-wrapper blue-radient-bg">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left" aria-label="hidden">
     <section class="above-fold">
         <div class="section-content">
             <p class="subheadline"><?= $page->subheadline_first_half()->toHtml() ?>
@@ -9,7 +9,7 @@
             </p>
             <div>
                 <h1 class="headline headline-xl color-font-white"><?= $page->headline_first_half()->toHtml() ?><span
-                        class="headline headline-xl color-font-lighterblue marg-left18"><?= $page->headline_second_half()->toHtml() ?></span>
+                        class="headline headline-xl color-font-lighterblue marg-left9"><?= $page->headline_second_half()->toHtml() ?></span>
                 </h1>
             </div>
 
@@ -25,9 +25,10 @@
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Icon von Google loading="lazy" role="img">
                     <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Icon Stern" loading="lazy" role="img">
                 </div>
-                <div class="label color-font-white">5,0 Sterne Bewertung -<span 
-                        class="label-underline marg-left4">20+
-                        Bewertungen</span></div>
+                 <div class="label color-font-white">5,0 Sterne Bewertung -<a target="blank"
+                        href="https://www.google.com/search?sa=X&sca_esv=ad335200c38ab265&hl=de&sxsrf=ANbL-n5fAmUI_Q00NO6pWSE7rGKG2EL7JA:1771848614790&q=Marlett+Steinsanierungen+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MjE3MTI3NDMwMjI3MzIxMDY12cDI-IpRxTexKCe1pEQhuCQ1M684MS8ztag0Lz01TyEotSo1rzgzPy81bxErUcoAY1PFcmgAAAA&rldimm=2474271602276240354&tbm=lcl&ved=2ahUKEwj74p66yu-SAxXNVfEDHR2vJCoQ9fQKegQIXhAG&biw=2560&bih=1300&dpr=1#lkt=LocalPoiReviews"
+                        class="label-underline marg-left4 color-font-white">20+
+                        Bewertungen</a></div>
             </div>
         </div>
 
@@ -37,7 +38,7 @@
 
         </div>
     </section>
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" aria-label="hidden">
 
 </div>
 

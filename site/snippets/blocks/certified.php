@@ -1,7 +1,7 @@
 <div class="section-wrapper lightgrey-bg" id="<?= $block->section_id()->toHtml() ?>">
 
     <section class="section-gap80">
-        <div class="section-content-gap56">
+        <div class="section-content-gap54">
             <div class="flex-column-gap40">
                 <h2 class="headline headline-l color-font-darkblue-alt3 services-headline">
                     <?= $block->headline_first_half()->toHtml() ?>
@@ -12,12 +12,12 @@
                 </h2>
                 <p class="text-regular color-font-darkblue"><?= $block->text()->toHtml() ?></p>
             </div>
-            <div class="flex-row-between certified-icons-wrapper">
+            <div class="certified-icons-div">
                 <?php foreach ($block->images()->toStructure() as $image): ?>
 
                     <?php if ($imageFile = $image->img()->toFile()): ?>
-                        <a target="blank" href="<?= $image->link()->toHtml() ?>">
-                            <img src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>" loading="lazy" role="img">
+                        <a class="width-full height-full" target="blank" href="<?= $image->link()->toHtml() ?>">
+                            <img class="width-full height-full" src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>" loading="lazy" role="img">
                         </a>
 
                     <?php endif ?>

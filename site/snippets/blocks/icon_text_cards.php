@@ -41,6 +41,6 @@
         </div>
 
     </section>
-    <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" loading="lazy">
+    <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" loading="lazy" aria-label="hidden" aria-label="hidden">
 
 </div>

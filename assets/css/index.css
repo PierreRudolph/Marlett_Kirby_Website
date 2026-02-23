@@ -1,105 +1,90 @@
 :root {
-    --color-bg-white: #ffffff;
-    --color-font-white: #ffffff;
-    --color-font-blue: #00417A;
-    --color-lighter-blue: #a3d9ff;
-    --color-font-lightblue-alt: #A3D9FF;
-    --color-dark-blue: #003665;
-    --color-blue: #00417A;
-    --color-font-darkblue-alt: #084A82;
-    --color-font-darkblue-alt2: #003665;
-    --color-font-darkblue-alt3: #005096;
-    --color-bg-lightgrey: #F2F6FA;
-    --color-font-skyblue: #4CA6E4;
-    /*Desktop Font size*/
-    --copy-text-small: 16px;
-    --copy-text-big: 18px;
-    --button-text: 18px;
-    --headline-xs: 24px;
-    --headline-s: 32px;
-    --headline-m: 36px;
-    --headline-l: 48px;
-    --headline-xl: 56px;
-
-    /*Site Padding*/
-    --main-padding-left: 80px;
-    --main-padding-right: 80px;
-    /*Sections Padding (top,bottom)*/
-    --section-padding-top: 120px;
-    --section-padding-bottom: 120px;
-    /*----Buttons-----*/
-    --btn-transition: 225ms ease-in-out;
-    /*Buttons-Positiv*/
-    --btn-pos-bg-color: #00417A;
-    --btn-pos-text-color: #ffffff;
-    --btn-pos-hover-bg-color: #00325E;
-    --btn-pos-hover-shadow-color: #0F2454;
-    --btn-pos-focus-shadow-color: #4CA6E4;
-    --btn-pos-outlined-text-color: #00417A;
-    --btn-pos-outlined-border-color: #00417A;
-    --btn-pos-outlined-bg-color: #ffffff;
-    --btn-pos-outlined-hover-shadow-color: #0F2454;
-    --btn-pos-outlined-focus-shadow-color: #4CA6E4;
-    /*Buttons Negativ*/
-    --btn-neg-bg-color: #ffffff;
-    --btn-neg-text-color: #00417A;
-    --btn-neg-hover-bg-color: #F2F6FA;
-    --btn-neg-hover-shadow-color: #0F2454;
-    --btn-neg-focus-shadow-color: #4CA6E4;
-    --btn-neg-focus-bg-color: #FFFFFF;
-    --btn-neg-outlined-bg-color: #00417A;
-    --btn-neg-outlined-text-color: #ffffff;
-    --btn-neg-outlined-border-color: #ffffff;
-    --btn-neg-outlined-hover-bg-color: #00325E;
-    --btn-neg-outlined-hover-shadow-color: #0F2454;
-    --btn-neg-outlined-focus-bg-color: #00417A;
-    --btn-neg-outlined-focus-shadow-color: #4CA6E4;
-    /*----Buttons Ende-----*/
+  --color-bg-white: #ffffff;
+  --color-font-white: #ffffff;
+  --color-font-blue: #00417A;
+  --color-lighter-blue: #a3d9ff;
+  --color-font-lightblue-alt: #A3D9FF;
+  --color-dark-blue: #003665;
+  --color-blue: #00417A;
+  --color-font-darkblue-alt: #084A82;
+  --color-font-darkblue-alt2: #003665;
+  --color-font-darkblue-alt3: #005096;
+  --color-bg-lightgrey: #F2F6FA;
+  --color-font-skyblue: #4CA6E4;
+  --copy-text-small: 16px;
+  --copy-text-big: 18px;
+  --button-text: 18px;
+  --headline-xs: 24px;
+  --headline-s: 32px;
+  --headline-m: 36px;
+  --headline-l: 48px;
+  --headline-xl: 56px;
+  --main-padding-left: 80px;
+  --main-padding-right: 80px;
+  --section-padding-top: 120px;
+  --section-padding-bottom: 120px;
+  --btn-transition: 225ms ease-in-out;
+  --btn-pos-bg-color: #00417A;
+  --btn-pos-text-color: #ffffff;
+  --btn-pos-hover-bg-color: #00325E;
+  --btn-pos-hover-shadow-color: #0F2454;
+  --btn-pos-focus-shadow-color: #4CA6E4;
+  --btn-pos-outlined-text-color: #00417A;
+  --btn-pos-outlined-border-color: #00417A;
+  --btn-pos-outlined-bg-color: #ffffff;
+  --btn-pos-outlined-hover-shadow-color: #0F2454;
+  --btn-pos-outlined-focus-shadow-color: #4CA6E4;
+  --btn-neg-bg-color: #ffffff;
+  --btn-neg-text-color: #00417A;
+  --btn-neg-hover-bg-color: #F2F6FA;
+  --btn-neg-hover-shadow-color: #0F2454;
+  --btn-neg-focus-shadow-color: #4CA6E4;
+  --btn-neg-focus-bg-color: #FFFFFF;
+  --btn-neg-outlined-bg-color: #00417A;
+  --btn-neg-outlined-text-color: #ffffff;
+  --btn-neg-outlined-border-color: #ffffff;
+  --btn-neg-outlined-hover-bg-color: #00325E;
+  --btn-neg-outlined-hover-shadow-color: #0F2454;
+  --btn-neg-outlined-focus-bg-color: #00417A;
+  --btn-neg-outlined-focus-shadow-color: #4CA6E4
 }
 
 html {
-    font-family: 'Manrope', 'Roboto';
-    font-size: 14px;
-    font-weight: 500;
-    scroll-behavior: smooth;
-    /* overscroll-behavior-x: none; */
+  font-family: Manrope, Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  scroll-behavior: smooth
 }
 
 body {
-    /* overscroll-behavior-x: none; */
-    width: 100vw;
-    height: 100vh;
-    width: 100dvw;
-    height: 100dvh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden
 }
 
 .outer-wrapper {
-    /* overscroll-behavior-x: none; */
-    width: 100%;
-    height: 100%;
-    display: grid;
-    /* grid-template-columns: minmax(200px,1440px); */
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        'header'
-        'main'
-        'footer';
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 'header' 'main' 'footer';
+  justify-content: center
 }
 
 main {
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 100%;
-    grid-area: main;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  grid-area: main
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none
 }
 
 h1,
@@ -107,579 +92,595 @@ h2,
 h3,
 h4,
 h5 {
-    margin: 0;
+  margin: 0
 }
 
 p {
-    min-height: 20px;
-    margin: 0;
-    /* line-height: 22px !important; */
+  min-height: 20px;
+  margin: 0
 }
 
 ul {
-    margin: 0;
+  margin: 0
 }
 
 figure {
-    margin: 0;
+  margin: 0
 }
 
 button {
-    border: none;
+  border: none
 }
 
 button:hover {
-    border: none;
+  border: none
 }
 
 img {
-    object-fit: contain;
-    /* height: fit-content; */
+  object-fit: contain
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0;
-    /* <-- Apparently some margin are still there even though it's hidden */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0
 }
 
 input[type=number] {
-    -moz-appearance: textfield;
-    /* Firefox */
-    -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield
 }
 
 .noselect {
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Old versions of Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
 }
 
 .honeypot {
-    position: absolute;
-    left: -9999px;
+  position: absolute;
+  left: -9999px
 }
 
 .color-font-blue {
-    color: var(--color-blue);
+  color: var(--color-blue)
 }
 
 .color-font-lighterblue {
-    color: var(--color-lighter-blue);
+  color: var(--color-lighter-blue)
 }
 
 .color-font-lightblue-alt {
-    color: var(--color-font-lightblue-alt);
+  color: var(--color-font-lightblue-alt)
 }
 
 .color-font-darkblue {
-    color: var(--color-dark-blue);
+  color: var(--color-dark-blue)
 }
 
 .color-font-darkblue-alt {
-    color: var(--color-font-darkblue-alt);
+  color: var(--color-font-darkblue-alt)
 }
 
 .color-font-darkblue-alt2 {
-    color: var(--color-font-darkblue-alt2);
+  color: var(--color-font-darkblue-alt2)
 }
 
 .color-font-darkblue-alt3 {
-    color: var(--color-font-darkblue-alt3);
+  color: var(--color-font-darkblue-alt3)
 }
 
 .color-font-white {
-    color: var(--color-font-white);
+  color: var(--color-font-white)
 }
 
 .color-font-skyblue {
-    color: var(--color-font-skyblue);
+  color: var(--color-font-skyblue)
 }
 
 .headline {
-    font-family: 'Exo 2';
-    font-weight: 700;
-    line-height: 120%;
-    letter-spacing: -2%;
+  font-family: 'Exo 2';
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2%
 }
 
 .headline-xxl {
-    font-size: 64px;
+  font-size: 64px
 }
 
 .headline-xl {
-    font-size: 56px;
+  font-size: 56px
 }
 
 .headline-l {
-    font-size: 48px;
+  font-size: 48px
 }
 
 .headline-m {
-    font-size: 36px;
+  font-size: 36px
 }
 
 .headline-s {
-    font-size: 32px;
+  font-size: 32px
 }
 
 .headline-xs {
-    font-size: 24px;
+  font-size: 24px
 }
 
 .btn-text {
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 32px;
-    letter-spacing: 0%;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .text-headline {
-    font-family: 'Exo 2';
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0%;
+  font-family: 'Exo 2';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .text-headline-manrope {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 .label-alt-headline {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 130%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%
 }
 
 .label-alt-text {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 130%;
-    margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 5px
 }
 
 .text-regular {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .text-regular500 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 29px;
-    letter-spacing: 0%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
 }
 
 .label {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 2;
+  /* ist wie 28px */
 }
 
 .label-big {
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0%;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .copy-text-big {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 29px;
-    letter-spacing: 0%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .copy-text-small {
-    font-weight: 600;
-    font-size: 16px;
-    /* line-height: 80%; */
-    letter-spacing: 0%;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .copy-text-smaller {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .link-text {
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0%;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-/*-----Buttons-----*/
-/*Button Positiv*/
+.header-link-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+}
+
 .btn-pos {
-    cursor: pointer;
-    width: fit-content;
-    transition: background-color, box-shadow, var(--btn-transition);
-    color: var(--btn-pos-text-color);
-    padding: 8px 36px;
-    background-color: var(--btn-pos-bg-color);
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  width: fit-content;
+  min-width: 247px;
+  transition: background-color, box-shadow, var(--btn-transition);
+  color: var(--btn-pos-text-color);
+  padding: 8px 36px;
+  background-color: var(--btn-pos-bg-color);
+  box-sizing: border-box;
 }
 
 .btn-pos:hover {
-    background-color: var(--btn-pos-hover-bg-color);
-    box-shadow: 6px 6px 0px 0px var(--btn-pos-hover-shadow-color);
+  background-color: var(--btn-pos-hover-bg-color);
+  box-shadow: 6px 6px 0 0 var(--btn-pos-hover-shadow-color);
 }
 
 .btn-pos:focus {
-    color: var(--btn-pos-text-color);
-    box-shadow: 0px 0px 0px 1px var(--btn-pos-focus-shadow-color);
+  color: var(--btn-pos-text-color);
+  box-shadow: 0 0 0 1px var(--btn-pos-focus-shadow-color);
 }
 
-/*Button Positiv Outlined*/
 .btn-pos-outlined {
-    cursor: pointer;
-    width: fit-content;
-    transition: background-color, box-shadow, var(--btn-transition);
-    color: var(--btn-pos-outlined-text-color);
-    border: 1px solid var(--btn-pos-outlined-border-color);
-    background-color: var(--btn-pos-outlined-bg-color);
-    padding: 7px 17px;
+  justify-content: center;
+  display: flex;
+  min-width: 247px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color, box-shadow, var(--btn-transition);
+  color: var(--btn-pos-outlined-text-color);
+  border: 1px solid var(--btn-pos-outlined-border-color);
+  background-color: var(--btn-pos-outlined-bg-color);
+  padding: 7px 17px;
+  box-sizing: border-box;
 }
 
 .btn-pos-outlined:hover {
-    box-shadow: 6px 6px 0px 0px var(--btn-pos-outlined-hover-shadow-color);
+  box-shadow: 6px 6px 0 0 var(--btn-pos-outlined-hover-shadow-color);
 }
 
 .btn-pos-outlined:focus {
-    box-shadow: 0px 0px 0px 3px #4CA6E4;
+  box-shadow: 0 0 0 3px #4ca6e4;
 }
 
-/*Button Negativ*/
 .btn-neg {
-    cursor: pointer;
-    width: fit-content;
-    transition: background-color, box-shadow, var(--btn-transition);
-    color: var(--btn-neg-text-color);
-    padding: 8px 36px;
-    background-color: var(--btn-neg-bg-color);
+  justify-content: center;
+  display: flex;
+  min-width: 247px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color, box-shadow, var(--btn-transition);
+  color: var(--btn-neg-text-color);
+  padding: 8px 36px;
+  background-color: var(--btn-neg-bg-color);
+  box-sizing: border-box;
 }
 
 .btn-neg:hover {
-    background-color: var(--btn-neg-hover-bg-color);
-    box-shadow: 6px 6px 0px 0px var(--btn-neg-hover-shadow-color);
+  background-color: var(--btn-neg-hover-bg-color);
+  box-shadow: 6px 6px 0 0 var(--btn-neg-hover-shadow-color);
 }
 
 .btn-neg:focus {
-    background-color: var(--btn-neg-focus-bg-color);
-    box-shadow: 0px 0px 0px 3px var(--btn-neg-focus-shadow-color);
+  background-color: var(--btn-neg-focus-bg-color);
+  box-shadow: 0 0 0 3px var(--btn-neg-focus-shadow-color);
 }
 
 .btn-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 7px 17px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 17px
 }
 
-/*Button Negativ Outlined*/
 .btn-neg-outlined {
-    cursor: pointer;
-    width: fit-content;
-    transition: background-color, box-shadow, var(--btn-transition);
-    color: var(--btn-neg-outlined-text-color);
-    /* background-color: var(--btn-neg-outlined-bg-color); */
-    border: 1px solid var(--btn-neg-outlined-border-color);
+  justify-content: center;
+  display: flex;
+  min-width: 247px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color, box-shadow, var(--btn-transition);
+  color: var(--btn-neg-outlined-text-color);
+  border: 1px solid var(--btn-neg-outlined-border-color);
+  box-sizing: border-box;
 }
 
 .btn-neg-outlined:hover {
-    background-color: var(--btn-neg-outlined-hover-bg-color);
-    box-shadow: 6px 6px 0px 0px var(--btn-neg-outlined-hover-shadow-color);
+  background-color: var(--btn-neg-outlined-hover-bg-color);
+  box-shadow: 6px 6px 0 0 var(--btn-neg-outlined-hover-shadow-color);
 }
 
 .btn-neg-outlined:focus {
-    background-color: var(--btn-neg-outlined-focus-bg-color);
-    box-shadow: 0px 0px 0px 3px var(--btn-neg-outlined-focus-shadow-color);
+  background-color: var(--btn-neg-outlined-focus-bg-color);
+  box-shadow: 0 0 0 3px var(--btn-neg-outlined-focus-shadow-color);
 }
 
-/*-------Buttons Ende--------*/
+.header-contact-btn {
+  font-weight: 700;
+  padding: 9px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color, box-shadow, var(--btn-transition);
+  color: var(--btn-pos-text-color);
+  background-color: var(--btn-pos-bg-color);
+}
 
+.header-contact-btn:hover {
+  background-color: var(--btn-pos-hover-bg-color);
+  box-shadow: 6px 6px 0 0 var(--btn-pos-hover-shadow-color);
+}
+
+.header-contact-btn:focus {
+  color: var(--btn-pos-text-color);
+  box-shadow: 0 0 0 1px var(--btn-pos-focus-shadow-color);
+}
 
 .overflow-hidden {
-    overflow: hidden;
+  overflow: hidden
 }
 
 .overflow-visible {
-    overflow: visible !important;
+  overflow: visible !important
 }
 
 .flex-row-start-gap12 {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px
 }
 
 .flex-row-start-gap20 {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px
 }
 
 .flex-row-start-gap24 {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px
 }
 
 .flex-row-gap4 {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px
 }
 
 .flex-row-gap5 {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.flex-row-gap10 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px
 }
 
 .flex-row-gap12 {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px
 }
 
 .flex-row-gap15 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px
 }
 
 .flex-row-gap20 {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px
 }
 
 .flex-row-gap24 {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px
 }
 
 .flex-column-gap16 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px
 }
 
 .flex-column-gap17 {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px
 }
 
 .flex-column-gap5 {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
 }
 
 .flex-column-gap8 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px
 }
 
 .flex-column-gap12 {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px
 }
 
 .flex-column-gap20 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
 }
 
 .flex-column-gap24 {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px
 }
 
 .flex-column-gap32 {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px
 }
 
 .flex-column-gap40 {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px
 }
 
 .flex-row-between {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between
 }
 
 .flex-middle {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center
 }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column
 }
 
 .flex-wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .grid-column-gap20 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px
 }
 
 .grid-column-gap40 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px
 }
 
 .grid-span1 {
-    grid-column: span 1;
+  grid-column: span 1
 }
 
 .grid-span2 {
-    grid-column: span 2;
+  grid-column: span 2
 }
 
 .grid-full {
-    grid-column: span 12 !important;
+  grid-column: span 12 !important
 }
 
 .grid-middle {
-    grid-column: span 6;
+  grid-column: span 6
 }
 
 .label-underline {
-    text-decoration: underline;
-    text-decoration-thickness: 9%;
+  text-decoration: underline;
+  text-decoration-thickness: 9%
 }
 
 .spacer-line {
-    touch-action: none;
-    -webkit-user-select: none;
-    /* verhindert Scroll / Zoom während Drag */
-    user-select: none;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none
 }
 
 .comparison-slider-figure {
-    touch-action: none;
-    /* verhindert Fenster-Verschieben */
+  touch-action: none
 }
 
 .img-compare {
-    position: relative;
-    width: 500px;
-    max-width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  overflow: hidden
 }
 
 .img-compare img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%
 }
 
 .img-front-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden
 }
 
 .slider {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background: white;
-    border: 1px solid #000;
-    cursor: ew-resize;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #000;
+  cursor: ew-resize
 }
 
 .alert {
-    margin-top: 5px;
-    color: #e61c40;
+  margin-top: 5px;
+  color: #e61c40
+}
+
+.height-full {
+  height: 100%;
 }
 
 .width-full {
-    width: 100%;
+  width: 100%
 }
 
 .width-half {
-    width: 50%;
+  width: 50%
 }
 
 .d-none {
-    display: none;
+  display: none
+}
+
+.d-none-important {
+  display: none !important
+}
+
+.marg-top12 {
+  /* wird 4px, ab 603 */
+  margin-top: 12px;
 }
 
 .marg-bot6 {
-    margin-bottom: 6px;
+  margin-bottom: 6px
 }
 
-.marg-left18 {
-    margin-left: 18px;
+.marg-left9 {
+  margin-left: 9px
 }
 
 .marg-left4 {
-    margin-left: 4px;
+  margin-left: 4px
 }
 
 .max-width345 {
-    max-width: 345px;
+  max-width: 345px
 }
 
 .pad-left16 {
-    padding-left: 16px;
+  padding-left: 16px
 }
 
 .align-center {
-    align-items: center;
+  align-items: center
 }
 
 .subheadline-second-half {
-    margin-left: 4px;
-    font-weight: 500;
+  margin-left: 4px;
+  font-weight: 500
 }

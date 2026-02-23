@@ -9,11 +9,13 @@ $items = $services->children()->listed();
     <a href="<?= url('leistungen') ?>" class="main-nav__toggle mobile-headline-xs">
       <?= $services->title() ?></a>
 
-    <img class="arrow mobile800-d-none" src="<?= url('assets/icons/chevron_down.svg') ?>" alt="Pfeil nach Unten" loading="lazy" role="img">
+    <img class="arrow mobile800-d-none" src="<?= url('assets/icons/chevron_down.svg') ?>" alt="Pfeil nach Unten"
+      loading="lazy" role="img">
 
     <label class="nav-services-arrow desktop800-d-none">
-      <input type="checkbox d-none" >
-      <img class="mobile-arrow" src="<?= url('assets/icons/chevron_down.svg') ?>" alt="Pfeil nach Unten" loading="lazy" role="img">
+      <input type="checkbox" class="d-none">
+      <img class="mobile-arrow" src="<?= url('assets/icons/chevron_down.svg') ?>" alt="Pfeil nach Unten" loading="lazy"
+        role="img">
     </label>
   </div>
 

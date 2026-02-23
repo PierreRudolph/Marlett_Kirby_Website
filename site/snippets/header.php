@@ -18,7 +18,7 @@
 
     <meta property="og:url" content="<?= $site->url() ?>">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= $site->meta_title() ?>">
+    <meta property="og:title" content="<?= $page->title() ?>">
     <meta property="og:description" content="<?= $site->meta_description() ?>">
     <meta property="og:image" content="<?= $site->meta_img() ?>">
 
@@ -71,20 +71,20 @@
 
     <?php if (!empty($companyName)): ?>
         <script type="application/ld+json">
-        <?= json_encode($localBusiness, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
-        </script>
+                    <?= json_encode($localBusiness, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
+                    </script>
     <?php endif ?>
 
 
     <!-- STRUCTURED DATA END -->
-    <?= css( [
+    <?= css([
         'assets/css/fonts.css',
         'assets/css/index.css',
         'assets/css/snippets/header.css',
         'assets/css/snippets/nav_menu.css',
         'assets/css/sections.css',
         'assets/css/mobile.css'
-    ],) ?>
+    ], ) ?>
 
     <?= js([
         'assets/script/script.js',
@@ -92,9 +92,10 @@
 
 </head>
 
-<body>
+<body onload="initiateHomeVideo()">
     <div class="outer-wrapper">
         <header>
+
             <div class="header-content max-width1440">
                 <a class="logo" href="<?= $site->url() ?>">
                     <?php $img = $site->header_icon()->toFile() ?>
@@ -117,7 +118,8 @@
                                 $item->title()->esc() != 'Home'
                             ): ?>
 
-                                <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>">
+                                <a class="header-link-text" <?php e($item->isOpen(), 'aria-current="page"') ?>
+                                    href="<?= $item->url() ?>">
                                     <?= $item->title()->esc() ?>
                                 </a>
 
@@ -125,11 +127,11 @@
                         <?php endforeach ?>
                     </div>
 
-                    <a class="btn-pos btn-text" href="<?= url('kontakt') ?>">Kontakt</a>
+                    <a class="header-contact-btn" href="<?= url('kontakt') ?>">Kontakt</a>
 
                     <label class="menu-toggle desktop800-d-none">
 
-                        <input type="checkbox d-none">
+                        <input type="checkbox">
                         <div class="hamburger">
                             <span></span>
                             <span></span>
@@ -139,88 +141,92 @@
                     </label>
                 </nav>
             </div>
-    <div class="mobile-nav-menu desktop800-d-none">
-            <div>
-                <?php snippet('nav_menu') ?>
-                <hr>
-                <?php foreach ($site->children()->listed() as $item): ?>
 
-                    <?php if (
-                        $item->title()->esc() != 'Datenschutzerklärung' &&
-                        $item->title()->esc() != 'Impressum' &&
-                        $item->title()->esc() != 'agb' &&
-                        $item->title()->esc() != 'Leistungen' &&
-                        $item->title()->esc() != 'Home'
-                    ): ?>
+            <div class="mobile-nav-menu desktop800-d-none">
+                <div>
+                    <?php snippet('nav_menu') ?>
+                    <hr>
+                    <?php foreach ($site->children()->listed() as $item): ?>
 
-                        <a class="mobile-headline-xs" <?php e($item->isOpen(), 'aria-current="page"') ?>
-                            href="<?= $item->url() ?>">
-                            <?= $item->title()->esc() ?>
-                        </a>
-                        <hr>
-                    <?php endif ?>
-                <?php endforeach ?>
-            </div>
+                        <?php if (
+                            $item->title()->esc() != 'Datenschutzerklärung' &&
+                            $item->title()->esc() != 'Impressum' &&
+                            $item->title()->esc() != 'agb' &&
+                            $item->title()->esc() != 'Leistungen' &&
+                            $item->title()->esc() != 'Home'
+                        ): ?>
 
-            <div class="flex-column-gap16">
-                <?php if ($site->email()->value() !== ""): ?>
-                    <div class="contact-option lightgrey-bg flex-row-gap24">
-
-                        <div class="icon-blue-bg">
-                            <img src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy" role="img">
-                        </div>
-
-                        <a class="color-font-darkblue-alt2 mobile-subheadline"
-                            href="mailto:<?= $site->email()->toString() ?>">
-                            <?= $site->email()->toString() ?>
-                        </a>
-                    </div>
-                <?php endif ?>
-
-                <?php if ($site->phone()->value() !== ""): ?>
-                    <div class="contact-option lightgrey-bg flex-row-gap24">
-
-                        <div class="icon-blue-bg">
-                            <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
-                        </div>
-
-                        <a class="color-font-darkblue-alt2 mobile-subheadline" href="tel:<?= $site->phone()->toHtml() ?>">
-                            <?= $site->phone()->toHtml() ?>
-                        </a>
-                    </div>
-                <?php endif ?>
-
-                <?php if ($site->whatsapp()->value() !== ""): ?>
-                    <div class="contact-option lightgrey-bg flex-row-gap24">
-
-                        <div class="icon-blue-bg">
-                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" alt="Icon von WhatsApp" loading="lazy"
-                                role="img">
-                        </div>
-
-                        <a class="color-font-darkblue-alt2 mobile-subheadline"
-                            href="https://wa.me/<?= $site->whatsapp()->toHtml() ?>">
-                            Whatsapp Chat Starten
-                        </a>
-                    </div>
-                <?php endif ?>
-            </div>
-
-            <div class="mobile-nav-menu-social">
-                <?php foreach ($site->social_links()->toStructure() as $social_link): ?>
-
-                    <a href="<?= $social_link->link()->toHtml() ?>">
-                        <?php if ($image = $social_link->icon_mobile()->toFile()): ?>
-                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
+                            <a class="mobile-headline-xs" <?php e($item->isOpen(), 'aria-current="page"') ?>
+                                href="<?= $item->url() ?>">
+                                <?= $item->title()->esc() ?>
+                            </a>
+                            <hr>
                         <?php endif ?>
-                    </a>
+                    <?php endforeach ?>
+                </div>
 
-                <?php endforeach ?>
+                <div class="flex-column-gap16">
+                    <?php if ($site->email()->value() !== ""): ?>
+                        <div class="contact-option lightgrey-bg flex-row-gap24">
 
+                            <div class="icon-blue-bg">
+                                <img src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy"
+                                    role="img">
+                            </div>
+
+                            <a class="color-font-darkblue-alt2 mobile-subheadline"
+                                href="mailto:<?= $site->email()->toString() ?>">
+                                <?= $site->email()->toString() ?>
+                            </a>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if ($site->phone()->value() !== ""): ?>
+                        <div class="contact-option lightgrey-bg flex-row-gap24">
+
+                            <div class="icon-blue-bg">
+                                <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy"
+                                    role="img">
+                            </div>
+
+                            <a class="color-font-darkblue-alt2 mobile-subheadline"
+                                href="tel:<?= $site->phone()->toHtml() ?>">
+                                <?= $site->phone()->toHtml() ?>
+                            </a>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if ($site->whatsapp()->value() !== ""): ?>
+                        <div class="contact-option lightgrey-bg flex-row-gap24">
+
+                            <div class="icon-blue-bg">
+                                <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" alt="Icon von WhatsApp"
+                                    loading="lazy" role="img">
+                            </div>
+
+                            <a class="color-font-darkblue-alt2 mobile-subheadline"
+                                href="https://wa.me/<?= $site->whatsapp()->toHtml() ?>">
+                                Whatsapp Chat Starten
+                            </a>
+                        </div>
+                    <?php endif ?>
+                </div>
+
+                <div class="mobile-nav-menu-social">
+                    <?php foreach ($site->social_links()->toStructure() as $social_link): ?>
+
+                        <a href="<?= $social_link->link()->toHtml() ?>">
+                            <?php if ($image = $social_link->icon_mobile()->toFile()): ?>
+                                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
+                            <?php endif ?>
+                        </a>
+
+                    <?php endforeach ?>
+
+
+                </div>
 
             </div>
-
-        </div>
         </header>
-    
+
         <main>

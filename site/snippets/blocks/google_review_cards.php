@@ -36,7 +36,7 @@
             </div>
 
             <div class="flex-row-between">
-                <div class="flex-row-gap10">
+                <div class="pic-slider-dots-wrapper">
                     <span id="blue-dot-rev-1" class="blue-dot-inactive blue-dot-active"></span>
                     <span id="blue-dot-rev-2" class="blue-dot-inactive"></span>
                     <span id="blue-dot-rev-3" class="blue-dot-inactive"></span>
@@ -59,6 +59,6 @@
 
 
     </section>
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right-reviews">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right-reviews" aria-label="hidden">
 
 </div>

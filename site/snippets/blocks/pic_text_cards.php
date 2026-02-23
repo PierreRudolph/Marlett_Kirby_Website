@@ -30,7 +30,7 @@
                             erfahren <img src="<?= url('assets/icons/arrow_forward.svg') ?>" alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
                         </a>
                         <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>"
-                            class="brick-layer-right card-brick-layer">
+                            class="brick-layer-right card-brick-layer" aria-label="hidden" aria-label="hidden">
                     </div>
 
                 </div>

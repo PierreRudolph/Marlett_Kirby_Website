@@ -1,6 +1,6 @@
 <div class="section-wrapper" id="<?= $block->section_id()->toHtml() ?>">
 
-    <section class="section-gap100">
+    <section class="section-gap80">
 
 
         <div class="section-content-gap32">
@@ -12,7 +12,7 @@
                         <?= $block->headline_second_half()->toHtml() ?>
                     </span>
                 </h2>
-                <p class="text-regular color-font-darkblue-alt2"><?= $block->text()->toHtml() ?></p>
+                <p class="copy-text-big color-font-darkblue-alt2"><?= $block->text()->toHtml() ?></p>
             </div>
 
 
@@ -20,7 +20,8 @@
                 <?php foreach ($block->contact_options()->toStructure() as $contact_option): ?>
 
                     <?php if ($contact_option->mail()->value() !== ""): ?>
-                        <div class="contact-option lightgrey-bg flex-row-gap24">
+                        <a href="mailto:<?= $contact_option->mail()->toString() ?>"
+                            class="contact-option lightgrey-bg flex-row-gap24">
 
                             <?php if ($image = $contact_option->img()->toFile()): ?>
                                 <div class="icon-blue-bg">
@@ -28,15 +29,15 @@
                                 </div>
                             <?php endif ?>
 
-                            <a class="color-font-darkblue-alt2 text-headline"
-                                href="mailto:<?= $contact_option->mail()->toString() ?>">
+                            <span class="color-font-darkblue-alt2 link-text">
                                 <?= $contact_option->mail()->toString() ?>
-                            </a>
-                        </div>
+                            </span>
+                        </a>
                     <?php endif ?>
 
                     <?php if ($contact_option->whatsapp_tel()->value() !== ""): ?>
-                        <div class="contact-option lightgrey-bg flex-row-gap24">
+                        <a href="https://wa.me/<?= $contact_option->whatsapp_tel()->toHtml() ?>"
+                            class="contact-option lightgrey-bg flex-row-gap24">
 
                             <?php if ($image = $contact_option->img()->toFile()): ?>
                                 <div class="icon-blue-bg">
@@ -44,15 +45,14 @@
                                 </div>
                             <?php endif ?>
 
-                            <a class="color-font-darkblue-alt2 text-headline"
-                                href="https://wa.me/<?= $contact_option->whatsapp_tel()->toHtml() ?>" loading="lazy" role="img">
-                                <?= $contact_option->whatsapp_text() ?> </a>
-                        </div>
+                            <span class="color-font-darkblue-alt2 link-text">
+                                <?= $contact_option->whatsapp_text() ?> </span>
+                        </a>
                     <?php endif ?>
 
                 <?php endforeach ?>
                 <?php if ($site->phone_line()->value() !== ""): ?>
-                    <div class="contact-option lightgrey-bg flex-row-gap24">
+                    <a href="tel:<?= $site->phone_line()->toHtml() ?>" class="contact-option lightgrey-bg flex-row-gap24">
 
                         <?php if ($image = $contact_option->img()->toFile()): ?>
                             <div class="icon-blue-bg">
@@ -60,14 +60,14 @@
                             </div>
                         <?php endif ?>
 
-                        <a class="color-font-darkblue-alt2 text-headline" href="tel:<?= $site->phone_line()->toHtml() ?>">
+                        <span class="color-font-darkblue-alt2 link-text">
                             <?= $site->phone_line()->toHtml() ?>
-                        </a>
-                    </div>
+                        </span>
+                    </a>
                 <?php endif ?>
 
                 <?php if ($site->phone()->value() !== ""): ?>
-                    <div class="contact-option lightgrey-bg flex-row-gap24">
+                    <a href="tel:<?= $site->phone()->toHtml() ?>" class="contact-option lightgrey-bg flex-row-gap24">
 
                         <?php if ($image = $contact_option->img()->toFile()): ?>
                             <div class="icon-blue-bg">
@@ -75,10 +75,10 @@
                             </div>
                         <?php endif ?>
 
-                        <a class="color-font-darkblue-alt2 text-headline" href="tel:<?= $site->phone()->toHtml() ?>">
+                        <span class="color-font-darkblue-alt2 link-text">
                             <?= $site->phone()->toHtml() ?>
-                        </a>
-                    </div>
+                        </span>
+                    </a>
                 <?php endif ?>
             </div>
 
