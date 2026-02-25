@@ -25,15 +25,15 @@
                 </a>
 
             </div>
-            <div class="flex-column-gap5">
+            <div class="flex-column-gap5 marg-top20">
 
                 <div class="flex-row-gap15">
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
                     <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
                 </div>
-                  <div class="label color-font-white">5,0 Sterne Bewertung -<a target="blank"
+                  <div class="label color-font-blue">5,0 Sterne Bewertung -<a target="blank"
                         href="https://www.google.com/search?sa=X&sca_esv=ad335200c38ab265&hl=de&sxsrf=ANbL-n5fAmUI_Q00NO6pWSE7rGKG2EL7JA:1771848614790&q=Marlett+Steinsanierungen+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MjE3MTI3NDMwMjI3MzIxMDY12cDI-IpRxTexKCe1pEQhuCQ1M684MS8ztag0Lz01TyEotSo1rzgzPy81bxErUcoAY1PFcmgAAAA&rldimm=2474271602276240354&tbm=lcl&ved=2ahUKEwj74p66yu-SAxXNVfEDHR2vJCoQ9fQKegQIXhAG&biw=2560&bih=1300&dpr=1#lkt=LocalPoiReviews"
-                        class="label-underline marg-left4 color-font-white">20+
+                        class="label-underline marg-left4 color-font-blue">20+
                         Bewertungen</a></div>
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="section-content">
             <?php if ($img = $page->img()->toFile()): ?>
                 <div class="services-pic">
-                    <img src="<?= $img->url() ?>" alt="<?= $img->alt() ?>" loading="lazy" role="img">
+                    <img aspect-ratio="16/9" src="<?= $img->url() ?>" alt="<?= $img->alt() ?>" loading="lazy" role="img">
                 </div>
             <?php endif ?>
         </div>

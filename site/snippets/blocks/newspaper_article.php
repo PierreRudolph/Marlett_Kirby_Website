@@ -19,7 +19,7 @@
         </div>
 
         <div class="section-content">
-            <div class="pic-text-card flex-column max-width345">
+            <a class="pic-text-card flex-column max-width345" href="<?= $block->link()->toUrl() ?>" target="blank">
 
                 <?php if ($image = $block->img()->toFile()): ?>
                     <div class="newspaper-img">
@@ -35,20 +35,20 @@
                     </div>
 
 
-                    <a href="<?= $block->link()->toUrl() ?>" target="blank"
-                        class="flex-row-gap5 link-text color-font-skyblue">Artikel
+                    <p class="flex-row-gap5 link-text color-font-skyblue">Artikel
                         Lesen <img src="<?= url('assets/icons/arrow_forward.svg') ?>" alt="Icon Pfeil nach Rechts"
                             loading="lazy" role="img">
-                    </a>
+                    </p>
                     <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>"
                         class="brick-layer-right card-brick-layer">
                 </div>
 
-            </div>
+            </a>
         </div>
 
 
     </section>
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right" aria-label="hidden" aria-label="hidden" aria-label="hidden">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right"
+        aria-label="hidden" aria-label="hidden" aria-label="hidden">
 
 </div>

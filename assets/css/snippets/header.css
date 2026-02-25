@@ -22,7 +22,12 @@ header {
   width: 100%
 }
 
+.logo:focus img{
+  transform: scale(0.9);
+}
+
 .logo img {
+  transition: transform 125ms ease-out;
   width: 130px
 }
 

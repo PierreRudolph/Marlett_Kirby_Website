@@ -98,10 +98,9 @@
 
         </div>
 
-
         <?php if ($site->show_service_areas()->toBool()): ?>
             <hr class="hr-line">
-            <div class="flex-column-gap40 width-full" >
+            <div class="flex-column-gap40 width-full">
                 <h4 class="headline headline-xs color-font-white">Einzugsgebiete</h4>
                 <?php $areas = $site->service_areas()->split(','); ?>
                 <div class="flex-row-gap24">
@@ -130,6 +129,79 @@
 </footer>
 </main>
 </div>
+<script defer src="/assets/script/glide.min.js"></script>
+<script defer src="/assets/script/img_comparison_slider.min.js"></script>
+
+<script defer>
+    // setTimeout(() => {
+
+    //     new window.Glide('.glide', {
+    //         type: 'carousel',
+    //         perView: 2,     // wie viele Karten sichtbar sind
+    //         gap: 20,
+    //         bound: true,
+    //         breakpoints: {
+    //             1000: { perView: 1 },
+    //         }
+    //     }).mount();
+    // }, 500)
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.gog-rev-slider').forEach(function (slider) {
+
+            new Glide(slider, {
+                type: 'carousel',
+                perView: 2,
+                perMove: 1,
+                gap: 20,
+                bound: true,
+                peek: 8,
+                breakpoints: {
+                    1024: { perView: 1 }
+                }
+            }).mount();
+
+        });
+        setTimeout(() => {
+            document.querySelectorAll('.pic-slider').forEach(function (slider) {
+
+                new Glide(slider, {
+                    type: 'carousel',
+                    perView: 4,
+                    perMove: 1,
+                    gap: 20,
+                    bound: true,
+                    breakpoints: {
+                        1400: { perView: 3 },
+                        1000: { perView: 2 },
+                        750: { perView: 2 },
+                        600: { perView: 1 }
+                    }
+                }).mount();
+
+            });
+        }, 500)
+
+    });
+
+
+    // document.querySelectorAll('.pic-slider').forEach(function (slider) {
+
+    //     new window.Glide(slider, {
+    //         type: 'carousel',
+    //         perView: 3,
+    //         perMove: 1,
+    //         gap: 20,
+    //         bound: true,
+    //         breakpoints: {
+    //             1024: { perView: 2 },
+    //             768: { perView: 1 }
+    //         }
+    //     }).mount();
+
+    // });
+
+
+</script>
 </body>
 
 </html>

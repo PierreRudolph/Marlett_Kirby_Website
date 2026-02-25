@@ -209,7 +209,8 @@ input[type=number] {
 }
 
 .headline-xs {
-  font-size: 24px
+  font-size: 24px;
+  line-height: 1.5;
 }
 
 .btn-text {
@@ -219,29 +220,29 @@ input[type=number] {
 }
 
 .text-headline {
-  font-family: 'Exo 2';
   font-weight: 700;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.5;
+
 }
 
 .text-headline-manrope {
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .label-alt-headline {
   font-weight: 700;
   font-size: 20px;
-  line-height: 130%
+  line-height: 1.3
 }
 
 .label-alt-text {
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
-  margin-bottom: 5px
+  margin-bottom: 12px
 }
 
 .text-regular {
@@ -252,8 +253,8 @@ input[type=number] {
 
 .text-regular500 {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 29px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .label {
@@ -306,7 +307,7 @@ input[type=number] {
   min-width: 247px;
   transition: background-color, box-shadow, var(--btn-transition);
   color: var(--btn-pos-text-color);
-  padding: 8px 36px;
+  padding: 10px 36px;
   background-color: var(--btn-pos-bg-color);
   box-sizing: border-box;
 }
@@ -331,7 +332,7 @@ input[type=number] {
   color: var(--btn-pos-outlined-text-color);
   border: 1px solid var(--btn-pos-outlined-border-color);
   background-color: var(--btn-pos-outlined-bg-color);
-  padding: 7px 17px;
+  padding: 10px 17px;
   box-sizing: border-box;
 }
 
@@ -351,7 +352,7 @@ input[type=number] {
   width: fit-content;
   transition: background-color, box-shadow, var(--btn-transition);
   color: var(--btn-neg-text-color);
-  padding: 8px 36px;
+  padding: 10px 36px;
   background-color: var(--btn-neg-bg-color);
   box-sizing: border-box;
 }
@@ -387,7 +388,7 @@ input[type=number] {
 
 .btn-neg-outlined:hover {
   background-color: var(--btn-neg-outlined-hover-bg-color);
-  box-shadow: 6px 6px 0 0 var(--btn-neg-outlined-hover-shadow-color);
+  box-shadow: 10px 6px 0 0 var(--btn-neg-outlined-hover-shadow-color);
 }
 
 .btn-neg-outlined:focus {
@@ -439,7 +440,13 @@ input[type=number] {
 .flex-row-start-gap24 {
   display: flex;
   align-items: flex-start;
-  gap: 20px
+  gap: 24px
+}
+
+.flex-row-gap2 {
+  display: flex;
+  align-items: center;
+  gap: 2px
 }
 
 .flex-row-gap4 {
@@ -579,6 +586,15 @@ input[type=number] {
   grid-column: span 6
 }
 
+.flex1 {
+  flex: 1;
+}
+
+.grid-template4{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
 .label-underline {
   text-decoration: underline;
   text-decoration-thickness: 9%
@@ -592,6 +608,10 @@ input[type=number] {
 
 .comparison-slider-figure {
   touch-action: none
+}
+
+.video-home-wrapper {
+  position: relative;
 }
 
 .img-compare {
@@ -651,6 +671,10 @@ input[type=number] {
   display: none !important
 }
 
+.marg-top20 {
+  margin-top: 20px;
+}
+
 .marg-top12 {
   /* wird 4px, ab 603 */
   margin-top: 12px;
@@ -672,8 +696,8 @@ input[type=number] {
   max-width: 345px
 }
 
-.pad-left16 {
-  padding-left: 16px
+.pad-left26 {
+  padding-left: 26px;
 }
 
 .align-center {
@@ -683,4 +707,40 @@ input[type=number] {
 .subheadline-second-half {
   margin-left: 4px;
   font-weight: 500
+}
+
+img-comparison-slider {
+  visibility: hidden;
+  outline: none;
+}
+
+img-comparison-slider [slot='second'] {
+  display: none;
+}
+
+img-comparison-slider.rendered {
+  visibility: inherit;
+}
+
+img-comparison-slider.rendered [slot='second'] {
+  display: unset;
+}
+
+img-comparison-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img-comparison-slider .handle {
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 35px;
+  height: 72px;
+  width: 69px;
+  min-width: 69px;
+  background-color: var(--color-bg-white)
 }

@@ -13,9 +13,9 @@
                 </span>
             </h2>
 
-            <p class="text-regular500 color-font-darkblue-alt2"><?= $block->text()->toHtml() ?></p>
+            <p class="copy-text-big color-font-darkblue-alt2"><?= $block->text()->toHtml() ?></p>
 
-            <div class="grid-full flex-middle">
+            <div class="grid-full">
                 <a class="btn-pos btn-text marg-bot6" href="<?= $block->button_contact_link()->toUrl() ?>">
                     <?= $block->button_contact_text()->toHtml() ?>
                 </a>
@@ -30,7 +30,7 @@
                 <?php $index = $q_and_a_collection->indexOf($q_and_a) ?>
                 <div onclick="openCloseAccordion(<?= $index ?>)" class="accordion" id="accordion-<?= $index ?>">
                     <button class="btn-accordion">
-                        <h4 id="faq-question" class="color-font-darkblue-alt2 text-headline mobile-font-16p">
+                        <h4 id="faq-question" class="color-font-darkblue-alt2 text-headline-manrope mobile-font-16p">
                             <?= $q_and_a->question()->toHtml() ?>
                         </h4>
                         <img src="<?= url('assets/icons/icon_arrow_down.svg') ?>" alt="Icon Pfeil nach Unten" loading="lazy"

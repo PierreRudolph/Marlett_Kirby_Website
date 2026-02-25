@@ -40,7 +40,7 @@
   max-width: 1440px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 40px
+  gap: 80px
 }
 
 .above-fold-gap120 {
@@ -141,7 +141,7 @@ section {
   grid-column: span 6
 }
 
-.section-content-row-gap24 {
+.section-content-big-numbers {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -195,13 +195,6 @@ section {
   margin: 12px 0
 }
 
-.video-home-wrapper {
-  position: relative;
-  position: relative;
-  height: fit-content;
-  width: fit-content
-}
-
 .video-play-btn {
   display: flex;
   align-items: center;
@@ -226,12 +219,19 @@ section {
   flex-direction: column;
   gap: 24px;
   padding: 24px;
-  background-color: var(--color-font-white)
+  background-color: var(--color-font-white);
+  flex: 1;
+  min-width: 333px;
 }
 
 .icon-text-card-img {
   width: 48px;
   height: 48px
+}
+
+.icon-text-card-img img {
+  width: 48px;
+  height: 48px;
 }
 
 .services-headline {
@@ -240,7 +240,8 @@ section {
 }
 
 .pic-text-card {
-  transition: all 225ms ease-in-out
+  transition: all 225ms ease-in-out;
+  grid-column: span 1;
 }
 
 .pic-text-card:hover .pic-text-card-body {
@@ -268,8 +269,6 @@ section {
 }
 
 .pic-text-card-img {
-  width: 345px;
-  min-width: 345px;
   height: 235px;
   overflow: hidden;
   display: flex;
@@ -278,12 +277,10 @@ section {
 }
 
 .pic-text-card-img img {
-  object-fit: contain;
-  position: relative
-}
-
-.pic-text-card-img img:first-child {
-  transform: scale(.7)
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .pic-text-card-body {
@@ -295,7 +292,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 345px;
   height: 275px;
   box-sizing: border-box
 }
@@ -309,15 +305,50 @@ section {
 }
 
 .comparison-pics-wrapper {
-  transition: transform .4s cubic-bezier(.65, 0, .35, 1);
-  will-change: transform
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.gog-rev-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .comparison-pics {
-  scroll-snap-align: left;
   display: flex;
   align-items: center;
-  gap: 2px
+  gap: 2px;
+  width: 350px;
+  height: 400px;
+}
+
+.comparison-pic {
+  width: 50%;
+  height: 100%;
+  /* display: flex; */
+}
+
+/* .comparison-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.comparison-pic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.glide__slides-gog-rev {
+  padding-bottom: 14px;
+}
+
+.glide__slides-comp-pic {
+  /* max-height: 440px; */
+  height: 100%;
 }
 
 .blue-dot-inactive {
@@ -329,7 +360,8 @@ section {
   border-radius: 30px
 }
 
-.blue-dot-active {
+.blue-dot-active,
+.glide__bullet--active {
   background-color: var(--color-blue)
 }
 
@@ -350,8 +382,8 @@ section {
   z-index: 1;
   background-color: var(--color-bg-white);
   box-sizing: border-box;
-  width: 563px;
-  min-width: 563px;
+  /* width: 563px;
+  min-width: 563px; */
   padding: 40px;
   box-shadow: 0 4px 14px 0 #1f588A29
 }
@@ -458,6 +490,12 @@ textarea::placeholder {
   color: #8d95a5
 }
 
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
 .field textarea {
   font-size: 18px;
   height: 174px;
@@ -475,12 +513,13 @@ textarea::placeholder {
 .field textarea::placeholder {
   font-size: 18px;
   line-height: 160%;
-  color: #8d95a5
+  color: #8d95a5;
 }
 
 .q-and-a-accordion-wrapper {
   box-sizing: border-box;
-  padding: 8px
+  /* padding: 8px; */
+  max-height: 544px;
 }
 
 .accordion {
@@ -488,7 +527,7 @@ textarea::placeholder {
   cursor: pointer;
   padding: 24px;
   background: var(--color-bg-white);
-  box-shadow: 0 4px 14px 0 #1f588A29
+  box-shadow: 0 4px 14px 0 #1f588A29;
 }
 
 .btn-accordion {
@@ -497,7 +536,8 @@ textarea::placeholder {
   background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+  text-align: start;
 }
 
 .open {
@@ -507,12 +547,12 @@ textarea::placeholder {
 
 .accordion:not(.open):hover {
   background: #f2f6fa;
-  box-shadow: 8px 8px 0 0 var(--color-blue)
+  box-shadow: 8px 8px 0 0 var(--color-blue);
 }
 
 .accordion:focus {
   background: var(--color-bg-white);
-  box-shadow: 0 0 0 3px #4ca6e4
+  box-shadow: 0 0 0 3px #4ca6e4;
 }
 
 .accordion.open>.text-accordion {
@@ -523,11 +563,11 @@ textarea::placeholder {
 }
 
 .accordion.open>button>img {
-  transform: rotate(180deg)
+  transform: rotate(180deg);
 }
 
 .accordion>button>img {
-  transition: transform 225ms ease-in-out
+  transition: transform 225ms ease-in-out;
 }
 
 .text-accordion {
@@ -574,7 +614,7 @@ textarea::placeholder {
   padding-bottom: 12px;
   padding-left: 32px;
   width: 100%;
-  background-color: #fff
+  background-color: #fff;
 }
 
 .footer-bottom>div {
@@ -582,7 +622,7 @@ textarea::placeholder {
   max-width: 1440px;
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .comparison-slider-figure {
@@ -618,7 +658,7 @@ textarea::placeholder {
   align-items: center;
   position: absolute;
   left: 50%;
-  z-index: 1
+  z-index: 1;
 }
 
 .draggable-button {
@@ -632,6 +672,11 @@ textarea::placeholder {
   width: 69px;
   min-width: 69px;
   background-color: var(--color-bg-white)
+}
+
+.draggable-button img {
+  height: 21px;
+  width: 21px;
 }
 
 .big-number {
@@ -679,7 +724,8 @@ textarea::placeholder {
   position: relative;
   max-width: 710px;
   max-height: 400px;
-  width: 710px
+  width: 710px;
+  height: 100%;
 }
 
 .video-wrapper:hover .video-with-thumbnail {
@@ -720,15 +766,20 @@ textarea::placeholder {
 }
 
 .services-pic {
-  width: 680px;
-  height: 500px
+  width: 100%;
+  /* height: 500px  */
 }
 
 .services-pic img {
-  width: 120%
+  width: 100%
+}
+
+.extended-section-img-wrapper {
+  height: 410px;
 }
 
 .extended-section-img-wrapper img {
+  object-fit: cover;
   width: 100%;
   height: 100%
 }
@@ -750,3 +801,15 @@ textarea::placeholder {
   gap: 70px;
   max-height: 74px;
 }
+
+/*-----------Google Review Glider--------*/
+.glide__bullets {
+  position: unset;
+  transform: unset;
+}
+
+.glide__track {
+  overflow: visible;
+}
+
+/*-----------Google Review Glider END--------*/

@@ -1,3 +1,4 @@
+
 ///////////VIDEO SEKTION
 function hideVideoLayers(videoIndex) {
     let layerOne = document.getElementById(`blue-video-layer-${videoIndex}`);
@@ -186,47 +187,47 @@ function initiateHomeVideo() {
     setTimeout(() => {
         let videoElem = document.getElementById('video-home');
         if (videoElem != null && videoElem.paused)
-            showPlayBtn();
+            showPlayBtn('home');
     }, 200)
 }
 
-function showPlayBtn() {
-    hideVideoBtn('pause');
-    showVideoBtn('play');
+function showPlayBtn(btnId) {
+    hideVideoBtn('pause', btnId);
+    showVideoBtn('play', btnId);
 }
 
-function showPauseBtn() {
-    hideVideoBtn('play');
-    showVideoBtn('pause');
+function showPauseBtn(btnId) {
+    hideVideoBtn('play', btnId);
+    showVideoBtn('pause', btnId);
 }
 
 
-function hideVideoBtn(btnId) {
-    let btnElem = document.getElementById(`video-${btnId}-btn`);
+function hideVideoBtn(playOrPuase, btnId) {
+    let btnElem = document.getElementById(`video-${playOrPuase}-btn-${btnId}`);
     if (btnElem == null)
         return;
     btnElem.classList.add('d-none-important');
 }
 
-function showVideoBtn(btnId) {
-    let btnElem = document.getElementById(`video-${btnId}-btn`);
+function showVideoBtn(playOrPuase, btnId) {
+    let btnElem = document.getElementById(`video-${playOrPuase}-btn-${btnId}`);
     if (btnElem == null)
         return;
     btnElem.classList.remove('d-none-important');
 }
 
-function playVideo(videoId) {
+function playVideo(videoId, btnId) {
     let videoElm = document.getElementById(videoId);
     if (videoElm == null)
         return;
     videoElm.play();
-    showPauseBtn();
+    showPauseBtn(btnId);
 }
 
-function pauseVideo(videoId) {
+function pauseVideo(videoId, btnId) {
     let videoElm = document.getElementById(videoId);
     if (videoElm == null)
         return;
     videoElm.pause();
-    showPlayBtn();
+    showPlayBtn(btnId);
 }

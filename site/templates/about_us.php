@@ -43,10 +43,10 @@
 
         </div>
 
-        <div class="section-content-row-gap24">
+        <div class="section-content-big-numbers">
             <?php $big_numbers = $page->big_numbers()->toStructure() ?>
             <?php foreach ($big_numbers as $big_number): ?>
-                <div class="big-number-card flex-column-gap24 blue-radient-bg">
+                <div class="big-number-card flex-column blue-radient-bg">
                     <h4 class="headline headline-xxl color-font-white"><?= $big_number->number()->toHtml() ?></h4>
                     <p class="headline headline-s color-font-lighterblue"><?= $big_number->text()->toHtml() ?></p>
                 </div>

@@ -1,6 +1,6 @@
 <div class="section-wrapper gap120 lightgrey-bg" id="<?= $block->section_id()->toHtml() ?>">
 
-    <section class="section-gap48">
+    <section class="section-gap64">
         <div class="section-content">
             <h2 class="headline headline-l color-font-blue">
                 <?= $block->headline_first_half()->toHtml() ?>
@@ -20,7 +20,7 @@
 
 
                     <?php if ($image = $card->img()->toFile()): ?>
-                        <img width="153px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
+                        <img aspect-ratio="16/9" width="153px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                     <?php endif ?>
 
                     <div class="flex-column-gap20">
@@ -28,7 +28,7 @@
                         <?php if ($card->text_top()->toString() !== ""): ?>
 
                             <p class="copy-text-big color-font-darkblue"><?= $card->text_top()->toHtml() ?></p>
-                            <ul>
+                            <ul class="pad-left26">
                                 <?php foreach ($card->text_list()->toStructure() as $listItem): ?>
 
                                     <li class="text-headline-manrope color-font-darkblue"><?= $listItem->text()->toHtml() ?></li>
@@ -64,7 +64,7 @@
             <section class="section-gap64 extended-section">
                 <div class="section-content extended-section-img-wrapper">
                     <?php if ($image = $section_item->image()->toFile()): ?>
-                        <img width="648px" height="410px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy"
+                        <img aspect-ratio="16/9" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy"
                             role="img">
                     <?php endif ?>
                 </div>
@@ -79,7 +79,7 @@
                                 <?= $section_item->subheadline_second_half()->toHtml() ?>
                             </span>
                         </h2>
-                        <ul class="pad-left16">
+                        <ul class="pad-left26">
                             <?php foreach ($section_item->extended_bottom_list()->toStructure() as $listItem): ?>
 
                                 <li class="text-headline-manrope color-font-darkblue">

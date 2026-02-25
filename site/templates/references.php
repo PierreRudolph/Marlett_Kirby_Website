@@ -1,8 +1,9 @@
 <?php snippet(name: 'header') ?>
 
 <div class="section-wrapper">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left" aria-label="hidden">
 
-    <section class="above-fold">
+    <section class="section-gap48">
 
         <div class="flex-column-gap24 grid-middle">
             <h2 class="headline headline-l color-font-darkblue-alt reasons-headline">
@@ -15,7 +16,7 @@
         </div>
 
         <div class="grid-full flex-column-gap20">
-            <div class="comparison-pics-wrapper flex-row-gap20 flex-wrap">
+            <div class="flex-row-gap20 flex-wrap">
                 <?php
                 $images = $page->galleryOwn()->toStructure();
                 $ratio = $page->ratio()->or('auto');
@@ -26,7 +27,7 @@
                 <?php foreach ($images as $item): ?>
 
 
-                    <figure class="comparison-pics mobile603-d-none" data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
+                    <figure class="flex-row-gap2 mobile603-d-none" data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
 
                         <?php $img1 = $item->img_one()->toFile() ?>
 
@@ -44,7 +45,7 @@
                         </div>
                     </figure>
 
-                    <figure class="comparison-pics desktop603-d-none" data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
+                    <figure class="flex-row-gap2 desktop603-d-none" data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
 
                         <?php $img1 = $item->img_one()->toFile() ?>
 
@@ -67,15 +68,17 @@
 
 
             </div>
-
+            <div class="flex-column">
+                <h4 class="label-alt-headline color-font-darkblue-alt2">
+                    <?= $page->comparison_pics_label_headline()->toHtml() ?>
+                </h4>
+                <p class="label-alt-text color-font-darkblue-alt2">
+                    <?= $page->comparison_pics_label_text()->toHtml() ?>
+                </p>
+            </div>
         </div>
 
-        <div class="flex-column grid-full">
-            <h4 class="label-alt-headline color-font-darkblue-alt2">
-                <?= $page->comparison_pics_label_headline()->toHtml() ?>
-            </h4>
-            <p class="label-alt-text color-font-darkblue-alt2"><?= $page->comparison_pics_label_text()->toHtml() ?></p>
-        </div>
+
     </section>
 
 </div>

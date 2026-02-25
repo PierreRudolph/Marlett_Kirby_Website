@@ -39,13 +39,25 @@
                     <?php if ($videoFile = $videoStructure->video()->toFile()): ?>
                         <div class="video-home-wrapper width-full">
 
-                            <video muted class="video-with-thumbnail" id="section-video-<?= $index ?>" controls
+                            <video aspect-ratio="16/9" class="video-with-thumbnail" id="section-video-<?= $index ?>"
                                 poster="<?= $videoStructure->video_thumbnail()->toFile()->url() ?>">
                                 <source src="<?= $videoFile->url() ?>" type="<?= $videoFile->mime() ?>">
                             </video>
-                            <div onclick="pauseVideo('section-video-<?= $index ?>')" class="video-play-btn"><img
-                                    src="<?= url('assets/icons/pause.svg') ?>" alt="Videoapspiel Button" loading="lazy"
-                                    role="img"></div>
+
+                            <div id="video-pause-btn-section-<?= $index ?>"
+                                onclick="pauseVideo('section-video-<?= $index ?>','section-<?= $index ?>')"
+                                class="video-play-btn">
+                                <img src="<?= url('assets/icons/pause.svg') ?>" alt="Video pausieren Button" loading="lazy"
+                                    role="img">
+                            </div>
+
+                            <div id="video-play-btn-section-<?= $index ?>"
+                                onclick="playVideo('section-video-<?= $index ?>','section-<?= $index ?>')"
+                                class="video-play-btn d-none-important">
+                                <img src="<?= url('assets/icons/play.svg') ?>" alt="Video apspielen Button" loading="lazy"
+                                    role="img">
+                            </div>
+
 
                         </div>
                     <?php endif ?>

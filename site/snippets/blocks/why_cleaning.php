@@ -2,7 +2,7 @@
 
     <section class="section-gap64">
 
-        <div class="flex-column-gap24 grid-middle">
+        <div class="flex-column-gap20 grid-middle">
             <h2 class="headline headline-l color-font-blue">
                 <?= $block->headline_first_half()->toHtml() ?>
                 <br>
@@ -27,7 +27,7 @@
                     <?php endif ?>
 
                     <div class="overflow-hidden">
-                        <h4 class="text-headline color-font-darkblue"><?= $card->headline()->toHtml() ?></h4>
+                        <h4 class="headline headline-xs color-font-darkblue"><?= $card->headline()->toHtml() ?></h4>
                         <p class="text-regular color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                     </div>
 

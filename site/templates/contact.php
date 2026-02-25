@@ -19,7 +19,7 @@
             <p class="copy-text-big color-font-white"><?= $page->text_bottom()->toHtml() ?></p>
 
 
-            <div class="flex-column-gap5">
+            <div class="flex-column-gap5 marg-top20">
 
                 <div class="flex-row-gap15">
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Icon von Google loading="lazy" role="img">

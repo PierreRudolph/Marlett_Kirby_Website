@@ -1,7 +1,8 @@
 <?php snippet('header') ?>
 
 <div class="section-wrapper white-bg">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left" aria-label="hidden">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left"
+        aria-label="hidden">
     <section class="above-fold">
         <div class="section-content">
             <p class="subheadline-neg">
@@ -34,92 +35,45 @@
                 </a>
 
             </div>
-            <div class="flex-column-gap5">
+            <div class="flex-column-gap5 marg-top20">
 
                 <div class="flex-row-gap15">
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
                     <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Stern Icon" loading="lazy" role="img">
                 </div>
-                   <div class="label color-font-white">5,0 Sterne Bewertung -<a target="blank"
+                <div class="label color-font-blue">5,0 Sterne Bewertung -<a target="blank"
                         href="https://www.google.com/search?sa=X&sca_esv=ad335200c38ab265&hl=de&sxsrf=ANbL-n5fAmUI_Q00NO6pWSE7rGKG2EL7JA:1771848614790&q=Marlett+Steinsanierungen+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MjE3MTI3NDMwMjI3MzIxMDY12cDI-IpRxTexKCe1pEQhuCQ1M684MS8ztag0Lz01TyEotSo1rzgzPy81bxErUcoAY1PFcmgAAAA&rldimm=2474271602276240354&tbm=lcl&ved=2ahUKEwj74p66yu-SAxXNVfEDHR2vJCoQ9fQKegQIXhAG&biw=2560&bih=1300&dpr=1#lkt=LocalPoiReviews"
-                        class="label-underline marg-left4 color-font-white">20+
+                        class="label-underline marg-left4 color-font-blue">20+
                         Bewertungen</a></div>
             </div>
         </div>
 
         <div class="section-content">
-
-
-
             <?php
             $imageBefore = $page->imageBefore()->toFile();
             $imageAfter = $page->imageAfter()->toFile();
-            $ratio = $page->ratio()->or('auto');
-            $crop = $page->crop()->isTrue();
             ?>
 
-            <figure id="img-compare" class="comparison-slider-figure" data-ratio="<?= $ratio ?>"
-                data-crop="<?= $crop ?>">
+            <img-comparison-slider class="img-comparison-slider" data-start="50" data-orientation="horizontal">
 
-                <?php $thumb = $imageBefore->crop(680, 569); ?>
-                <div id="img-front-wrapper" class="comparison-slider-before width-half">
-                    <img draggable="false" class="noselect" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>"
-                        loading="lazy" role="img">
+                <?php $thumb = $imageBefore ?>
+                <img slot="first" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy"
+                    role="img">
 
-                </div>
-
-                <span id="slider" class="spacer-line">
-                    <div class="draggable-button">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>"
-                            alt="Pfeil nach Links" loading="lazy" role="img">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>"
-                            alt="Pfeil nach Rechts" loading="lazy" role="img">
-                    </div>
-                </span>
 
                 <?php $thumb = $imageAfter->crop(680, 569); ?>
 
-                <img draggable="false" class="noselect" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>"
-                    loading="lazy" role="img">
+                <img slot="second" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy"
+                    role="img">
 
-            </figure>
+                <div slot="handle" class="draggable-button noselect">
+                    <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>"
+                        alt="Pfeil nach Links" loading="lazy" role="img">
+                    <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>"
+                        alt="Pfeil nach Rechts" loading="lazy" role="img">
+                </div>
 
-
-            <script>
-                const box = document.getElementById("img-compare");
-                const front = document.getElementById("img-front-wrapper");
-                const slider = document.getElementById("slider");
-
-                slider.addEventListener("pointerdown", e => {
-                    slider.setPointerCapture(e.pointerId);
-                    move(e);
-                });
-
-                slider.addEventListener("pointermove", e => {
-                    e.preventDefault();   // <-- verhindert Scrollen auf Touch
-                    if (!slider.hasPointerCapture(e.pointerId)) return;
-                    move(e);
-                });
-
-                slider.addEventListener("pointerup", e => {
-                    slider.releasePointerCapture(e.pointerId);
-                });
-
-                slider.addEventListener("pointercancel", e => {
-                    slider.releasePointerCapture(e.pointerId);
-                });
-
-                function move(e) {
-                    const rect = box.getBoundingClientRect();
-                    let x = e.clientX - rect.left;
-
-                    x = Math.max(0, Math.min(x, rect.width));
-
-                    front.style.width = x + "px";
-                    slider.style.left = x + "px";
-                };
-            </script>
-
+            </img-comparison-slider>
 
         </div>
     </section>

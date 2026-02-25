@@ -10,7 +10,7 @@
         </h2>
 
 
-        <div class="flex-row-gap20 grid-full flex-wrap">
+        <div class="flex-row-gap20 grid-template4 grid-full flex-wrap">
             <?php foreach ($block->cards()->toStructure() as $card): ?>
                 <div class="pic-text-card flex-column">
 

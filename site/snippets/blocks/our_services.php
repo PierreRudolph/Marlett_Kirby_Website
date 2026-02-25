@@ -1,6 +1,6 @@
 <div class="section-wrapper" id="<?= $block->section_id()->toHtml() ?>">
 
-    <section class="section-gap64">
+    <section class="section-gap80">
 
         <div class="section-content">
             <h2 class="headline headline-l color-font-blue">
@@ -16,7 +16,7 @@
             <h3 class="headline headline-xs"><?= $block->services_headline()->toHtml() ?></h3>
 
             <?php if ($block->with_bottom_text()->isTrue()): ?>
-                <ul class="flex-column-gap8 pad-left16">
+                <ul class="flex-column-gap8 pad-left26">
                     <?php foreach ($block->services_list()->toStructure() as $service): ?>
                         <li class="label-alt-headline"><?= $service->text()->toHtml() ?></li>
                     <?php endforeach ?>
@@ -24,7 +24,7 @@
                 <p class="text-regular500"><?= $block->services_text()->toHtml() ?></p>
             <?php else: ?>
 
-                <ul>
+                <ul class="pad-left26">
                     <?php foreach ($block->services_list()->toStructure() as $service): ?>
                         <li class="label-alt-text"><?= $service->text()->toHtml() ?></li>
                     <?php endforeach ?>

@@ -12,53 +12,65 @@
         </div>
 
         <div class="grid-full flex-column-gap20">
-            <div id="gog-rev-wrapper"
-                class="comparison-pics-wrapper flex-row-start-gap20 ">
+            <div id="gog-rev-wrapper" class="glide gog-rev-slider">
 
-                <?php foreach ($block->cards()->toStructure() as $card): ?>
-                    <div class="google-review-card flex-column-gap32">
+                <div class="glide__track" data-glide-el="track">
+                    <div class="glide__slides glide__slides-gog-rev">
 
-                        <div class="flex-row-gap15">
-                            <img src="<?= url('assets/icons/google_icon.svg') ?>"alt="Icon von Google" loading="lazy" role="img">
-                            <img src="<?= url('assets/icons/stars_icon.svg') ?>"alt="Stern Icon" loading="lazy" role="img">
-                        </div>
+                        <?php foreach ($block->cards()->toStructure() as $card): ?>
+                            <div class="glide__slide google-review-card flex-column-gap32">
 
+                                <div class="flex-row-gap15">
+                                    <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Icon von Google"
+                                        loading="lazy">
+                                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Stern Icon" loading="lazy">
+                                </div>
 
-                        <div class="overflow-hidden">
-                            <p class="copy-text-big color-font-darkblue"><?= $card->text()->toHtml() ?></p>
-                        </div>
+                                <div class="overflow-hidden">
+                                    <p class="copy-text-big color-font-darkblue">
+                                        <?= $card->text()->toHtml() ?>
+                                    </p>
+                                </div>
 
-                        <p class="label-big color-font-darkblue"><?= $card->username()->toHtml() ?></p>
+                                <p class="label-big color-font-darkblue">
+                                    <?= $card->username()->toHtml() ?>
+                                </p>
+
+                            </div>
+                        <?php endforeach ?>
 
                     </div>
-                <?php endforeach ?>
+                </div>
+                <div class="flex-row-between">
+                    <div class="pic-slider-dots-wrapper glide__bullets" data-glide-el="controls[nav]">
 
+                        <?php foreach ($block->cards()->toStructure() as $index => $card): ?>
+                            <button class="blue-dot-inactive" data-glide-dir="=<?= $index ?>">
+                            </button>
+                        <?php endforeach ?>
+
+                    </div>
+
+                    <div class="flex-row-gap20 glide__arrows" data-glide-el="controls">
+
+                        <button class="btn-slide" data-glide-dir="<">
+                            <img src="<?= url('assets/icons/arrow_left.svg') ?>" alt="Zurück" loading="lazy">
+                        </button>
+
+                        <button class="btn-slide" data-glide-dir=">">
+                            <img src="<?= url('assets/icons/arrow_right.svg') ?>" alt="Weiter" loading="lazy">
+                        </button>
+
+                    </div>
+                </div>
             </div>
 
-            <div class="flex-row-between">
-                <div class="pic-slider-dots-wrapper">
-                    <span id="blue-dot-rev-1" class="blue-dot-inactive blue-dot-active"></span>
-                    <span id="blue-dot-rev-2" class="blue-dot-inactive"></span>
-                    <span id="blue-dot-rev-3" class="blue-dot-inactive"></span>
-                    <span id="blue-dot-rev-4" class="blue-dot-inactive"></span>
-                    <span id="blue-dot-rev-5" class="blue-dot-inactive"></span>
-                    <span id="blue-dot-rev-6" class="blue-dot-inactive"></span>
-                    <span id="blue-dot-rev-7" class="blue-dot-inactive"></span>
-                </div>
-
-
-                <div class="flex-row-gap20">
-                    <button class="btn-slide" onclick="slideReviewsBackward()"><img
-                            src="<?= url('assets/icons/arrow_left.svg') ?>"alt="Icon Pfeil nach links" loading="lazy" role="img"></button>
-                    <button class="btn-slide" onclick="slideReviewsForward()"><img
-                            src="<?= url('assets/icons/arrow_right.svg') ?>" alt="Icon Pfeil nach rechts" loading="lazy" role="img"></button>
-                </div>
-            </div>
         </div>
 
 
 
     </section>
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right-reviews" aria-label="hidden">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right-reviews"
+        aria-label="hidden">
 
 </div>

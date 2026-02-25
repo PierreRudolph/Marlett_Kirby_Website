@@ -21,31 +21,43 @@
 
         <div class="grid-full flex-column-gap20">
             <div id="comp-pic-wrapper"
-                class="comparison-pics-wrapper flex-row-gap20 <?= $show_as_slider ? "" : "flex-wrap" ?>">
-                <?= $block->blocks()->toBlocks() ?>
-            </div>
-            <?php if ($show_as_slider): ?>
-                <div class="flex-row-between">
-                    <div class="pic-slider-dots-wrapper">
-                        <span id="blue-dot-1" class="blue-dot-inactive blue-dot-active"></span>
-                        <span id="blue-dot-2" class="blue-dot-inactive"></span>
-                        <span id="blue-dot-3" class="blue-dot-inactive"></span>
-                        <span id="blue-dot-4" class="blue-dot-inactive"></span>
-                        <span id="blue-dot-5" class="blue-dot-inactive"></span>
-                        <span id="blue-dot-6" class="blue-dot-inactive"></span>
-                        <span id="blue-dot-7" class="blue-dot-inactive"></span>
+                class="comparison-pics-wrapper <?= $show_as_slider ? "pic-slider" : "flex-wrap" ?>">
+
+                <div class="glide__track" data-glide-el="track">
+
+                    <div class="glide__slides glide__slides-comp-pic">
+                        <?= $block->blocks()->toBlocks() ?>
+
                     </div>
 
-                    <div class="flex-row-gap20">
-                        <button class="btn-slide" onclick="slidePicsBackward()"><img alt="Icon Pfeil nach Links"
-                                loading="lazy" role="img" src="<?= url('assets/icons/arrow_left.svg') ?>"></button>
-                        <button class="btn-slide" onclick="slidePicsForward()"><img alt="Icon Pfeil nach Rechts"
-                                loading="lazy" role="img" src="<?= url('assets/icons/arrow_right.svg') ?>"></button>
-                    </div>
                 </div>
-            <?php endif ?>
-        </div>
 
+                <?php if ($show_as_slider): ?>
+                    <div class="flex-row-between">
+                        <div class="pic-slider-dots-wrapper glide__bullets" data-glide-el="controls[nav]">
+
+                            <?php foreach ($block->blocks()->toBlocks() as $index => $card): ?>
+                                <button class="blue-dot-inactive" data-glide-dir="=<?= $index ?>">
+                                </button>
+                            <?php endforeach ?>
+
+                        </div>
+
+                        <div class="flex-row-gap20 glide__arrows" data-glide-el="controls">
+
+                            <button class="btn-slide" data-glide-dir="<">
+                                <img src="<?= url('assets/icons/arrow_left.svg') ?>" alt="Zurück" loading="lazy">
+                            </button>
+
+                            <button class="btn-slide" data-glide-dir=">">
+                                <img src="<?= url('assets/icons/arrow_right.svg') ?>" alt="Weiter" loading="lazy">
+                            </button>
+
+                        </div>
+                    </div>
+                <?php endif ?>
+            </div>
+        </div>
 
         <div class="flex-column grid-full">
             <h4 class="text-headline-manrope color-font-darkblue-alt2">

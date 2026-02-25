@@ -2,12 +2,22 @@
   display: none
 }
 
+@media(max-width:1600px) {
+  .pic-text-card {
+    grid-column: span 2;
+  }
+}
+
 @media(max-width:1400px) {
   :root {
     --main-padding-left: 40px;
     --main-padding-right: 40px;
-    --section-padding-top: 40px;
+    --section-padding-top: 80px;
     --section-padding-bottom: 80px
+  }
+
+  .mobile-padding-above-fold {
+    padding-top: 40px;
   }
 
   .headline-xl {
@@ -27,8 +37,12 @@
   }
 
   .headline-xs {
-    font-size: 20px
+    font-size: 24px
   }
+
+  /* .copy-text-big {
+    font-size: 16px;
+  } */
 
   .section-gap64 {
     gap: 48px;
@@ -41,7 +55,7 @@
   }
 
   .above-fold {
-    max-width: 100%
+    max-width: 100%;
   }
 
   .above-fold-gap120 {
@@ -64,7 +78,7 @@
     padding: 32px;
   }
 
-  .section-content-row-gap24 {
+  .section-content-big-numbers {
     flex-wrap: wrap
   }
 
@@ -83,10 +97,6 @@
   .mobile-margin-auto {
     margin: 0 auto
   }
-
-  .flex-column-gap40 {
-    gap: 32px
-  }
 }
 
 @media(max-width:1200px) {
@@ -94,12 +104,17 @@
     height: 76px;
   }
 
+  .above-fold {
+    gap: 0;
+    row-gap: 48px;
+  }
+
   .mobile-grid-reverse {
     order: 1
   }
 
   .grid-middle {
-    grid-column: span 12
+    grid-column: span 2;
   }
 
   .brick-layer-right {
@@ -112,6 +127,10 @@
     transform: scale(.8);
     bottom: -67px;
     right: -99px
+  }
+
+  .gap120 {
+    gap: 80px;
   }
 
   .brick-layer-left {
@@ -140,7 +159,7 @@
   .section-gap64 {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
-    row-gap: 40px
+    row-gap: 64px
   }
 
   .section-gap80 {
@@ -169,6 +188,14 @@
     row-gap: 48px;
   }
 
+  .m-section-content-gap32 {
+    gap: 32px;
+  }
+
+  .grid-full {
+    grid-column: span 2 !important;
+  }
+
   .section-content-gap40 {
     grid-column: span 2
   }
@@ -176,7 +203,8 @@
   .section-content-gap32 {
     grid-column: span 2;
     gap: 0;
-    row-gap: 20px
+    /* row-gap: 20px */
+    row-gap: 32px;
   }
 
   .section-content-gap24 {
@@ -187,7 +215,7 @@
     grid-column: span 2
   }
 
-  .section-content-row-gap24 {
+  .section-content-big-numbers {
     grid-column: span 2
   }
 
@@ -209,9 +237,35 @@
   .certified-icons-div {
     gap: 50px;
   }
+
+  .big-number {
+    font-size: 52px;
+  }
+
+  .certificate-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 48px
+  }
+
+  .section-content-big-numbers {
+    gap: 20px;
+  }
+
+  .big-number-card {
+    padding: 32px;
+  }
+
+  .t-width-full {
+    width: 100%;
+  }
 }
 
 @media(max-width:800px) {
+  .pic-text-card {
+    grid-column: span 4;
+  }
+
   .mobile-headline-xs {
     color: var(--color-font-blue);
     font-family: 'Exo 2';
@@ -222,7 +276,7 @@
 
   .services-headline {
     min-width: unset;
-    grid-column: span 12
+    grid-column: span 2
   }
 
   .mobile800-d-none {
@@ -389,10 +443,6 @@
     position: unset
   }
 
-  .location-card {
-    width: unset
-  }
-
   .section-gap48 {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
@@ -430,7 +480,7 @@
 
   .text-headline {
     line-height: 22px;
-    font-size: 14px
+    font-size: 16px
   }
 
   .copy-text-small {
@@ -453,6 +503,14 @@
     font-size: 16px
   }
 
+  .big-number {
+    font-size: 48px;
+  }
+
+  .m-flex-column {
+    flex-direction: column;
+  }
+
   .btn-neg,
   .btn-neg-outlined,
   .btn-pos,
@@ -461,7 +519,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 8px 24px
+    padding: 10px 24px
   }
 
   .above-fold {
@@ -470,7 +528,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
-    row-gap: 21px
+    row-gap: 40px
+  }
+
+  .above-fold-home-mobile-gap {
+    row-gap: 21px;
   }
 
   .logo_img {
@@ -483,7 +545,10 @@
     row-gap: 64px
   }
 
-  .label-alt-headline,
+  .label-alt-headline {
+    font-size: 16px;
+  }
+
   .label-alt-text,
   .subheadline-neg {
     font-size: 14px
@@ -518,16 +583,6 @@
 
   .mobile-width {
     width: 100%
-  }
-
-  .big-number-card {
-    gap: 5px
-  }
-
-  .certificate-card {
-    padding: 24px 20px;
-    flex-direction: column;
-    gap: 40px
   }
 
   .certificate-card img {
@@ -586,9 +641,9 @@
     font-size: 16px
   }
 
-  .flex-column-gap40 {
+  /* .flex-column-gap40 {
     gap: 20px
-  }
+  } */
 
   .flex-row-gap24 {
     gap: 12px
@@ -606,11 +661,9 @@
     row-gap: 40px
   }
 
-  .section-gap64 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    row-gap: 40px
-  }
+  /* .section-gap64 {
+    row-gap: 60px
+  } */
 
   .section-gap80 {
     grid-template-columns: repeat(2, 1fr);
@@ -639,7 +692,8 @@
   .section-content-gap32 {
     grid-column: span 2;
     gap: 0;
-    row-gap: 20px
+    /* row-gap: 20px */
+    row-gap: 32px;
   }
 
   .section-content-gap24 {
@@ -650,7 +704,7 @@
     grid-column: span 2
   }
 
-  .section-content-row-gap24 {
+  .section-content-big-numbers {
     grid-column: span 2
   }
 
@@ -671,6 +725,51 @@
   .accordion:not(.open):hover {
     background: var(--color-bg-white);
     box-shadow: 0 4px 14px 0 #1f588A29
+  }
+
+
+  .mobile-padding-above-fold {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0
+  }
+
+  .mobile-padding-above-fold-content {
+    position: relative;
+    padding-left: var(--main-padding-left);
+    padding-right: var(--main-padding-right)
+  }
+
+  .video-play-btn {
+    right: 12px;
+    bottom: 12px;
+    height: 44px;
+    width: 44px;
+  }
+
+  .headline-xxl {
+    font-size: 48px;
+  }
+
+  .headline-xs {
+    font-size: 24px;
+  }
+
+  .m-width-full {
+    width: 100%;
+  }
+
+  .certificate-card {
+    padding: 24px 20px;
+    gap: 40px;
+  }
+
+  .section-content-big-numbers {
+    gap: 16px;
+  }
+
+  .big-number-card {
+    padding: 24px;
   }
 }
 
@@ -729,25 +828,6 @@
     grid-column: span 2
   }
 
-  .mobile-padding-above-fold {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0
-  }
-
-  .mobile-padding-above-fold-content {
-    position: relative;
-    padding-left: var(--main-padding-left);
-    padding-right: var(--main-padding-right)
-  }
-
-  .video-play-btn {
-    right: 12px;
-    bottom: 12px;
-    height: 44px;
-    width: 44px;
-  }
-
   .section-gap80 {
     row-gap: 40px
   }
@@ -757,7 +837,7 @@
   }
 
   .text-headline-manrope {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
   }
 

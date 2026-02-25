@@ -30,7 +30,7 @@
                 </a>
 
             </div>
-            <div class="flex-column-gap5">
+            <div class="flex-column-gap5 marg-top20">
 
                 <div class="flex-row-gap15">
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
@@ -43,78 +43,32 @@
             </div>
         </div>
 
-        <div class="section-content">
-
-
-
+       <div class="section-content">
             <?php
             $imageBefore = $page->imageBefore()->toFile();
             $imageAfter = $page->imageAfter()->toFile();
-            $ratio = $page->ratio()->or('auto');
-            $crop = $page->crop()->isTrue();
             ?>
 
-            <figure id="img-compare" class="comparison-slider-figure" data-ratio="<?= $ratio ?>"
-                data-crop="<?= $crop ?>">
+            <img-comparison-slider class="img-comparison-slider" data-start="50" data-orientation="horizontal">
 
-                <?php $thumb = $imageBefore->crop(680, 569); ?>
-                <div id="img-front-wrapper" class="comparison-slider-before width-half">
-                    <img aspect-ratio="16/9" draggable="false" class="noselect" src="<?= $thumb->url() ?>"
-                        alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
+                <?php $thumb = $imageBefore ?>
+                <img slot="first" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy"
+                    role="img">
 
-                </div>
-
-                <span id="slider" class="spacer-line noselect">
-                    <div class="draggable-button noselect">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>"
-                            alt="Pfeil nach Links" loading="lazy" role="img">
-                        <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>"
-                            alt="Pfeil nach Rechts" loading="lazy" role="img">
-                    </div>
-                </span>
 
                 <?php $thumb = $imageAfter->crop(680, 569); ?>
 
-                <img aspect-ratio="16/9" draggable="false" class="noselect" src="<?= $thumb->url() ?>"
-                    alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
+                <img slot="second" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy"
+                    role="img">
 
-            </figure>
+                <div slot="handle" class="draggable-button noselect">
+                    <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_left.svg') ?>"
+                        alt="Pfeil nach Links" loading="lazy" role="img">
+                    <img draggable="false" class="noselect" src="<?= url('assets/icons/icon_polygon_right.svg') ?>"
+                        alt="Pfeil nach Rechts" loading="lazy" role="img">
+                </div>
 
-
-            <script>
-                const box = document.getElementById("img-compare");
-                const front = document.getElementById("img-front-wrapper");
-                const slider = document.getElementById("slider");
-
-                slider.addEventListener("pointerdown", e => {
-                    e.preventDefault();                 // wichtig für iOS
-                    slider.setPointerCapture(e.pointerId);
-                    move(e);
-                }, { passive: false });
-
-                slider.addEventListener("pointermove", e => {
-                    if (!slider.hasPointerCapture(e.pointerId)) return;
-                    e.preventDefault();                 // verhindert Scroll auf iPhone
-                    move(e);
-                }, { passive: false });
-
-                slider.addEventListener("pointerup", e => {
-                    slider.releasePointerCapture(e.pointerId);
-                });
-
-                slider.addEventListener("pointercancel", e => {
-                    slider.releasePointerCapture(e.pointerId);
-                });
-
-                function move(e) {
-                    const rect = box.getBoundingClientRect();
-                    let x = e.clientX - rect.left;
-                    x = Math.max(0, Math.min(x, rect.width));
-                    front.style.width = x + "px";
-                    slider.style.left = x + "px";
-                }
-            </script>
-
+            </img-comparison-slider>
 
         </div>
     </section>

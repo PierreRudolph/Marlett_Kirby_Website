@@ -71,13 +71,15 @@
 
     <?php if (!empty($companyName)): ?>
         <script type="application/ld+json">
-                    <?= json_encode($localBusiness, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
-                    </script>
+                            <?= json_encode($localBusiness, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
+                            </script>
     <?php endif ?>
 
 
     <!-- STRUCTURED DATA END -->
     <?= css([
+        'assets/css/glide_js/glide.core.min.css',
+        'assets/css/glide_js/glide.theme.min.css',
         'assets/css/fonts.css',
         'assets/css/index.css',
         'assets/css/snippets/header.css',

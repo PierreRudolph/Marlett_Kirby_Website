@@ -3,7 +3,7 @@
 <div class="section-wrapper blue-radient-bg mobile-padding-above-fold">
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left mobile603-d-none" aria-label="hidden"
         fetchpriority="high">
-    <section class="above-fold">
+    <section class="above-fold above-fold-home-mobile-gap">
 
 
 
@@ -34,7 +34,7 @@
                 </a>
 
             </div>
-            <div class="flex-column-gap5">
+            <div class="flex-column-gap5 marg-top20">
 
                 <div class="flex-row-gap15">
                     <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
@@ -57,12 +57,12 @@
                         <source src="<?= $video->url() ?>" type="<?= $video->mime() ?>" loading="lazy">
                     </video>
 
-                    <div id="video-pause-btn" onclick="pauseVideo('video-home')" class="video-play-btn">
+                    <div id="video-pause-btn-home" onclick="pauseVideo('video-home','home')" class="video-play-btn">
                         <img src="<?= url('assets/icons/pause.svg') ?>" alt="Video pausieren Button" loading="lazy"
                             role="img">
                     </div>
 
-                    <div id="video-play-btn" onclick="playVideo('video-home')" class="video-play-btn d-none-important">
+                    <div id="video-play-btn-home" onclick="playVideo('video-home','home')" class="video-play-btn d-none-important">
                         <img src="<?= url('assets/icons/play.svg') ?>" alt="Video apspielen Button" loading="lazy"
                             role="img">
                     </div>

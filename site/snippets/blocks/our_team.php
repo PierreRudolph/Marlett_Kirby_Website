@@ -10,7 +10,7 @@
         </h2>
 
 
-        <div class="flex-row-gap24 grid-full flex-wrap">
+        <div class="flex-row-gap24 grid-full m-flex-column">
             <?php
             $ratio = $block->ratio()->or('auto');
             $crop = $block->crop()->isTrue();
@@ -18,15 +18,13 @@
             <?php foreach ($block->cards()->toStructure() as $card): ?>
 
 
-                <div class="flex-column-gap12">
+                <div class="flex-column-gap12 t-width-full">
 
                     <figure data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
 
-                        <div>
                             <?php if ($thumb = $card->img()->toFile()->crop(464, 442)): ?>
-                                <img src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
+                                <img class="t-width-full" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                             <?php endif ?>
-                        </div>
 
                     </figure>
 
@@ -36,7 +34,7 @@
                             <span
                                 class="color-font-skyblue"><?= $card->name_colored_part()->toHtml() ?></span><span><?= $card->name()->toHtml() ?></span>
                         </h4>
-                        <p class="text-regular color-font-darkblue"><?= $card->text()->toHtml() ?></p>
+                        <p class="text-regular color-font-blue"><?= $card->text()->toHtml() ?></p>
                     </div>
 
                 </div>
