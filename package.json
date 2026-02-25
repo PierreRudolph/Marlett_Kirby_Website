@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "esbuild": "^0.27.3",
+    "eslint": "^10.0.2",
+    "stylelint": "^17.4.0"
+  },
+"scripts": {
+    "lint:js": "eslint assets/js/.js",
+    "lint:css": "stylelint 'assets/css/.css'",
+
+    "build:js": "esbuild assets/js/*.js --bundle --minify --outdir=dist/js",
+    "build:css": "esbuild assets/css/*.css --bundle --minify --outdir=dist/css",
+
+    "build": "npm run build:js && npm run build:css",
+    "ci": "npm run lint:js && npm run lint:css && npm run build"
+  }
+}

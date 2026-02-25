@@ -129,8 +129,8 @@
 </footer>
 </main>
 </div>
-<script defer src="/assets/script/glide.min.js"></script>
-<script defer src="/assets/script/img_comparison_slider.min.js"></script>
+<script defer src="/assets/js/glide.min.js"></script>
+<script defer src="/assets/js/img_comparison_slider.min.js"></script>
 
 <script defer>
     // setTimeout(() => {

@@ -82,18 +82,18 @@
 
     <!-- STRUCTURED DATA END -->
     <?= css([
-        'assets/css/glide_js/glide.core.min.css',
-        'assets/css/glide_js/glide.theme.min.css',
+        'assets/css/glide.core.min.css',
+        'assets/css/glide.theme.min.css',
         'assets/css/fonts.css',
         'assets/css/index.css',
-        'assets/css/snippets/header.css',
-        'assets/css/snippets/nav_menu.css',
+        'assets/css/header.css',
+        'assets/css/nav_menu.css',
         'assets/css/sections.css',
         'assets/css/mobile.css'
     ], ) ?>
 
     <?= js([
-        'assets/script/script.js',
+        'assets/js/script.js',
     ]) ?>
 
 </head>
