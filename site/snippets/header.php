@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $site->title()->esc() ?> | <?= $page->title()->esc() ?></title>
+    <title><?= $page->title()->esc() ?> | <?= $site->meta_description() ?></title>
     <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
     <link rel="apple-touch-icon" sizes="180x180" href="<?= url('assets/favicon/apple-touch-icon.png') ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= url('assets/favicon/favicon-32x32.png') ?>">
@@ -68,11 +68,15 @@
         ]
     ];
     ?>
-
+    <?php
+    $sitemap = $page->page_meta()->value();
+    ?>
+  
     <?php if (!empty($companyName)): ?>
+
         <script type="application/ld+json">
-                            <?= json_encode($localBusiness, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
-                            </script>
+                                <?= json_encode($sitemap, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
+                                </script>
     <?php endif ?>
 
 

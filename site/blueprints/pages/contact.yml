@@ -42,7 +42,10 @@ tabs:
             type: textarea
             size: small
             width: 2/3
-
+          page_meta:
+            label: Meta JSON
+            type: textarea
+            size: big
       builder:
         type: fields
         fields:

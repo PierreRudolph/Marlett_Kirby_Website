@@ -1,6 +1,6 @@
 <?php
 return [
-  'debug' => false,
+  'debug' => true,
   'editor' => 'vscode',
   'sitemap.ignore' => ['error', 'assets', 'vendor'],
   'routes' => [

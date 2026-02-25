@@ -82,6 +82,10 @@ sections:
       crop:
         label: Zuschneiden
         type: toggle
+      page_meta:
+        label: Meta JSON
+        type: textarea
+        site: big
   builder:
     type: fields
     fields:

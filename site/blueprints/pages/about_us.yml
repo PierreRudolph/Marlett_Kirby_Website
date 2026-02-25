@@ -75,7 +75,10 @@ sections:
             label: Text
             type: text
             size: small
-  
+      page_meta:
+        label: Meta JSON
+        type: textarea
+        size: big 
 
   builder:
     type: fields

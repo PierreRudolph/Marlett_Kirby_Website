@@ -50,7 +50,10 @@ sections:
         label: Telefonnummer
         type: tel
         width: 1/3
-
+      page_meta:
+        label: Meta JSON
+        type: textarea
+        site: big
   services_subpages:
     type: pages
     label: Unterseiten Services bearbeiten
