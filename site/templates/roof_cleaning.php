@@ -29,7 +29,7 @@
 
                 <a href="tel:<?= $site->phone()->toHtml() ?>"
                     class="btn-pos-outlined btn-text btn-with-icon m-btn-width">
-                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" width="24px" height="24px alt="Telefon Icon" loading="lazy"
+                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy"
                         role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>

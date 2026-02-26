@@ -12,7 +12,7 @@
 
         <div class="flex-row-gap20 grid-template4 grid-full flex-wrap">
             <?php foreach ($block->cards()->toStructure() as $card): ?>
-                <div class="pic-text-card flex-column">
+                <a href="<?= $card->link()->toUrl() ?>" class="pic-text-card flex-column">
 
                     <?php if ($image = $card->img()->toFile()): ?>
                         <div class="pic-text-card-img">
@@ -25,15 +25,16 @@
                             <h3 class="headline headline-s color-font-blue"><?= $card->headline()->toHtml() ?></h3>
                             <p class="copy-text-smaller color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                         </div>
-                      
-                        <a href="<?= $card->link()->toUrl() ?>" class="flex-row-gap5 link-text color-font-skyblue">Mehr
-                            erfahren <img src="<?= url('assets/icons/arrow_forward.svg') ?>" width="24px" height="24px" alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
-                        </a>
+
+                        <span class="flex-row-gap5 link-text color-font-skyblue">Mehr
+                            erfahren <img src="<?= url('assets/icons/arrow_forward.svg') ?>" width="24px" height="24px"
+                                alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
+                        </span>
                         <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>"
                             class="brick-layer-right card-brick-layer" aria-hidden="true" aria-hidden="true">
                     </div>
 
-                </div>
+                </a>
             <?php endforeach ?>
         </div>
 

@@ -119,7 +119,7 @@
                                 $item->title()->esc() != 'agb' &&
                                 $item->title()->esc() != 'Leistungen' &&
                                 $item->title()->esc() != 'Kontakt' &&
-                                $item->title()->esc() != 'Home'
+                                $item->title()->esc() != 'Startseite'
                             ): ?>
 
                                 <a class="header-link-text" <?php e($item->isOpen(), 'aria-current="page"') ?>
@@ -157,10 +157,10 @@
                             $item->title()->esc() != 'Impressum' &&
                             $item->title()->esc() != 'agb' &&
                             $item->title()->esc() != 'Leistungen' &&
-                            $item->title()->esc() != 'Home'
+                            $item->title()->esc() != 'Startseite'
                         ): ?>
 
-                            <a class="mobile-headline-xs" <?php e($item->isOpen(), 'aria-current="page"') ?>
+                            <a class="mobile-headline-xs m-link-text" <?php e($item->isOpen(), 'aria-current="page"') ?>
                                 href="<?= $item->url() ?>">
                                 <?= $item->title()->esc() ?>
                             </a>

@@ -22,7 +22,7 @@ $items = $services->children()->listed();
   <ul class="dropdown mobile800-d-none">
     <?php foreach ($items as $item): ?>
       <li>
-        <a class="copy-text-small" href="<?= $item->url() ?>">
+        <a href="<?= $item->url() ?>">
           <?= $item->title() ?>
         </a>
       </li>
@@ -33,7 +33,7 @@ $items = $services->children()->listed();
   <ul class="mobile-dropdown desktop800-d-none">
     <?php foreach ($items as $item): ?>
       <li>
-        <a class="copy-text-small" href="<?= $item->url() ?>">
+        <a href="<?= $item->url() ?>">
           <?= $item->title() ?>
         </a>
       </li>

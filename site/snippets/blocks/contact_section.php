@@ -16,7 +16,7 @@
             </div>
 
 
-            <div class="flex-column-gap12">
+            <div class="flex-column-gap12 pad-left4">
                 <?php foreach ($block->contact_options()->toStructure() as $contact_option): ?>
 
                     <?php if ($contact_option->mail()->value() !== ""): ?>

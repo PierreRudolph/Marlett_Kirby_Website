@@ -12,19 +12,19 @@
                         role="img">
                     <div class="flex-column color-font-white">
                         <p class="label-big">Standort <?= $site->city()->toHtml() ?></p>
-                        <p class="copy-text-small"><?= $site->street()->toHtml() ?>
+                        <p class="font16-500"><?= $site->street()->toHtml() ?>
                             <?= $site->house_number()->toHtml() ?>
                         </p>
-                        <p class="copy-text-small"><?= $site->zip()->toHtml() ?> <?= $site->city()->toHtml() ?></p>
+                        <p class="font16-500"><?= $site->zip()->toHtml() ?> <?= $site->city()->toHtml() ?></p>
                     </div>
                 </div>
             </div>
 
             <div class="flex-column-gap40 grid-span1">
                 <h3 class="headline headline-xs color-font-lightblue-alt">Kontakt</h3>
-                <div class="flex-column-gap12">
+                <div class="flex-column-gap16">
                     <?php if ($site->whatsapp()->toHtml() != ''): ?>
-                        <a class="flex-row-gap12 copy-text-small color-font-white"
+                        <a class="flex-row-gap12 font16-500 color-font-white"
                             href="tel:<?= $site->whatsapp()->toHtml() ?>">
                             <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" width="24px" height="24px" alt="Icon von WhatsApp" loading="lazy"
                                 role="img">
@@ -32,20 +32,20 @@
                         </a>
                     <?php endif ?>
 
-                    <a class="flex-row-gap12 copy-text-small color-font-white"
+                    <a class="flex-row-gap12 font16-500 color-font-white"
                         href="tel:<?= $site->phone_line()->toHtml() ?>">
                         <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy" role="img">
                         <span>
                             <?= $site->phone_line()->toHtml() ?>
                         </span>
                     </a>
-                    <a class="flex-row-gap12 copy-text-small color-font-white"
+                    <a class="flex-row-gap12 font16-500 color-font-white"
                         href="tel:<?= $site->phone()->toHtml() ?>">
                         <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy" role="img">
                         <span><?= $site->phone()->toHtml() ?></span>
                     </a>
 
-                    <a class="flex-row-gap12 copy-text-small color-font-white"
+                    <a class="flex-row-gap12 font16-500 color-font-white"
                         href="mailto:<?= $site->email()->toSring() ?>">
                         <img width="24px" height="24px" src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy" role="img">
                         <span><?= $site->email()->toHtml() ?></span>
@@ -55,11 +55,11 @@
 
             <div class="flex-column-gap40 grid-span1">
                 <h3 class="headline headline-xs color-font-lightblue-alt">Unternehmen</h3>
-                <div class="flex-column-gap12">
-                    <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= url('ueber-uns') ?>">
+                <div class="flex-column-gap16">
+                    <a class="flex-row-gap12 font16-500 color-font-white" href="<?= url('ueber-uns') ?>">
                         <?= page('ueber-uns')->title() ?>
                     </a>
-                    <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= url('referenzen') ?>">
+                    <a class="flex-row-gap12 font16-500 color-font-white" href="<?= url('referenzen') ?>">
                         <?= page('referenzen')->title() ?>
                     </a>
                 </div>
@@ -67,9 +67,9 @@
 
             <div class="flex-column-gap40 grid-span1">
                 <h3 class="headline headline-xs color-font-lightblue-alt">Leistungen</h3>
-                <div class="flex-column-gap12">
+                <div class="flex-column-gap16">
                     <?php foreach (page('leistungen')->children()->listed() as $service): ?>
-                        <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= $service->url() ?>">
+                        <a class="flex-row-gap12 font16-500 color-font-white" href="<?= $service->url() ?>">
                             <?= $service->title()->toHtml() ?>
                         </a>
                     <?php endforeach ?>
@@ -78,10 +78,10 @@
 
             <div class="flex-column-gap40 grid-span1">
                 <h3 class="headline headline-xs color-font-lightblue-alt">Social Media</h3>
-                <div class="flex-column-gap12">
+                <div class="flex-column-gap16">
                     <?php foreach ($site->social_links()->toStructure() as $social_link): ?>
 
-                        <a class="flex-row-gap12 copy-text-small color-font-white"
+                        <a class="flex-row-gap12 font16-500 color-font-white"
                             href="<?= $social_link->link()->toHtml() ?>">
                             <?php if ($image = $social_link->icon()->toFile()): ?>
 
@@ -105,7 +105,7 @@
                 <?php $areas = $site->service_areas()->split(','); ?>
                 <div class="flex-row-gap24">
                     <?php foreach ($areas as $area): ?>
-                        <span class="copy-text-small color-font-white">
+                        <span class="font16-500 color-font-white">
                             <?= html($area) ?>
                         </span>
                     <?php endforeach ?>
@@ -116,12 +116,12 @@
     </div>
     <div class="footer-bottom">
         <div>
-            <p class="copy-text-small color-font-blue">© 2026 Marlett GbR</p>
+            <p class="font16-500 color-font-blue">© 2026 Marlett GbR</p>
 
             <div class="flex-row-gap24">
-                <a class="copy-text-small color-font-blue" href="<?= url('impressum') ?>">Impressum</a>
-                <a class="copy-text-small color-font-blue" href="<?= url('datenschutzerklaerung') ?>">Datenschutz</a>
-                <a class="copy-text-small color-font-blue" href="<?= url('agb') ?>">AGB</a>
+                <a class="font16-500 color-font-blue" href="<?= url('impressum') ?>">Impressum</a>
+                <a class="font16-500 color-font-blue" href="<?= url('datenschutzerklaerung') ?>">Datenschutz</a>
+                <a class="font16-500 color-font-blue" href="<?= url('agb') ?>">AGB</a>
             </div>
         </div>
     </div>

@@ -5,6 +5,7 @@
   font-weight: 400;
   src: url(../fonts/manrope-v20-latin-regular.woff2) format('woff2')
 }
+
 @font-face {
   font-display: swap;
   font-family: Manrope;
@@ -28,6 +29,7 @@
   font-weight: 700;
   src: url(../fonts/manrope-v20-latin-700.woff2) format('woff2')
 }
+
 @font-face {
   font-display: swap;
   font-family: Manrope;
@@ -35,6 +37,7 @@
   font-weight: 800;
   src: url(../fonts/manrope-v20-latin-800.woff2) format('woff2')
 }
+
 @font-face {
   font-display: swap;
   font-family: 'Exo 2';
@@ -42,6 +45,7 @@
   font-weight: 400;
   src: url(../fonts/exo-2-v26-latin-regular.woff2) format('woff2')
 }
+
 @font-face {
   font-display: swap;
   font-family: 'Exo 2';
@@ -49,6 +53,7 @@
   font-weight: 500;
   src: url(../fonts/exo-2-v26-latin-500.woff2) format('woff2')
 }
+
 @font-face {
   font-display: swap;
   font-family: 'Exo 2';
@@ -56,6 +61,7 @@
   font-weight: 600;
   src: url(../fonts/exo-2-v26-latin-600.woff2) format('woff2')
 }
+
 @font-face {
   font-display: swap;
   font-family: 'Exo 2';
@@ -63,6 +69,7 @@
   font-weight: 700;
   src: url(../fonts/exo-2-v26-latin-700.woff2) format('woff2')
 }
+
 @font-face {
   font-display: swap;
   font-family: 'Exo 2';
@@ -254,6 +261,7 @@ input[type=number] {
 .color-font-skyblue {
   color: var(--color-font-skyblue)
 }
+
 /*-----HEADER--------*/
 header {
   width: 100%;
@@ -279,7 +287,7 @@ header {
   width: 100%
 }
 
-.logo:focus img{
+.logo:focus img {
   transform: scale(0.9);
 }
 
@@ -361,6 +369,7 @@ nav a {
   transform: rotate(-45deg);
   bottom: 11px
 }
+
 /*-----HEADER--------*/
 /*-----NAV_MENU-----*/
 .main-nav__toggle {
@@ -398,15 +407,18 @@ nav a {
   z-index: 0
 }
 
-.dropdown li a{
+.dropdown li a {
   transition: color 225ms ease-in-out;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-.dropdown li:hover a{
+.dropdown li:hover a {
   color: var(--color-font-skyblue);
 }
 
-.dropdown li a:focus{
+.dropdown li a:focus {
   color: var(--color-font-blue);
 }
 
@@ -448,6 +460,7 @@ nav a {
   top: -12px;
   padding-bottom: 29px;
 }
+
 /*-----NAV_MENU-----*/
 
 .headline {
@@ -568,6 +581,10 @@ nav a {
   line-height: 20px;
 }
 
+.font16-500{
+  font-size: 16px;
+  font-weight: 500;
+}
 
 .btn-pos {
   justify-content: center;
@@ -860,9 +877,9 @@ nav a {
   flex: 1;
 }
 
-.grid-template4{
+.grid-template4 {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .label-underline {
@@ -964,6 +981,10 @@ nav a {
 
 .max-width345 {
   max-width: 345px
+}
+
+.pad-left4 {
+  padding-left: 4px;
 }
 
 .pad-left26 {

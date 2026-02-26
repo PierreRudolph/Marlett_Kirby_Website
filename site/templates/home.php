@@ -29,7 +29,7 @@
 
                 <a href="tel:<?= $site->phone()->toHtml() ?>"
                     class="btn-neg-outlined btn-text btn-with-icon m-btn-width">
-                    <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px alt="Telefon Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy" role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
 
@@ -52,18 +52,18 @@
 
             <?php if ($video = $page->video()->toFile()): ?>
                 <div class="video-home-wrapper">
-                    <video aspect-ratio="16/9" playsinline webkit-playsinline id="video-home" autoplay loop muted
+                    <video aspect-ratio="16/9" playsinline webkit-playsinline id="video-home" loop muted
                         poster="<?= url('assets/layout/img/video_poster2.webp') ?>" class="section-video">
                         <source src="<?= $video->url() ?>" type="<?= $video->mime() ?>" loading="lazy">
                     </video>
 
                     <div id="video-pause-btn-home" onclick="pauseVideo('video-home','home')" class="video-play-btn">
-                        <img src="<?= url('assets/icons/pause.svg') ?>" width="24px" height="24px alt="Video pausieren Button" loading="lazy"
+                        <img src="<?= url('assets/icons/pause.svg') ?>" width="24px" height="24px" alt="Video pausieren Button" loading="lazy"
                             role="img">
                     </div>
 
                     <div id="video-play-btn-home" onclick="playVideo('video-home','home')" class="video-play-btn d-none-important">
-                        <img src="<?= url('assets/icons/play.svg') ?>" width="24px" height="24px alt="Video apspielen Button" loading="lazy"
+                        <img src="<?= url('assets/icons/play.svg') ?>" width="24px" height="24px" alt="Video apspielen Button" loading="lazy"
                             role="img">
                     </div>
 
