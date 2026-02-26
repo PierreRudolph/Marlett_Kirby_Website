@@ -93,13 +93,13 @@
                             <?= $section_item->button_text()->toHtml() ?>
                         </a>
                     <?php else: ?>
-                        <h2 class="headline headline-l color-font-skyblue">
+                        <h3 class="headline headline-l color-font-skyblue">
                             <?= $section_item->subheadline_first_half()->toHtml() ?>
                             <br>
                             <span class="headline headline-l color-font-blue">
                                 <?= $section_item->subheadline_second_half()->toHtml() ?>
                             </span>
-                        </h2>
+                        </h3>
                         <p class="copy-text-big color-font-darkblue"><?= $section_item->text()->toHtml() ?></p>
                         <p class="copy-text-big color-font-darkblue">
                             <?= $section_item->text_second_half()->toHtml() ?>

@@ -20,8 +20,8 @@
                     </div>
 
                     <div class="overflow-hidden">
-                        <h4 class="headline headline-xs color-font-darkblue">Standort <?= $card->city()->toHtml() ?>
-                        </h4>
+                        <h3 class="headline headline-xs color-font-darkblue">Standort <?= $card->city()->toHtml() ?>
+                        </h3>
                         <p class="headline-xs color-font-darkblue"><?= $card->street_and_number()->toHtml() ?></p>
                         <p class="headline-xs color-font-darkblue"><?= $card->zip()->toHtml() ?>
                             <?= $card->city()->toHtml() ?>

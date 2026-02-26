@@ -21,7 +21,7 @@
             </div>
 
             <div class="flex-column-gap40 grid-span1">
-                <h5 class="headline headline-xs color-font-lightblue-alt">Kontakt</h5>
+                <h3 class="headline headline-xs color-font-lightblue-alt">Kontakt</h3>
                 <div class="flex-column-gap12">
                     <?php if ($site->whatsapp()->toHtml() != ''): ?>
                         <a class="flex-row-gap12 copy-text-small color-font-white"
@@ -54,7 +54,7 @@
             </div>
 
             <div class="flex-column-gap40 grid-span1">
-                <h5 class="headline headline-xs color-font-lightblue-alt">Unternehmen</h5>
+                <h3 class="headline headline-xs color-font-lightblue-alt">Unternehmen</h3>
                 <div class="flex-column-gap12">
                     <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= url('ueber-uns') ?>">
                         <?= page('ueber-uns')->title() ?>
@@ -66,7 +66,7 @@
             </div>
 
             <div class="flex-column-gap40 grid-span1">
-                <h5 class="headline headline-xs color-font-lightblue-alt">Leistungen</h5>
+                <h3 class="headline headline-xs color-font-lightblue-alt">Leistungen</h3>
                 <div class="flex-column-gap12">
                     <?php foreach (page('leistungen')->children()->listed() as $service): ?>
                         <a class="flex-row-gap12 copy-text-small color-font-white" href="<?= $service->url() ?>">
@@ -77,7 +77,7 @@
             </div>
 
             <div class="flex-column-gap40 grid-span1">
-                <h5 class="headline headline-xs color-font-lightblue-alt">Social Media</h5>
+                <h3 class="headline headline-xs color-font-lightblue-alt">Social Media</h3>
                 <div class="flex-column-gap12">
                     <?php foreach ($site->social_links()->toStructure() as $social_link): ?>
 
@@ -129,22 +129,11 @@
 </footer>
 </main>
 </div>
-<script defer src="/assets/js/glide.min.js"></script>
-<script defer src="/assets/js/img_comparison_slider.min.js"></script>
+<script defer src="<?= url('/assets/js/glide.min.js') ?>"></script>
+<script defer src="<?= url('/assets/js/img_comparison_slider.min.js') ?>"></script>
 
 <script defer>
-    // setTimeout(() => {
 
-    //     new window.Glide('.glide', {
-    //         type: 'carousel',
-    //         perView: 2,     // wie viele Karten sichtbar sind
-    //         gap: 20,
-    //         bound: true,
-    //         breakpoints: {
-    //             1000: { perView: 1 },
-    //         }
-    //     }).mount();
-    // }, 500)
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.gog-rev-slider').forEach(function (slider) {
 
@@ -182,24 +171,6 @@
         }, 500)
 
     });
-
-
-    // document.querySelectorAll('.pic-slider').forEach(function (slider) {
-
-    //     new window.Glide(slider, {
-    //         type: 'carousel',
-    //         perView: 3,
-    //         perMove: 1,
-    //         gap: 20,
-    //         bound: true,
-    //         breakpoints: {
-    //             1024: { perView: 2 },
-    //             768: { perView: 1 }
-    //         }
-    //     }).mount();
-
-    // });
-
 
 </script>
 </body>

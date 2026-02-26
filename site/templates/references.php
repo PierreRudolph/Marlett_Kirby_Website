@@ -1,7 +1,7 @@
 <?php snippet(name: 'header') ?>
 
 <div class="section-wrapper">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left" aria-label="hidden">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left" aria-hidden="true">
 
     <section class="section-gap48">
 

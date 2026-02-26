@@ -2,7 +2,7 @@
 
 <div class="section-wrapper white-bg">
     <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left"
-        aria-label="hidden" aria-label="hidden">
+       aria-hidden="true">
     <section class="above-fold-gap120">
 
         <div class="section-gap80 grid-full align-center">
@@ -47,7 +47,7 @@
             <?php $big_numbers = $page->big_numbers()->toStructure() ?>
             <?php foreach ($big_numbers as $big_number): ?>
                 <div class="big-number-card flex-column blue-radient-bg">
-                    <h4 class="headline headline-xxl color-font-white"><?= $big_number->number()->toHtml() ?></h4>
+                    <h2 class="headline headline-xxl color-font-white"><?= $big_number->number()->toHtml() ?></h2>
                     <p class="headline headline-s color-font-lighterblue"><?= $big_number->text()->toHtml() ?></p>
                 </div>
             <?php endforeach ?>

@@ -1,5 +1,5 @@
 <div class="section-wrapper lightgrey-bg" id="<?= $block->section_id()->toHtml() ?>">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left" aria-label="hidden">  
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left_blue.svg") ?>" class="brick-layer-left" aria-hidden="true">  
 
     <section class="section-gap48 overflow-visible">
 
@@ -30,9 +30,9 @@
                 <?php $index = $q_and_a_collection->indexOf($q_and_a) ?>
                 <div onclick="openCloseAccordion(<?= $index ?>)" class="accordion" id="accordion-<?= $index ?>">
                     <button class="btn-accordion">
-                        <h4 id="faq-question" class="color-font-darkblue-alt2 text-headline-manrope mobile-font-16p">
+                        <h3 id="faq-question" class="color-font-darkblue-alt2 text-headline-manrope mobile-font-16p">
                             <?= $q_and_a->question()->toHtml() ?>
-                        </h4>
+                        </h3>
                         <img src="<?= url('assets/icons/icon_arrow_down.svg') ?>" alt="Icon Pfeil nach Unten" loading="lazy"
                             role="img">
                     </button>
@@ -48,7 +48,7 @@
 
     </section>
 
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right" aria-label="hidden" aria-label="hidden">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right" aria-hidden="true" aria-hidden="true">
 </div>
 
 

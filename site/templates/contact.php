@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
 <div class="section-wrapper blue-radient-bg">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left" aria-label="hidden">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left" aria-hidden="true">
     <section class="above-fold">
         <div class="section-content">
             <p class="subheadline"><?= $page->subheadline_first_half()->toHtml() ?>
@@ -38,7 +38,7 @@
 
         </div>
     </section>
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" aria-label="hidden">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" aria-hidden="true">
 
 </div>
 

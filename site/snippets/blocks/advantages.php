@@ -25,7 +25,7 @@
                     <?php endif ?>
 
                     <div class="overflow-hidden">
-                        <h4 class="text-headline color-font-darkblue"><?= $card->headline()->toHtml() ?></h4>
+                        <h3 class="text-headline color-font-darkblue"><?= $card->headline()->toHtml() ?></h3>
                         <p class="text-regular color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                     </div>
 

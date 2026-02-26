@@ -1,5 +1,5 @@
 <div class="section-wrapper blue-radient-bg" id="<?= $block->section_id()->toHtml() ?>">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left" loading="lazy">
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left" loading="lazy" aria-hidden="true">
 
     <section class="section-gap48">
 
@@ -32,7 +32,7 @@
                     <?php endif ?>
 
                     <div class="overflow-hidden">
-                        <h4 class="text-headline color-font-darkblue"><?= $card->headline()->toHtml() ?></h4>
+                        <h3 class="text-headline color-font-darkblue"><?= $card->headline()->toHtml() ?></h3>
                         <p class="text-regular color-font-darkblue"><?= $card->text()->toHtml() ?></p>
                     </div>
 
@@ -41,6 +41,6 @@
         </div>
 
     </section>
-    <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" loading="lazy" aria-label="hidden" aria-label="hidden">
+    <img src="<?= url("assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right" loading="lazy" aria-hidden="true" aria-hidden="true">
 
 </div>

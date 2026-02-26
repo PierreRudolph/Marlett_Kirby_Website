@@ -9,7 +9,7 @@
 
                 <div class="location-card flex-column-gap24 lightgrey-bg">
 
-                    <h4 class="headline headline-xs color-font-darkblue">Adresse</h4>
+                    <h2 class="headline headline-xs color-font-darkblue">Adresse</h2>
                     <p class="text-regular500 color-font-darkblue">
                         <?= $page->adresse()->toHtml() ?>
                     </p>
@@ -55,7 +55,7 @@
                 <?php if ($show_second_adress): ?>
                     <div class="location-card flex-column-gap24 lightgrey-bg">
 
-                        <h4 class="text-headline color-font-darkblue">Adresse Zweigstelle</h4>
+                        <h2 class="text-headline color-font-darkblue">Adresse Zweigstelle</h2>
                         <div class="overflow-hidden">
 
                             <p class="text-regular color-font-darkblue">
@@ -146,7 +146,7 @@
 
                 <div class="location-card flex-column-gap24 lightgrey-bg">
 
-                    <h4 class="headline headline-xs color-font-darkblue">Gewerbeaufsicht</h4>
+                    <h2 class="headline headline-xs color-font-darkblue">Gewerbeaufsicht</h2>
                     <p class="text-regular500 color-font-darkblue">
                         <strong>Stadtverwaltung Herrenberg</strong>
                     </p>

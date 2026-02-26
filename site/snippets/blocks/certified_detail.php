@@ -29,8 +29,8 @@
 
 
                     <div class="flex-column-gap20">
-                        <h4 class="headline headline-s color-font-darkblue"><?= $certificate->text_headline()->toHtml() ?>
-                        </h4>
+                        <h3 class="headline headline-s color-font-darkblue"><?= $certificate->text_headline()->toHtml() ?>
+                        </h3>
                         <p class="copy-text-big color-font-darkblue"><?= $certificate->text()->toHtml() ?></p>
                         <?php if ($bottomText = $certificate->bottomText()->toHtml() != ""): ?>
                             <p class="copy-text-big color-font-darkblue"><?= $certificate->text_bottom()->toHtml() ?></p>

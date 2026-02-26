@@ -1,3 +1,77 @@
+@font-face {
+  font-display: swap;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/manrope-v20-latin-regular.woff2) format('woff2')
+}
+@font-face {
+  font-display: swap;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/manrope-v20-latin-500.woff2) format('woff2')
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/manrope-v20-latin-600.woff2) format('woff2')
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/manrope-v20-latin-700.woff2) format('woff2')
+}
+@font-face {
+  font-display: swap;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 800;
+  src: url(../fonts/manrope-v20-latin-800.woff2) format('woff2')
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/exo-2-v26-latin-regular.woff2) format('woff2')
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/exo-2-v26-latin-500.woff2) format('woff2')
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/exo-2-v26-latin-600.woff2) format('woff2')
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/exo-2-v26-latin-700.woff2) format('woff2')
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../fonts/exo-2-v26-latin-800.woff2) format('woff2')
+}
+
+
 :root {
   --color-bg-white: #ffffff;
   --color-font-white: #ffffff;
@@ -180,6 +254,201 @@ input[type=number] {
 .color-font-skyblue {
   color: var(--color-font-skyblue)
 }
+/*-----HEADER--------*/
+header {
+  width: 100%;
+  height: 80px;
+  grid-area: header;
+  box-sizing: border-box;
+  box-shadow: 0 4px 14px 0 #1f588A29;
+  z-index: 3;
+  background-color: #fff;
+  display: flex;
+  justify-content: center
+}
+
+.header-content {
+  padding-right: var(--main-padding-right);
+  padding-left: var(--main-padding-left);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  z-index: 1;
+  justify-content: space-between;
+  width: 100%
+}
+
+.logo:focus img{
+  transform: scale(0.9);
+}
+
+.logo img {
+  transition: transform 125ms ease-out;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px
+}
+
+nav>div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: var(--button-text)
+}
+
+nav a {
+  color: var(--color-blue)
+}
+
+.contact_btn {
+  color: var(--color-font-white);
+  margin-left: 8px;
+  color: var(--color-font-white);
+  padding: 10px 24px;
+  background-color: var(--color-blue)
+}
+
+.menu-toggle {
+  display: inline-block;
+  cursor: pointer
+}
+
+.menu-toggle input {
+  display: none
+}
+
+.hamburger {
+  width: 30px;
+  height: 25px;
+  position: relative
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-blue);
+  transition: .3s ease
+}
+
+.hamburger span:nth-child(1) {
+  top: 0
+}
+
+.hamburger span:nth-child(2) {
+  top: 11px
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0
+}
+
+.menu-toggle input:checked+.hamburger span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 11px
+}
+
+.menu-toggle input:checked+.hamburger span:nth-child(2) {
+  opacity: 0
+}
+
+.menu-toggle input:checked+.hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 11px
+}
+/*-----HEADER--------*/
+/*-----NAV_MENU-----*/
+.main-nav__toggle {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  color: var(--color-font-blue);
+  background: 0 0;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer
+}
+
+.arrow {
+  cursor: pointer;
+  width: 24px;
+  margin-left: .3rem;
+  transition: transform 225ms ease-in-out
+}
+
+.dropdown {
+  transition: opacity 225ms ease-in-out;
+  position: absolute;
+  top: 40px;
+  background-color: var(--color-bg-lightgrey);
+  padding: 16px 24px 16px 24px;
+  list-style: none;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0
+}
+
+.dropdown li a{
+  transition: color 225ms ease-in-out;
+}
+
+.dropdown li:hover a{
+  color: var(--color-font-skyblue);
+}
+
+.dropdown li a:focus{
+  color: var(--color-font-blue);
+}
+
+.main-nav__item {
+  position: relative;
+  width: 130px
+}
+
+.main-nav__item:hover .dropdown {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 2
+}
+
+.main-nav__toggle:hover .dropdown {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 2
+}
+
+.dropdown:hover {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 2
+}
+
+.main-nav__item:hover .arrow {
+  transform: rotate(180deg)
+}
+
+.services-dropdown-link {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  height: fit-content;
+  width: 126px;
+  top: -12px;
+  padding-bottom: 29px;
+}
+/*-----NAV_MENU-----*/
 
 .headline {
   font-family: 'Exo 2';

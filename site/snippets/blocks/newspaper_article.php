@@ -40,7 +40,7 @@
                             loading="lazy" role="img">
                     </p>
                     <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>"
-                        class="brick-layer-right card-brick-layer">
+                        class="brick-layer-right card-brick-layer" aria-hidden="true">
                 </div>
 
             </a>
@@ -49,6 +49,6 @@
 
     </section>
     <img src="<?= url(path: "assets/layout/layer/brick_layer_right_blue.svg") ?>" class="brick-layer-right"
-        aria-label="hidden" aria-label="hidden" aria-label="hidden">
+        aria-hidden="true" aria-hidden="true" aria-hidden="true">
 
 </div>

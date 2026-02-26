@@ -37,7 +37,7 @@
                         <div class="pic-slider-dots-wrapper glide__bullets" data-glide-el="controls[nav]">
 
                             <?php foreach ($block->blocks()->toBlocks() as $index => $card): ?>
-                                <button class="blue-dot-inactive" data-glide-dir="=<?= $index ?>">
+                                <button class="blue-dot-inactive" data-glide-dir="=<?= $index ?>" aria-label="Button springe zu Listen item">
                                 </button>
                             <?php endforeach ?>
 
@@ -45,11 +45,11 @@
 
                         <div class="flex-row-gap20 glide__arrows" data-glide-el="controls">
 
-                            <button class="btn-slide" data-glide-dir="<">
+                            <button class="btn-slide" data-glide-dir="<" aria-label="Button Item nach Links">
                                 <img src="<?= url('assets/icons/arrow_left.svg') ?>" alt="Zurück" loading="lazy">
                             </button>
 
-                            <button class="btn-slide" data-glide-dir=">">
+                            <button class="btn-slide" data-glide-dir=">" aria-label="Button Item nach Rechts">
                                 <img src="<?= url('assets/icons/arrow_right.svg') ?>" alt="Weiter" loading="lazy">
                             </button>
 
@@ -60,9 +60,9 @@
         </div>
 
         <div class="flex-column grid-full">
-            <h4 class="text-headline-manrope color-font-darkblue-alt2">
+            <h3 class="text-headline-manrope color-font-darkblue-alt2">
                 <?= $block->comparison_pics_label_headline()->toHtml() ?>
-            </h4>
+            </h3>
             <p class="text-regular color-font-darkblue-alt2"><?= $block->comparison_pics_label_text()->toHtml() ?></p>
         </div>
     </section>

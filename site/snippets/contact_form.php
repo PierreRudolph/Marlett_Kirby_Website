@@ -94,7 +94,7 @@
         </div>
 
         <div class="field checkbox">
-            <label><input type="checkbox" name="privacy" value="1" <?= isset($data['privacy']) && $data['privacy'] ? 'checked' : '' ?> required></label>
+            <label for="privacy"><input id="privacy" type="checkbox" name="privacy" value="1" <?= isset($data['privacy']) && $data['privacy'] ? 'checked' : '' ?> required></label>
             <label>
                 
                 Ich stimme den <a href="<?= url('datenschutzerklaerung') ?>" target="_blank" class="label-underline color-font-blue">Datenschutzbestimmungen</a> zu

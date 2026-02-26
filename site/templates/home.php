@@ -1,7 +1,7 @@
 <?php snippet(name: 'header') ?>
 
 <div class="section-wrapper blue-radient-bg mobile-padding-above-fold">
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left mobile603-d-none" aria-label="hidden"
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>" class="brick-layer-left mobile603-d-none" aria-hidden="true"
         fetchpriority="high">
     <section class="above-fold above-fold-home-mobile-gap">
 
@@ -9,7 +9,7 @@
 
         <div class="section-content mobile-grid-reverse mobile-padding-above-fold-content">
             <img src="<?= url(path: "assets/layout/layer/brick_layer_left.svg") ?>"
-                class="brick-layer-left-mobile-home desktop603-d-none" fetchpriority="high" aria-label="hidden" aria-label="hidden">
+                class="brick-layer-left-mobile-home desktop603-d-none" fetchpriority="high" aria-hidden="true" aria-hidden="true">
             <p class="subheadline"><?= $page->subheadline_first_half()->toHtml() ?><span
                     class="subheadline-second-half"><?= $page->subheadline_second_half()->toHtml() ?></span>
             </p>
@@ -75,7 +75,7 @@
 
 
     </section>
-    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right mobile-pos" aria-label="hidden"
+    <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>" class="brick-layer-right mobile-pos" aria-hidden="true"
         fetchpriority="high">
 
 </div>

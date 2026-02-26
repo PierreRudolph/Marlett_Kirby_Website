@@ -20,14 +20,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?= $page->title() ?>">
     <meta property="og:description" content="<?= $site->meta_description() ?>">
-    <meta property="og:image" content="<?= $site->meta_img() ?>">
+    <meta property="og:image" content="<?= $site->meta_img()->toFile()->url() ?>">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="<?= $site->url() ?>">
     <meta property="twitter:url" content="<?= $site->url() ?>">
     <meta name="twitter:title" content="<?= $site->meta_title() ?>">
     <meta name="twitter:description" content="<?= $site->meta_description() ?>">
-    <meta name="twitter:image" content="<?= $site->meta_img() ?>">
+    <meta name="twitter:image" content="<?= $site->meta_img()->toFile()->url() ?>">
 
     <meta name="theme-color" content="#ffffff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -71,23 +71,20 @@
     <?php
     $sitemap = $page->page_meta()->value();
     ?>
-  
-    <?php if (!empty($companyName)): ?>
+
+    <?php if (!empty($sitemap)): ?>
 
         <script type="application/ld+json">
-                                <?= json_encode($sitemap, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
-                                </script>
+                    <?= $sitemap ?>
+                                        </script>
     <?php endif ?>
 
 
     <!-- STRUCTURED DATA END -->
     <?= css([
+        'assets/css/index.css',
         'assets/css/glide.core.min.css',
         'assets/css/glide.theme.min.css',
-        'assets/css/fonts.css',
-        'assets/css/index.css',
-        'assets/css/header.css',
-        'assets/css/nav_menu.css',
         'assets/css/sections.css',
         'assets/css/mobile.css'
     ], ) ?>
@@ -105,7 +102,8 @@
             <div class="header-content max-width1440">
                 <a class="logo" href="<?= $site->url() ?>">
                     <?php $img = $site->header_icon()->toFile() ?>
-                    <img src="<?= $img->url() ?>" alt="<?= $img->alt() ?>" loading="lazy" role="img">
+                    <img width="130px" height="46px" src="<?= $img->url() ?>" alt="<?= $img->alt() ?>" loading="lazy"
+                        role="img">
                 </a>
 
                 <nav>

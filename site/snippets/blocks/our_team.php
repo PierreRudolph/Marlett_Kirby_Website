@@ -29,11 +29,11 @@
                     </figure>
 
                     <div class="flex-column-gap5">
-                        <h4 class="headline headline-s color-font-blue">
+                        <h3 class="headline headline-s color-font-blue">
                             <?= $card->first_name()->toHtml() ?>
                             <span
                                 class="color-font-skyblue"><?= $card->name_colored_part()->toHtml() ?></span><span><?= $card->name()->toHtml() ?></span>
-                        </h4>
+                        </h3>
                         <p class="text-regular color-font-blue"><?= $card->text()->toHtml() ?></p>
                     </div>
 
