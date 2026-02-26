@@ -13,7 +13,7 @@
             <?php if ($show_as_slider): ?>
                 <a class="link-text flex-row-gap5 color-font-blue" href="<?= $block->link_about_us_url()->toUrl() ?>">
                     <?= $block->link_about_us_text()->toHtml() ?>
-                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>" alt="Icon Pfeil nach Rechts" loading="lazy"
+                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>" width="24px" height="24px" alt="Icon Pfeil nach Rechts" loading="lazy"
                         role="img">
                 </a>
             <?php endif ?>

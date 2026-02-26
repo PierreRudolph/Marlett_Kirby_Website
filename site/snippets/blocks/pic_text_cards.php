@@ -27,7 +27,7 @@
                         </div>
                       
                         <a href="<?= $card->link()->toUrl() ?>" class="flex-row-gap5 link-text color-font-skyblue">Mehr
-                            erfahren <img src="<?= url('assets/icons/arrow_forward.svg') ?>" alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
+                            erfahren <img src="<?= url('assets/icons/arrow_forward.svg') ?>" width="24px" height="24px" alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
                         </a>
                         <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>"
                             class="brick-layer-right card-brick-layer" aria-hidden="true" aria-hidden="true">

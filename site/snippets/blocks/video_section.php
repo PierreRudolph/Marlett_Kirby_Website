@@ -47,14 +47,14 @@
                             <div id="video-pause-btn-section-<?= $index ?>"
                                 onclick="pauseVideo('section-video-<?= $index ?>','section-<?= $index ?>')"
                                 class="video-play-btn">
-                                <img src="<?= url('assets/icons/pause.svg') ?>" alt="Video pausieren Button" loading="lazy"
+                                <img src="<?= url('assets/icons/pause.svg') ?>" width="24px" height="24px alt="Video pausieren Button" loading="lazy"
                                     role="img">
                             </div>
 
                             <div id="video-play-btn-section-<?= $index ?>"
                                 onclick="playVideo('section-video-<?= $index ?>','section-<?= $index ?>')"
                                 class="video-play-btn d-none-important">
-                                <img src="<?= url('assets/icons/play.svg') ?>" alt="Video apspielen Button" loading="lazy"
+                                <img src="<?= url('assets/icons/play.svg') ?>" width="24px" height="24px alt="Video apspielen Button" loading="lazy"
                                     role="img">
                             </div>
 

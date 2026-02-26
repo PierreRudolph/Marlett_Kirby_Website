@@ -14,7 +14,7 @@
             <?php if ($block->link_about_us_url()->toUrl() != null): ?>
                 <a class="link-text flex-row-gap5 color-font-white" href="<?= $block->link_about_us_url()->toUrl() ?>">
                     <?= $block->link_about_us_text()->toHtml() ?>
-                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>" alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/arrow_forward.svg') ?>" width="24px" height="24px" alt="Icon Pfeil nach Rechts" loading="lazy" role="img">
                 </a>
             <?php endif ?>
 

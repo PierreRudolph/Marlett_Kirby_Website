@@ -23,7 +23,7 @@
                     <figure data-ratio="<?= $ratio ?>" data-crop="<?= $crop ?>">
 
                             <?php if ($thumb = $card->img()->toFile()->crop(464, 442)): ?>
-                                <img class="t-width-full" src="<?= $thumb->url() ?>" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
+                                <img class="t-width-full" src="<?= $thumb->url() ?>" width="464px" height="442px" alt="<?= $thumb->alt()->esc() ?>" loading="lazy" role="img">
                             <?php endif ?>
 
                     </figure>

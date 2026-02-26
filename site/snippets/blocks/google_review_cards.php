@@ -21,9 +21,9 @@
                             <div class="glide__slide google-review-card flex-column-gap32">
 
                                 <div class="flex-row-gap15">
-                                    <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Icon von Google"
+                                    <img src="<?= url('assets/icons/google_icon.svg') ?>" width="24px" height="24px" alt="Icon von Google"
                                         loading="lazy">
-                                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Stern Icon" loading="lazy">
+                                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" width="120px" height="20px" alt="Stern Icon" loading="lazy">
                                 </div>
 
                                 <div class="overflow-hidden">

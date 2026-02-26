@@ -14,7 +14,7 @@ $items = $services->children()->listed();
 
     <label class="nav-services-arrow desktop800-d-none">
       <input type="checkbox" class="d-none">
-      <img class="mobile-arrow" src="<?= url('assets/icons/chevron_down.svg') ?>" alt="Pfeil nach Unten" loading="lazy"
+      <img width="33px" height="33px" class="mobile-arrow" src="<?= url('assets/icons/chevron_down.svg') ?>" alt="Pfeil nach Unten" loading="lazy"
         role="img">
     </label>
   </div>

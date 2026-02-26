@@ -23,7 +23,7 @@
 
                 <?php if ($image = $block->img()->toFile()): ?>
                     <div class="newspaper-img">
-                        <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
+                        <img width="300px" height="252px" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
                     </div>
                 <?php endif ?>
 
@@ -36,7 +36,7 @@
 
 
                     <p class="flex-row-gap5 link-text color-font-skyblue">Artikel
-                        Lesen <img src="<?= url('assets/icons/arrow_forward.svg') ?>" alt="Icon Pfeil nach Rechts"
+                        Lesen <img src="<?= url('assets/icons/arrow_forward.svg') ?>" width="24px" height="24px" alt="Icon Pfeil nach Rechts"
                             loading="lazy" role="img">
                     </p>
                     <img src="<?= url(path: "assets/layout/layer/brick_layer_right.svg") ?>"

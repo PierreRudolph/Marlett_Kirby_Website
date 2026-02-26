@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                        <img src="assets/icons/phone_negativ.svg" width="24px" height="24px alt="Telefon Icon" loading="lazy" role="img">
                         <p class="text-regular500  color-font-darkblue">
                             <strong>Tel:</strong>
                             <?= $site->phone_line()->toHtml() ?>
@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                        <img src="assets/icons/phone_negativ.svg" width="24px" height="24px alt="Telefon Icon" loading="lazy" role="img">
                         <p class="text-regular500  color-font-darkblue">
                             <strong>Mobil:</strong>
                             <?= $site->phone()->toHtml() ?>
@@ -73,7 +73,7 @@
                         </div>
 
                         <div class="flex-row-gap15">
-                            <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                            <img src="assets/icons/phone_negativ.svg" width="24px" height="24px alt="Telefon Icon" loading="lazy" role="img">
                             <p class="text-regular color-font-darkblue">
                             <p><strong>Tel:</strong></p>
                             <?= $page->tel_zweigstelle()->toHtml() ?>
@@ -81,7 +81,7 @@
 
                         </div>
                         <div class="flex-row-gap15">
-                            <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                            <img src="assets/icons/phone_negativ.svg" width="24px" height="24px alt="Telefon Icon" loading="lazy" role="img">
                             <p class="text-regular color-font-darkblue">
                             <p><strong>Mobil:</strong></p>
                             <?= $page->mobil_zweigstelle()->toHtml() ?>
@@ -157,7 +157,7 @@
                         71083 Herrenberg
                     </p>
                     <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                        <img src="assets/icons/phone_negativ.svg" width="24px" height="24px alt="Telefon Icon" loading="lazy" role="img">
                         <p class="text-regular500  color-font-darkblue">
                             <strong>Tel:</strong>
                             +49 7032 924-0

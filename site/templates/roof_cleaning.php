@@ -29,7 +29,7 @@
 
                 <a href="tel:<?= $site->phone()->toHtml() ?>"
                     class="btn-pos-outlined btn-text btn-with-icon m-btn-width">
-                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" alt="Telefon Icon" loading="lazy"
+                    <img src="<?= url('assets/icons/phone_negativ.svg') ?>" width="24px" height="24px alt="Telefon Icon" loading="lazy"
                         role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
@@ -38,8 +38,8 @@
             <div class="flex-column-gap5 marg-top20">
 
                 <div class="flex-row-gap15">
-                    <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
-                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Stern Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/google_icon.svg') ?>" width="24px" height="24px" alt="Google Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" width="120px" height="20px" alt="Stern Icon" loading="lazy" role="img">
                 </div>
                 <div class="label color-font-blue">5,0 Sterne Bewertung -<a target="blank"
                         href="https://www.google.com/search?sa=X&sca_esv=ad335200c38ab265&hl=de&sxsrf=ANbL-n5fAmUI_Q00NO6pWSE7rGKG2EL7JA:1771848614790&q=Marlett+Steinsanierungen+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MjE3MTI3NDMwMjI3MzIxMDY12cDI-IpRxTexKCe1pEQhuCQ1M684MS8ztag0Lz01TyEotSo1rzgzPy81bxErUcoAY1PFcmgAAAA&rldimm=2474271602276240354&tbm=lcl&ved=2ahUKEwj74p66yu-SAxXNVfEDHR2vJCoQ9fQKegQIXhAG&biw=2560&bih=1300&dpr=1#lkt=LocalPoiReviews"

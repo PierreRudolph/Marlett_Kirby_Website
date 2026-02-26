@@ -33,7 +33,7 @@
                         <h3 id="faq-question" class="color-font-darkblue-alt2 text-headline-manrope mobile-font-16p">
                             <?= $q_and_a->question()->toHtml() ?>
                         </h3>
-                        <img src="<?= url('assets/icons/icon_arrow_down.svg') ?>" alt="Icon Pfeil nach Unten" loading="lazy"
+                        <img src="<?= url('assets/icons/icon_arrow_down.svg') ?>" width="24px" height="24px" alt="Icon Pfeil nach Unten" loading="lazy"
                             role="img">
                     </button>
                     <div id="accordion-text" class="text-accordion">

@@ -29,7 +29,7 @@
                     </div>
 
                     <a href="tel: <?= $site->phone()->toHtml() ?>" class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" alt="Telefon Icon" loading="lazy" role="img">
+                        <img src="assets/icons/phone_negativ.svg" width="24px" height="24px alt="Telefon Icon" loading="lazy" role="img">
                         <p class="headline-xs label-underline color-font-darkblue">
                             <?= $card->phone()->toHtml() ?>
                         </p>

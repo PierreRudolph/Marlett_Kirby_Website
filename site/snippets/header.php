@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $page->title()->esc() ?> | <?= $site->meta_description() ?></title>
+    <title><?= $page->title()->esc() ?> | <?= $site->meta_description()->esc() ?></title>
     <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
     <link rel="apple-touch-icon" sizes="180x180" href="<?= url('assets/favicon/apple-touch-icon.png') ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= url('assets/favicon/favicon-32x32.png') ?>">
@@ -18,7 +18,7 @@
 
     <meta property="og:url" content="<?= $site->url() ?>">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= $page->title() ?>">
+    <meta property="og:title" content="<?= $page->title()->toHtml() ?> | Marlett Steinsanierungen in Herrenberg">
     <meta property="og:description" content="<?= $site->meta_description() ?>">
     <meta property="og:image" content="<?= $site->meta_img()->toFile()->url() ?>">
 
@@ -75,8 +75,8 @@
     <?php if (!empty($sitemap)): ?>
 
         <script type="application/ld+json">
-                    <?= $sitemap ?>
-                                        </script>
+                        <?= $sitemap ?>
+                                            </script>
     <?php endif ?>
 
 
@@ -174,8 +174,8 @@
                         <div class="contact-option lightgrey-bg flex-row-gap24">
 
                             <div class="icon-blue-bg">
-                                <img src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy"
-                                    role="img">
+                                <img src="<?= url('assets/icons/icon_mail.svg') ?>" width="24px" height="24px"
+                                    alt="Email Icon" loading="lazy" role="img">
                             </div>
 
                             <a class="color-font-darkblue-alt2 mobile-subheadline"
@@ -189,7 +189,7 @@
                         <div class="contact-option lightgrey-bg flex-row-gap24">
 
                             <div class="icon-blue-bg">
-                                <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy"
+                                <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy"
                                     role="img">
                             </div>
 
@@ -205,7 +205,7 @@
 
                             <div class="icon-blue-bg">
                                 <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" alt="Icon von WhatsApp"
-                                    loading="lazy" role="img">
+                                    loading="lazy" role="img" width="24px" height="24px">
                             </div>
 
                             <a class="color-font-darkblue-alt2 mobile-subheadline"
@@ -221,7 +221,7 @@
 
                         <a href="<?= $social_link->link()->toHtml() ?>">
                             <?php if ($image = $social_link->icon_mobile()->toFile()): ?>
-                                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
+                                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" width="24px" height="24px" loading="lazy" role="img">
                             <?php endif ?>
                         </a>
 

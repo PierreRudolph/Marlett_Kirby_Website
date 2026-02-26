@@ -29,7 +29,7 @@
 
                 <a href="tel:<?= $site->phone()->toHtml() ?>"
                     class="btn-neg-outlined btn-text btn-with-icon m-btn-width">
-                    <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px alt="Telefon Icon" loading="lazy" role="img">
                     <?= $page->button_phone_text()->toHtml() ?>
                 </a>
 
@@ -37,8 +37,8 @@
             <div class="flex-column-gap5 marg-top20">
 
                 <div class="flex-row-gap15">
-                    <img src="<?= url('assets/icons/google_icon.svg') ?>" alt="Google Icon" loading="lazy" role="img">
-                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" alt="Stern Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/google_icon.svg') ?>" width="24px" height="24px" alt="Google Icon" loading="lazy" role="img">
+                    <img src="<?= url('assets/icons/stars_icon.svg') ?>" width="120px" height="20px" alt="Stern Icon" loading="lazy" role="img">
                 </div>
                 <div class="label color-font-white">5,0 Sterne Bewertung -<a target="blank"
                         href="https://www.google.com/search?sa=X&sca_esv=ad335200c38ab265&hl=de&sxsrf=ANbL-n5fAmUI_Q00NO6pWSE7rGKG2EL7JA:1771848614790&q=Marlett+Steinsanierungen+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MjE3MTI3NDMwMjI3MzIxMDY12cDI-IpRxTexKCe1pEQhuCQ1M684MS8ztag0Lz01TyEotSo1rzgzPy81bxErUcoAY1PFcmgAAAA&rldimm=2474271602276240354&tbm=lcl&ved=2ahUKEwj74p66yu-SAxXNVfEDHR2vJCoQ9fQKegQIXhAG&biw=2560&bih=1300&dpr=1#lkt=LocalPoiReviews"
@@ -58,12 +58,12 @@
                     </video>
 
                     <div id="video-pause-btn-home" onclick="pauseVideo('video-home','home')" class="video-play-btn">
-                        <img src="<?= url('assets/icons/pause.svg') ?>" alt="Video pausieren Button" loading="lazy"
+                        <img src="<?= url('assets/icons/pause.svg') ?>" width="24px" height="24px alt="Video pausieren Button" loading="lazy"
                             role="img">
                     </div>
 
                     <div id="video-play-btn-home" onclick="playVideo('video-home','home')" class="video-play-btn d-none-important">
-                        <img src="<?= url('assets/icons/play.svg') ?>" alt="Video apspielen Button" loading="lazy"
+                        <img src="<?= url('assets/icons/play.svg') ?>" width="24px" height="24px alt="Video apspielen Button" loading="lazy"
                             role="img">
                     </div>
 

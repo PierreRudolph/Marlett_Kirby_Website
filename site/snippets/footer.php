@@ -4,7 +4,7 @@
 
             <div class="flex-column-gap40 grid-span2 mobile-flex-row">
                 <a class="logo" href="<?= $site->url() ?>">
-                    <img src="<?= url('assets/icons/marlett_logo.svg') ?>" alt="Marlett Firmenlogo" loading="lazy"
+                    <img src="<?= url('assets/icons/marlett_logo.svg') ?>" width="183px" height="46px" alt="Marlett Firmenlogo" loading="lazy"
                         role="img">
                 </a>
                 <div class="flex-row-start-gap12 mobile-margin-auto">
@@ -26,7 +26,7 @@
                     <?php if ($site->whatsapp()->toHtml() != ''): ?>
                         <a class="flex-row-gap12 copy-text-small color-font-white"
                             href="tel:<?= $site->whatsapp()->toHtml() ?>">
-                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" alt="Icon von WhatsApp" loading="lazy"
+                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" width="24px" height="24px" alt="Icon von WhatsApp" loading="lazy"
                                 role="img">
                             <span><?= $site->whatsapp()->toHtml() ?></span>
                         </a>
@@ -34,20 +34,20 @@
 
                     <a class="flex-row-gap12 copy-text-small color-font-white"
                         href="tel:<?= $site->phone_line()->toHtml() ?>">
-                        <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
+                        <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy" role="img">
                         <span>
                             <?= $site->phone_line()->toHtml() ?>
                         </span>
                     </a>
                     <a class="flex-row-gap12 copy-text-small color-font-white"
                         href="tel:<?= $site->phone()->toHtml() ?>">
-                        <img src="<?= url('assets/icons/phone.svg') ?>" alt="Telefon Icon" loading="lazy" role="img">
+                        <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy" role="img">
                         <span><?= $site->phone()->toHtml() ?></span>
                     </a>
 
                     <a class="flex-row-gap12 copy-text-small color-font-white"
                         href="mailto:<?= $site->email()->toSring() ?>">
-                        <img src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy" role="img">
+                        <img width="24px" height="24px" src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy" role="img">
                         <span><?= $site->email()->toHtml() ?></span>
                     </a>
                 </div>
