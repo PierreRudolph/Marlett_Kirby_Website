@@ -1,4 +1,4 @@
-<img src="https://pierre-lettner.de/portfolio-preview/preview.png" width="300">
+<img src="https://pierre-lettner.de/marlett-preview/Marlett_website.jpg" width="300">
 
 # Marlett Steinsanierungen – Website
 
