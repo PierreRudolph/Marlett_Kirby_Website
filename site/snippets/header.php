@@ -82,11 +82,11 @@
 
     <!-- STRUCTURED DATA END -->
     <?= css([
-        'assets/css/index.css',
+        'assets/css/index-v-1.css',
         'assets/css/glide.core.min.css',
         'assets/css/glide.theme.min.css',
-        'assets/css/sections.css',
-        'assets/css/mobile.css'
+        'assets/css/sections-v-1.css',
+        'assets/css/mobile-v-1.css'
     ], ) ?>
 
     <?= js([
