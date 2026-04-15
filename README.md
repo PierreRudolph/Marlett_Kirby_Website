@@ -1,36 +1,78 @@
-<img src="http://getkirby.com/assets/images/github/plainkit.jpg" width="300">
+<img src="https://pierre-lettner.de/portfolio-preview/preview.png" width="300">
 
-**Kirby: the CMS that adapts to any project, loved by developers and editors alike.**
-The Plainkit is a minimal Kirby setup with the basics you need to start a project from scratch. It is the ideal choice if you are already familiar with Kirby and want to start step-by-step.
+# Marlett Steinsanierungen – Website
 
-You can learn more about Kirby at [getkirby.com](https://getkirby.com).
-
-### Try Kirby for free
-
-You can try Kirby and the Plainkit on your local machine or on a test server as long as you need to make sure it is the right tool for your next project. … and when you’re convinced, [buy your license](https://getkirby.com/buy).
-
-### Get going
-
-Read our guide on [how to get started with Kirby](https://getkirby.com/docs/guide/quickstart).
-
-You can [download the latest version](https://github.com/getkirby/plainkit/archive/main.zip) of the Plainkit.
-If you are familiar with Git, you can clone Kirby's Plainkit repository from Github.
-
-    git clone https://github.com/getkirby/plainkit.git
-
-## What's Kirby?
-
--   **[getkirby.com](https://getkirby.com)** – Get to know the CMS.
--   **[Try it](https://getkirby.com/try)** – Take a test ride with our online demo. Or download one of our kits to get started.
--   **[Documentation](https://getkirby.com/docs/guide)** – Read the official guide, reference and cookbook recipes.
--   **[Issues](https://github.com/getkirby/kirby/issues)** – Report bugs and other problems.
--   **[Feedback](https://feedback.getkirby.com)** – You have an idea for Kirby? Share it.
--   **[Forum](https://forum.getkirby.com)** – Whenever you get stuck, don't hesitate to reach out for questions and support.
--   **[Discord](https://chat.getkirby.com)** – Hang out and meet the community.
--   **[Mastodon](https://mastodon.social/@getkirby)** – Spread the word.
--   **[Bluesky](https://bsky.app/profile/getkirby.com)** – Spread the word.
+Corporate website for a regional stone restoration company, built with a custom Kirby CMS setup.  
+The project focuses on performance, maintainability, and a clean, structured presentation of services.
 
 ---
 
-© 2009 Bastian Allgeier
-[getkirby.com](https://getkirby.com) · [License agreement](https://getkirby.com/license)
+## 🚀 Project Overview
+
+This website was developed for **Marlett Steinsanierungen**, a company specializing in stone restoration and surface treatment services.
+
+The goal was to create a modern, fast, and easy-to-manage website that allows the client to update content without technical knowledge.
+
+---
+
+## 🧩 Key Features
+
+- Custom Kirby CMS implementation
+- Modular content structure using Blueprints
+- Fully responsive design (mobile-first approach)
+- Structured service presentation
+- SEO-friendly page structure
+- Lightweight and fast-loading frontend
+
+---
+
+## 🛠️ Tech Stack
+
+- Kirby CMS (file-based CMS)
+- PHP (Kirby templates)
+- HTML5
+- CSS3
+- JavaScript
+- Responsive Web Design principles
+
+---
+
+## 📁 Project Structure
+
+- `/site` – Kirby CMS configuration (blueprints, controllers, templates)
+- `/content` – Page content (file-based structure)
+- `/assets` – CSS, JavaScript, and media files
+- `/kirby` – Kirby core system
+
+---
+
+## 🎯 My Role
+
+- Full development of the website
+- Setup and configuration of Kirby CMS
+- Creation of custom templates and blueprints
+- Frontend development (HTML, CSS, JavaScript)
+- Responsive design implementation
+- Deployment and project setup
+
+---
+
+## 💡 What I Learned
+
+- Building structured CMS systems with Kirby
+- Creating scalable content models using Blueprints
+- Improving performance with lightweight architecture
+- Working on real-world client requirements
+- Translating business needs into functional web solutions
+
+---
+
+## 🌐 Live Website
+
+[https://marlett-steinsanierungen.de/](https://marlett-steinsanierungen.de/)
+
+---
+
+## 📌 Notes
+
+This project was built as a real-world client website with a focus on simplicity, performance, and maintainability rather than heavy frameworks or dependencies.
