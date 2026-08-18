@@ -792,6 +792,10 @@
   .big-number-card {
     padding: 24px;
   }
+
+  .location-card{
+    width: unset;
+  }
 }
 
 .desktop603-d-none {
