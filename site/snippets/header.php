@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="<?= url('assets/favicon/favicon-32x32.png') ?>">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= url('assets/favicon/favicon-16x16.png') ?>">
     <link rel="manifest" href="<?= url('assets/favicon/site.webmanifest') ?>">
-    <link rel="canonical" href="<?= $site->url() ?>">
+    <link rel="canonical" href="<?= $page->url() ?>">
 
     <!-- ------META----- -->
     <meta name="description" content="<?= $site->meta_description() ?>">
@@ -18,7 +18,7 @@
 
     <meta property="og:url" content="<?= $site->url() ?>">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= $page->title()->toHtml() ?> | Marlett Steinsanierungen in Herrenberg">
+    <meta property="og:title" content="<?= $page->title()->toHtml() ?> | Marlett Steinsanierungen in Gäufelden">
     <meta property="og:description" content="<?= $site->meta_description() ?>">
     <meta property="og:image" content="<?= $site->meta_img()->toFile()->url() ?>">
 
