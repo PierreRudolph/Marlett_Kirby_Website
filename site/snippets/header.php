@@ -46,7 +46,7 @@
     $zip = $site->zip()->value();
     $city = $site->city()->value();
     $url = $site->url(); // Website-URL
-    $telephone = $site->phone_line()->value() ?? ''; // optional, falls du ein Feld für Telefon hast
+    $telephone = $site->phone_line()->value() ?? '';
     $mobileTelephone = $site->phone()->value();
 
     $fullStreet = trim($street . ' ' . $houseNumber);
@@ -86,7 +86,7 @@
         'assets/css/glide.core.min.css',
         'assets/css/glide.theme.min.css',
         'assets/css/sections-v-1.css',
-        'assets/css/mobile-v-2.css'
+        'assets/css/mobile-v-3.css'
     ], ) ?>
 
     <?= js([

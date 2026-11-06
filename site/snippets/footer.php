@@ -4,8 +4,8 @@
 
             <div class="flex-column-gap40 grid-span2 mobile-flex-row">
                 <a class="logo" href="<?= $site->url() ?>">
-                    <img src="<?= url('assets/icons/marlett_logo.svg') ?>" width="183px" height="46px" alt="Marlett Firmenlogo" loading="lazy"
-                        role="img">
+                    <img src="<?= url('assets/icons/marlett_logo.svg') ?>" width="183px" height="46px"
+                        alt="Marlett Firmenlogo" loading="lazy" role="img">
                 </a>
                 <div class="flex-row-start-gap12 mobile-margin-auto">
                     <img src="<?= url('assets/icons/icon_map_pin.svg') ?>" alt="Icon eines Kartenmarkers" loading="lazy"
@@ -24,30 +24,31 @@
                 <h3 class="headline headline-xs color-font-lightblue-alt">Kontakt</h3>
                 <div class="flex-column-gap16">
                     <?php if ($site->whatsapp()->toHtml() != ''): ?>
-                        <a class="flex-row-gap12 font16-500 color-font-white"
-                            href="tel:<?= $site->whatsapp()->toHtml() ?>">
-                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" width="24px" height="24px" alt="Icon von WhatsApp" loading="lazy"
-                                role="img">
+                        <a class="flex-row-gap12 font16-500 color-font-white" href="tel:<?= $site->whatsapp()->toHtml() ?>">
+                            <img src="<?= url('assets/icons/icon_whatsapp.svg') ?>" width="24px" height="24px"
+                                alt="Icon von WhatsApp" loading="lazy" role="img">
                             <span><?= $site->whatsapp()->toHtml() ?></span>
                         </a>
                     <?php endif ?>
 
                     <a class="flex-row-gap12 font16-500 color-font-white"
                         href="tel:<?= $site->phone_line()->toHtml() ?>">
-                        <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy" role="img">
+                        <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon"
+                            loading="lazy" role="img">
                         <span>
                             <?= $site->phone_line()->toHtml() ?>
                         </span>
                     </a>
-                    <a class="flex-row-gap12 font16-500 color-font-white"
-                        href="tel:<?= $site->phone()->toHtml() ?>">
-                        <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon" loading="lazy" role="img">
+                    <a class="flex-row-gap12 font16-500 color-font-white" href="tel:<?= $site->phone()->toHtml() ?>">
+                        <img src="<?= url('assets/icons/phone.svg') ?>" width="24px" height="24px" alt="Telefon Icon"
+                            loading="lazy" role="img">
                         <span><?= $site->phone()->toHtml() ?></span>
                     </a>
 
                     <a class="flex-row-gap12 font16-500 color-font-white"
                         href="mailto:<?= $site->email()->toSring() ?>">
-                        <img width="24px" height="24px" src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon" loading="lazy" role="img">
+                        <img width="24px" height="24px" src="<?= url('assets/icons/icon_mail.svg') ?>" alt="Email Icon"
+                            loading="lazy" role="img">
                         <span><?= $site->email()->toHtml() ?></span>
                     </a>
                 </div>
@@ -81,8 +82,7 @@
                 <div class="flex-column-gap16">
                     <?php foreach ($site->social_links()->toStructure() as $social_link): ?>
 
-                        <a class="flex-row-gap12 font16-500 color-font-white"
-                            href="<?= $social_link->link()->toHtml() ?>">
+                        <a class="flex-row-gap12 font16-500 color-font-white" href="<?= $social_link->link()->toHtml() ?>">
                             <?php if ($image = $social_link->icon()->toFile()): ?>
 
                                 <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" role="img">
@@ -116,9 +116,9 @@
     </div>
     <div class="footer-bottom">
         <div>
-            <p class="font16-500 color-font-blue">© 2026 Marlett GbR</p>
+            <p class="font16-500 color-font-blue mobile-width-half">© 2026 Marlett Dienstleistungen OHG</p>
 
-            <div class="flex-row-gap24">
+            <div class="flex-row-gap24 mobile-flex-column">
                 <a class="font16-500 color-font-blue" href="<?= url('impressum') ?>">Impressum</a>
                 <a class="font16-500 color-font-blue" href="<?= url('datenschutzerklaerung') ?>">Datenschutz</a>
                 <a class="font16-500 color-font-blue" href="<?= url('agb') ?>">AGB</a>

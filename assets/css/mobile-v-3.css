@@ -875,4 +875,12 @@
     justify-content: space-between;
     gap: 30px;
   }
+
+  .mobile-width-half{
+    max-width: 50%;
+  }
+
+  .mobile-flex-column{
+    flex-direction: column;
+  }
 }
