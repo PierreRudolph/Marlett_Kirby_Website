@@ -793,7 +793,7 @@
     padding: 24px;
   }
 
-  .location-card{
+  .location-card {
     width: unset;
   }
 }
@@ -876,11 +876,19 @@
     gap: 30px;
   }
 
-  .mobile-width-half{
+  .mobile-width-half {
     max-width: 50%;
   }
 
-  .mobile-flex-column{
+  .mobile-flex-column {
     flex-direction: column;
   }
+
+  .service-areas-mobile {
+    overflow-x: auto;
+
+  }
+
+
+
 }

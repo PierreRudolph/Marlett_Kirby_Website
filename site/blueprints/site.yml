@@ -143,11 +143,18 @@ tabs:
 
           service_areas:
             label: Einzugsgebiete
-            type: tags
+            type: structure
             placeholder: z.B. Augsburg, München, Ulm
-            help: Mehrere Orte möglich
             when:
               show_service_areas: true
+            fields:
+              text:
+                label: Anzeigename
+                type: text
+                placeholder: z.B. Augsburg, München, Ulm
+              link:
+                label: URL
+                type: url
   
   seo:
     label: SEO

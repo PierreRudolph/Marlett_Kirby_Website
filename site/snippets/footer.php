@@ -102,12 +102,13 @@
             <hr class="hr-line">
             <div class="flex-column-gap40 width-full">
                 <h4 class="headline headline-xs color-font-white">Einzugsgebiete</h4>
-                <?php $areas = $site->service_areas()->split(','); ?>
-                <div class="flex-row-gap24">
-                    <?php foreach ($areas as $area): ?>
-                        <span class="font16-500 color-font-white">
-                            <?= html($area) ?>
-                        </span>
+                <div class="flex-row-gap24 service-areas-mobile">
+                    <?php foreach ($site->service_areas()->toStructure() as $area): ?>
+
+                        <a class="font16-500 color-font-white" href="<?= $area->link()->toHtml() ?>">
+                            <span><?= $area->text()->toHtml() ?></span>
+                        </a>
+
                     <?php endforeach ?>
                 </div>
             </div>

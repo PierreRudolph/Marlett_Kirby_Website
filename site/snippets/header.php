@@ -86,7 +86,7 @@
         'assets/css/glide.core.min.css',
         'assets/css/glide.theme.min.css',
         'assets/css/sections-v-1.css',
-        'assets/css/mobile-v-3.css'
+        'assets/css/mobile-v-4.css'
     ], ) ?>
 
     <?= js([

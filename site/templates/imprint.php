@@ -118,121 +118,14 @@
                     </div>
 
                 </div>
-                <!-- Altes Impressum 5.11.26 (obige änderung auf wunsch von Florian)
-                <div class="location-card flex-column-gap24 lightgrey-bg">
-
-                    <h2 class="headline headline-xs color-font-darkblue">Adresse</h2>
-                    <p class="text-regular500 color-font-darkblue">
-                        <?= $page->adresse()->toHtml() ?>
-                    </p>
-                    <div class="overflow-hidden">
-                        <p class="text-regular500  color-font-darkblue">
-                            <?php if ($page->mail_haupt()->isNotEmpty()): ?>
-                                <strong>Mail:</strong>
-                                <a href="mailto:<?= $page->mail_haupt()->esc() ?>">
-                                    <?= $page->mail_haupt()->html() ?>
-                                </a>
-
-                            <?php endif ?>
-                        </p>
-                    </div>
-
-                    <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" width="24px" height="24px" alt="Telefon Icon"
-                            loading="lazy" role="img">
-                        <p class="text-regular500  color-font-darkblue">
-                            <strong>Tel:</strong>
-                            <?= $site->phone_line()->toHtml() ?>
-                        </p>
-
-                    </div>
-
-                    <div class="flex-row-gap15">
-                        <img src="assets/icons/phone_negativ.svg" width="24px" height="24px" alt="Telefon Icon"
-                            loading="lazy" role="img">
-                        <p class="text-regular500  color-font-darkblue">
-                            <strong>Mobil:</strong>
-                            <?= $site->phone()->toHtml() ?>
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <?php
-
-                $show_second_adress = $page->show_second_adress()->isTrue();
-                ?>
-                <?php if ($show_second_adress): ?>
-                    <div class="location-card flex-column-gap24 lightgrey-bg">
-
-                        <h2 class="text-headline color-font-darkblue">Adresse Zweigstelle</h2>
-                        <div class="overflow-hidden">
-
-                            <p class="text-regular color-font-darkblue">
-                                <?= $page->adresse_zweigstelle()->toHtml() ?>
-                            </p>
-                            <p class="text-regular color-font-darkblue">
-                                <?php if ($page->mail_zweigstelle()->isNotEmpty()): ?>
-                                <p><strong>Mail:</strong>
-                                    <a href="mailto:<?= $page->mail_zweigstelle()->esc() ?>">
-                                        <?= $page->mail_zweigstelle()->html() ?>
-                                    </a>
-                                </p>
-                            <?php endif ?>
-                            </p>
-                        </div>
-
-                        <div class="flex-row-gap15">
-                            <img src="assets/icons/phone_negativ.svg" width="24px" height="24px" alt="Telefon Icon"
-                                loading="lazy" role="img">
-                            <p class="text-regular color-font-darkblue">
-                            <p><strong>Tel:</strong></p>
-                            <?= $page->tel_zweigstelle()->toHtml() ?>
-                            </p>
-
-                        </div>
-                        <div class="flex-row-gap15">
-                            <img src="assets/icons/phone_negativ.svg" width="24px" height="24px" alt="Telefon Icon"
-                                loading="lazy" role="img">
-                            <p class="text-regular color-font-darkblue">
-                            <p><strong>Mobil:</strong></p>
-                            <?= $page->mobil_zweigstelle()->toHtml() ?>
-                            </p>
-
-                        </div>
-                    </div>
-                <?php endif ?>
-
 
                 <div class="location-card flex-column-gap24 lightgrey-bg">
 
-                    <h4 class="headline headline-xs color-font-darkblue">Vertretungsberechtigte Gesellschafter</h4>
-                    <div class="overflow-hidden">
-
-                        <?php
-                        // Gesellschafter
-                        $gesellschafter = $page->gesellschafter()->toStructure();
-                        if ($gesellschafter->isNotEmpty()): ?>
-                            <?php foreach ($gesellschafter as $g): ?>
-                                <p class="text-regular500 color-font-darkblue">
-                                    <?= $g->name()->html() ?>
-                                </p>
-                            <?php endforeach ?>
-                        <?php endif ?>
-
-                    </div>
-
-                    <div class="flex-row-gap15">
-                        <p class="text-regular500  color-font-darkblue">
-                            <strong>Umsatzsteuer ID:</strong>
-                            <?= $page->ustid()->html() ?>
-                        </p>
-                    </div>
+                    <h4 class="headline headline-xs color-font-darkblue">Betriebshaftplicht</h4>
+                 
 
                     <div class="flex-row-gap15">
                         <p class="text-regular color-font-darkblue">
-                            <strong>Betriebshaftplicht:</strong><br>
                             <strong>Versicherung wurde abgeschlossen bei:</strong>
                         </p>
 
@@ -279,7 +172,7 @@
 
                     </div>
 
-                </div> -->
+                </div>
             </div>
 
         </div>
